@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada — UG Collection</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#141519">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #141519; --gold: #b08d57; --gold-2: #d6b97f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100svh; display: grid; place-items: center; text-align: center; background: var(--ink); color: #f3efe8; font-family: "Manrope", system-ui, sans-serif; padding: 40px 16px; }
+    h1 { font-family: "Marcellus", Georgia, serif; font-weight: 400; font-size: clamp(90px, 22vw, 220px); line-height: 1; margin: 0; background: linear-gradient(100deg, #8a6a3a, var(--gold-2) 45%, var(--gold) 70%, #8a6a3a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { color: #b9b5ad; font-size: 18px; margin: 16px 0 32px; }
+    a { display: inline-flex; align-items: center; min-height: 50px; padding: 0 28px; border-radius: 999px; background: var(--gold); color: var(--ink); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: 14px; text-decoration: none; transition: background .3s; }
+    a:hover { background: #fff; }
+    img { width: 72px; margin: 0 auto 28px; display: block; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/assets/img/monogram.png" alt="UG Collection">
+    <h1>404</h1>
+    <p>Esta página se detuvo en el tiempo. · Esta página parou no tempo. · This page stopped in time.</p>
+    <a href="/">UG Collection</a>
+  </main>
+  <script>
+    // En GitHub Pages el sitio vive en /<repo>/: corrige las rutas absolutas
+    var base = /github.io$/.test(location.hostname) ? '/' + location.pathname.split('/')[1] + '/' : '/';
+    document.querySelector('main img').src = base + 'assets/img/monogram.png';
+    document.querySelector('main a').href = base;
+  </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "pt",
+    "locale": "pt-BR"
+  },
+  "nav": {
+    "home": "Início",
+    "catalog": "Catálogo",
+    "collections": "Coleções",
+    "contact": "Contato",
+    "favorites": "Favoritos",
+    "menu": "Menu",
+    "close": "Fechar",
+    "skip": "Pular para o conteúdo"
+  },
+  "common": {
+    "from": "A partir de",
+    "view": "Ver relógio",
+    "viewAll": "Ver todo o catálogo",
+    "consult": "Consultar pelo WhatsApp",
+    "consultShort": "Consultar",
+    "quickView": "Visualização rápida",
+    "details": "Ver detalhes",
+    "addFav": "Adicionar aos favoritos",
+    "removeFav": "Remover dos favoritos",
+    "versions": "versões",
+    "version": "versão",
+    "models": "modelos",
+    "model": "modelo",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "share": "Compartilhar",
+    "copied": "Link copiado",
+    "off": "OFF",
+    "loading": "Carregando…",
+    "backTop": "Voltar ao topo",
+    "lowStock": "Consulte disponibilidade",
+    "all": "Todos",
+    "seeMore": "Ver mais",
+    "pending": "[PENDENTE]"
+  },
+  "hero": {
+    "eyebrow": "Pagani Design · Paraguai",
+    "title": "O tempo,<br>com caráter.",
+    "lead": "Relógios automáticos e cronógrafos com cristal de safira e calibres japoneses e suíços.",
+    "scroll": "Deslize"
+  },
+  "marquee": [
+    "Cristal de safira AR",
+    "Calibres Miyota & Seiko",
+    "Resistência 100 m",
+    "Aço inoxidável",
+    "Desconto de inauguração",
+    "Atendimento personalizado"
+  ],
+  "home": {
+    "collectionsEyebrow": "Coleções",
+    "collectionsTitle": "Encontre seu calibre",
+    "featuredEyebrow": "Desconto de inauguração",
+    "featuredTitle": "Os mais procurados",
+    "calibreEyebrow": "Conheça seu relógio",
+    "calibreTitle": "Três formas de medir o tempo",
+    "calibreLead": "Veja como se move o ponteiro dos segundos de cada tipo de calibre. É a hora real, agora mesmo.",
+    "aboutEyebrow": "UG Collection",
+    "aboutTitle": "Relojoaria com critério, ao seu alcance",
+    "aboutText": "Selecionamos modelos Pagani Design com especificações que normalmente você encontra em relógios de gama muito mais alta: cristal de safira, calibres automáticos japoneses e 100 metros de resistência à água.",
+    "statModels": "modelos",
+    "statVersions": "versões",
+    "statWater": "metros de resistência",
+    "bannerTitle": "Cada segundo, à vista.",
+    "bannerText": "O PD-YS025 revela seu coração mecânico pulsando através do mostrador.",
+    "instaTitle": "Siga-nos no Instagram",
+    "instaText": "Novidades, chegadas e fotos reais de cada modelo.",
+    "whyTitle": "Por que nos escolher"
+  },
+  "calibres": {
+    "automatico": {
+      "name": "Automático",
+      "text": "Dá corda sozinho com o movimento do seu pulso, sem bateria. O ponteiro dos segundos avança em um movimento suave de 6 passos por segundo.",
+      "spec": "Miyota 8215 · Seiko NH35"
+    },
+    "mecacuarzo": {
+      "name": "Meca-quartzo",
+      "text": "Precisão de quartzo para as horas e um módulo mecânico para o cronógrafo: o ponteiro do crono percorre o mostrador em movimento contínuo.",
+      "spec": "Seiko VK63 · VH65"
+    },
+    "cuarzo": {
+      "name": "Quartzo",
+      "text": "Funciona a bateria com um cristal de quartzo que vibra 32.768 vezes por segundo. Máxima precisão, um salto por segundo.",
+      "spec": "Ronda 762 (Suíça)"
+    }
+  },
+  "why": [
+    {
+      "t": "Cristal de safira",
+      "d": "Resistente a riscos, com tratamento antirreflexo (AR)."
+    },
+    {
+      "t": "Calibres de confiança",
+      "d": "Miyota, Seiko e Ronda: os motores usados por marcas renomadas."
+    },
+    {
+      "t": "100 m de resistência",
+      "d": "Chuva, natação e uso diário sem preocupações."
+    },
+    {
+      "t": "Atendimento personalizado",
+      "d": "Ajudamos você pelo WhatsApp a escolher o relógio ideal."
+    }
+  ],
+  "catalog": {
+    "title": "Catálogo",
+    "lead": "Todos os nossos modelos, com suas versões e preços.",
+    "search": "Buscar modelo, cor, calibre…",
+    "filters": "Filtros",
+    "clear": "Limpar",
+    "apply": "Ver resultados",
+    "results": "resultados",
+    "result": "resultado",
+    "sort": "Ordenar",
+    "sortFeatured": "Destaques",
+    "sortPriceAsc": "Preço: menor para maior",
+    "sortPriceDesc": "Preço: maior para menor",
+    "sortName": "Modelo A–Z",
+    "collection": "Coleção",
+    "type": "Calibre",
+    "strap": "Pulseira",
+    "case": "Tamanho da caixa",
+    "price": "Preço",
+    "offers": "Só com desconto",
+    "empty": "Não encontramos relógios com esses filtros.",
+    "emptyCta": "Limpar filtros",
+    "density": "Colunas"
+  },
+  "product": {
+    "breadcrumb": "Catálogo",
+    "selectVersion": "Escolha sua versão",
+    "description": "Descrição",
+    "specs": "Especificações",
+    "movement": "Movimento",
+    "type": "Calibre",
+    "case": "Caixa",
+    "crystal": "Cristal",
+    "water": "Resistência à água",
+    "strap": "Pulseira",
+    "features": "Características",
+    "brand": "Marca",
+    "related": "Você também pode gostar",
+    "recent": "Vistos recentemente",
+    "howTitle": "Como comprar?",
+    "how": [
+      "Escolha o modelo e a versão que você gosta.",
+      "Toque em «Consultar pelo WhatsApp»: a mensagem já inclui o modelo e o preço.",
+      "Confirmamos a disponibilidade e combinamos pagamento e entrega."
+    ],
+    "perks": [
+      "Atendimento personalizado",
+      "Consulte a disponibilidade na hora",
+      "Ajuda para escolher o tamanho"
+    ],
+    "notFound": "Não encontramos este relógio.",
+    "zoomHint": "Passe o mouse para ampliar",
+    "waMsg": "Olá UG Collection! Tenho interesse no relógio {model} — versão {version} ({price}). Está disponível?"
+  },
+  "fav": {
+    "title": "Seus favoritos",
+    "empty": "Você ainda não salvou relógios. Toque no coração de qualquer modelo para guardá-lo aqui.",
+    "consultAll": "Consultar favoritos pelo WhatsApp",
+    "waMsg": "Olá UG Collection! Tenho interesse nestes relógios:",
+    "added": "Salvo nos favoritos",
+    "removed": "Removido dos favoritos"
+  },
+  "contact": {
+    "title": "Contato",
+    "lead": "Escreva para nós e ajudamos você a escolher seu próximo relógio.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "hours": "Horário de atendimento",
+    "location": "Localização",
+    "formTitle": "Envie sua consulta",
+    "name": "Seu nome",
+    "model": "Modelo de interesse (opcional)",
+    "message": "Sua consulta",
+    "send": "Enviar pelo WhatsApp",
+    "anyModel": "Qualquer modelo",
+    "waMsg": "Olá UG Collection! Sou {name}.",
+    "waModel": "Tenho interesse em: {model}.",
+    "required": "Preencha este campo"
+  },
+  "footer": {
+    "tagline": "Relógios Pagani Design no Paraguai. Cristal de safira, calibres japoneses e suíços.",
+    "explore": "Explorar",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados."
+  },
+  "types": {
+    "automatico": "Automático",
+    "mecacuarzo": "Meca-quartzo",
+    "cuarzo": "Quartzo"
+  },
+  "straps": {
+    "acero": "Aço inoxidável",
+    "caucho": "Borracha",
+    "nylon": "Nylon",
+    "cuero": "Couro"
+  },
+  "terms": {
+    "Negro": "Preto",
+    "Azul": "Azul",
+    "Celeste": "Azul-claro",
+    "Verde": "Verde",
+    "Gris": "Cinza",
+    "Plata": "Prata",
+    "Blanco": "Branco",
+    "Champagne": "Champanhe",
+    "Bronce": "Bronze",
+    "Salmón": "Salmão",
+    "Chocolate": "Chocolate",
+    "Turquesa": "Turquesa",
+    "Nácar": "Madrepérola",
+    "Acero": "Aço",
+    "Caucho": "Borracha",
+    "Nylon": "Nylon",
+    "Cuero": "Couro",
+    "Oro rosa": "Ouro rosé",
+    "Dorado": "Dourado",
+    "Bicolor": "Bicolor",
+    "Bisel": "Bisel",
+    "y": "e",
+    "rojo": "vermelho",
+    "azul": "azul",
+    "negro": "preto",
+    "verde": "verde",
+    "gris": "cinza",
+    "marrón": "marrom",
+    "degradé": "degradê",
+    "Subesferas": "Submostradores",
+    "negras": "pretos",
+    "humo": "fumê",
+    "petróleo": "petróleo",
+    "dorado": "dourado",
+    "rosa": "rosé",
+    "oro": "ouro",
+    "Corazón abierto": "Coração aberto",
+    "Cronógrafo": "Cronógrafo",
+    "Automático": "Automático",
+    "Suiza": "Suíça",
+    "Zafiro AR": "Safira AR"
+  }
+}

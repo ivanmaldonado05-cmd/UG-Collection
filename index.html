@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UG Collection — Relojes Pagani Design en Paraguay</title>
+  <meta name="description" content="Relojes automáticos y cronógrafos Pagani Design con cristal de zafiro y calibres japoneses y suizos. Consultá por WhatsApp.">
+  <meta name="theme-color" content="#141519">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UG Collection — Relojes Pagani Design">
+  <meta property="og:description" content="Automáticos, cronógrafos y relojes femeninos con cristal de zafiro. Descuento de apertura.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home" data-header="dark">
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"/></svg>
+      <img src="assets/img/monogram.png" alt="">
+    </div>
+  </div>
+  <script>try{if(sessionStorage.getItem('ug_intro'))document.querySelector('.loader').remove()}catch(e){}</script>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-roledescription="carousel">
+      <div class="hero__bg"><div class="hero__glow"></div><div class="hero__grain"></div><div class="hero__word" aria-hidden="true">PAGANI</div></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow reveal" data-i18n="hero.eyebrow"></span>
+          <h1 class="hero__title" data-hero-title></h1>
+          <p class="hero__lead reveal" style="--i:3" data-i18n="hero.lead"></p>
+          <div class="hero__ctas reveal" style="--i:4">
+            <a class="btn btn--gold" href="catalogo.html"><span data-i18n="common.viewAll"></span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="btn btn--ghost-light" href="#colecciones" data-i18n="nav.collections"></a>
+          </div>
+          <a class="hero__slide-info reveal" style="--i:5" data-hero-info href="catalogo.html">
+            <span class="swap meta"><span data-hi="meta"></span></span>
+            <span class="swap name"><span data-hi="name"></span></span>
+            <span class="swap price"><span data-hi="price"></span></span>
+          </a>
+        </div>
+        <div class="hero__stage">
+          <svg class="hero__ticks" viewBox="0 0 200 200" aria-hidden="true" data-ticks></svg>
+          <div class="hero__ring" aria-hidden="true"><svg viewBox="0 0 200 200"><circle class="r2" cx="100" cy="100" r="96"/><circle class="r1" cx="100" cy="100" r="88" pathLength="1000"/></svg></div>
+          <div class="hero__slides" data-hero-slides></div>
+        </div>
+      </div>
+      <div class="hero__controls">
+        <div class="container">
+          <div class="scroll-cue"><i></i><span data-i18n="hero.scroll"></span></div>
+          <div class="dots" data-hero-dots role="tablist"></div>
+          <div style="display:flex;align-items:center;gap:18px">
+            <span class="hero__count tabular"><b data-hero-cur>01</b> / <span data-hero-total>04</span></span>
+            <div class="hero__arrows">
+              <button class="round-btn" data-hero-prev data-i18n-attr="aria-label:common.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></button>
+              <button class="round-btn" data-hero-next data-i18n-attr="aria-label:common.next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee></div></div>
+
+    <!-- COLECCIONES -->
+    <section class="section" id="colecciones">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal" data-i18n="home.collectionsEyebrow"></span>
+            <h2 class="h-1"><span class="split-line"><span data-i18n="home.collectionsTitle"></span></span></h2>
+          </div>
+          <a class="link-arrow reveal" href="catalogo.html"><span data-i18n="common.viewAll"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+        <div class="coll-grid" data-collections></div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="section section--paper" id="destacados">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal" data-i18n="home.featuredEyebrow"></span>
+            <h2 class="h-1"><span class="split-line"><span data-i18n="home.featuredTitle"></span></span></h2>
+          </div>
+          <div class="carousel__nav">
+            <button class="round-btn" data-prev data-i18n-attr="aria-label:common.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></button>
+            <button class="round-btn" data-next data-i18n-attr="aria-label:common.next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <div class="chips reveal" role="tablist" data-feat-tabs style="margin-bottom:28px"></div>
+        <div class="carousel carousel--bleed" data-carousel>
+          <div class="carousel__track" data-featured></div>
+          <div class="carousel__bar"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALIBRES -->
+    <section class="section section--dark" id="calibres">
+      <div class="container calibre">
+        <div>
+          <span class="eyebrow reveal" data-i18n="home.calibreEyebrow"></span>
+          <h2 class="h-1" style="margin-top:16px"><span class="split-line"><span data-i18n="home.calibreTitle"></span></span></h2>
+          <p class="lead reveal" style="margin-top:18px" data-i18n="home.calibreLead"></p>
+          <div class="calibre__tabs" role="tablist" data-cal-tabs></div>
+        </div>
+        <div class="dial-wrap reveal reveal--scale">
+          <svg viewBox="0 0 300 300" data-dial aria-hidden="true"></svg>
+          <span class="dial-label" data-dial-label></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section">
+      <div class="container">
+        <div class="about">
+          <div class="about__media reveal reveal--scale">
+            <img class="mono" src="assets/img/monogram.png" alt="" width="54" height="54">
+            <img data-parallax="0.08" src="assets/img/products/pd-1651.webp" alt="Pagani Design PD-1651" loading="lazy">
+          </div>
+          <div class="about__copy">
+            <span class="eyebrow reveal" data-i18n="home.aboutEyebrow"></span>
+            <h2 class="h-1"><span class="split-line"><span data-i18n="home.aboutTitle"></span></span></h2>
+            <p class="lead reveal" data-i18n="home.aboutText"></p>
+            <div class="stats">
+              <div class="stat reveal" style="--i:1"><b class="tabular" data-count="0" data-stat="models">0</b><span data-i18n="home.statModels"></span></div>
+              <div class="stat reveal" style="--i:2"><b class="tabular" data-count="0" data-stat="versions">0</b><span data-i18n="home.statVersions"></span></div>
+              <div class="stat reveal" style="--i:3"><b class="tabular" data-count="100">0</b><span data-i18n="home.statWater"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="why" data-why></div>
+      </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="section--tight" style="padding-top:0">
+      <div class="container">
+        <div class="banner reveal">
+          <div class="banner__copy">
+            <span class="eyebrow">PD-YS025</span>
+            <h2 class="h-1" data-i18n="home.bannerTitle"></h2>
+            <p class="lead" data-i18n="home.bannerText"></p>
+            <div><a class="btn btn--gold" href="producto.html?id=pd-ys025"><span data-i18n="common.view"></span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+          </div>
+          <div class="banner__media">
+            <div class="banner__ring"></div>
+            <img data-parallax="-0.06" src="assets/img/products/pd-ys025.webp" alt="Pagani Design PD-YS025" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section">
+      <div class="container insta">
+        <div style="display:grid;gap:18px">
+          <span class="eyebrow reveal">@ug_collection27</span>
+          <h2 class="h-2"><span class="split-line"><span data-i18n="home.instaTitle"></span></span></h2>
+          <p class="lead reveal" data-i18n="home.instaText"></p>
+          <div class="reveal"><a class="btn btn--ghost" href="https://www.instagram.com/ug_collection27/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/></svg><span>Instagram</span></a></div>
+        </div>
+        <div class="insta__grid" data-insta></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

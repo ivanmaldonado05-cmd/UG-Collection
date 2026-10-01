@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Panel — UG Collection</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#141519">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="adm">
+  <div class="adm-boot" data-boot><img src="../assets/img/monogram.png" alt="" width="64" height="64"></div>
+
+  <!-- LOGIN -->
+  <section class="login" data-view="login" hidden>
+    <form class="login__card" data-login novalidate>
+      <img src="../assets/img/logo.webp" alt="UG Collection" width="170" height="122">
+      <h1>Panel de administración</h1>
+      <div class="field">
+        <label for="lg-user">Usuario</label>
+        <input id="lg-user" name="user" autocomplete="username" value="admin" required>
+      </div>
+      <div class="field">
+        <label for="lg-pass">Contraseña</label>
+        <div class="pass">
+          <input id="lg-pass" name="pass" type="password" autocomplete="current-password" required>
+          <button type="button" class="icon-btn" data-toggle-pass aria-label="Mostrar contraseña"></button>
+        </div>
+      </div>
+      <p class="field__err" data-login-err role="alert"></p>
+      <button class="btn btn--block" type="submit" data-login-btn>Ingresar</button>
+      <p class="login__demo" data-demo-note hidden>Modo demo (sin servidor): ingresá con cualquier contraseña. Los cambios se guardan sólo en este navegador.</p>
+    </form>
+  </section>
+
+  <!-- APP -->
+  <div class="app" data-view="app" hidden>
+    <header class="topbar">
+      <a class="topbar__brand" href="../index.html" target="_blank" rel="noopener">
+        <img src="../assets/img/monogram.png" alt="" width="36" height="36">
+        <span>UG Collection<small>Panel</small></span>
+      </a>
+      <span class="mode-badge" data-mode-badge></span>
+      <div class="topbar__actions">
+        <a class="btn btn--ghost btn--sm" href="../index.html" target="_blank" rel="noopener" data-view-site>Ver sitio</a>
+        <button class="icon-btn" data-logout aria-label="Cerrar sesión" title="Cerrar sesión"></button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <button role="tab" data-tab="products" aria-selected="true"><span data-ico="watch"></span>Productos</button>
+      <button role="tab" data-tab="collections" aria-selected="false"><span data-ico="grid2"></span>Colecciones</button>
+      <button role="tab" data-tab="settings" aria-selected="false"><span data-ico="cog"></span>Ajustes</button>
+    </nav>
+
+    <main class="adm-main" id="main">
+      <!-- PRODUCTOS -->
+      <section data-panel="products">
+        <div class="adm-head">
+          <div><h1>Productos</h1><p class="muted" data-prod-summary></p></div>
+          <button class="btn btn--gold" data-new-product><span data-ico="plus"></span>Nuevo producto</button>
+        </div>
+        <div class="adm-tools">
+          <div class="search"><span data-ico="search"></span><input type="search" placeholder="Buscar por código, apodo, color…" data-prod-q aria-label="Buscar productos"><button type="button" data-prod-q-clear aria-label="Limpiar"></button></div>
+          <div class="select"><select data-prod-coll aria-label="Filtrar por colección"></select><span data-ico="chevron-down"></span></div>
+        </div>
+        <p class="hint" data-reorder-hint>Arrastrá <span data-ico="grip"></span> para cambiar el orden en el que aparecen en el sitio.</p>
+        <ul class="plist" data-plist></ul>
+      </section>
+
+      <!-- COLECCIONES -->
+      <section data-panel="collections" hidden>
+        <div class="adm-head">
+          <div><h1>Colecciones</h1><p class="muted">Agrupan los relojes en el sitio (Calibre Japonés, Femeninos, etc.).</p></div>
+          <button class="btn btn--gold" data-new-coll><span data-ico="plus"></span>Nueva colección</button>
+        </div>
+        <ul class="plist" data-clist></ul>
+      </section>
+
+      <!-- AJUSTES -->
+      <section data-panel="settings" hidden>
+        <div class="adm-head"><div><h1>Ajustes</h1><p class="muted">Datos de contacto y portada del sitio.</p></div></div>
+        <form class="adm-card form-grid" data-settings novalidate>
+          <div class="field"><label for="st-wa">WhatsApp (con código de país, sin + ni espacios)</label><input id="st-wa" name="whatsapp" inputmode="numeric" placeholder="595983836674" required><span class="field__err"></span></div>
+          <div class="field"><label for="st-ig">Instagram</label><input id="st-ig" name="instagram" type="url" placeholder="https://www.instagram.com/…"><span class="field__err"></span></div>
+          <fieldset class="field i18n-field">
+            <legend>Texto de la oferta (aparece junto al precio tachado)</legend>
+            <div class="i18n-row"><span>ES</span><input name="promo_es" placeholder="Descuento de apertura"></div>
+            <div class="i18n-row"><span>PT</span><input name="promo_pt" placeholder="Desconto de inauguração"></div>
+            <div class="i18n-row"><span>EN</span><input name="promo_en" placeholder="Opening discount"></div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Relojes de la portada (slider principal, hasta 6)</legend>
+            <p class="hint">Marcá los relojes y ordenalos con las flechas. Conviene usar fotos con fondo transparente.</p>
+            <ul class="hero-pick" data-hero-pick></ul>
+          </fieldset>
+          <div class="form-actions"><button class="btn" type="submit">Guardar ajustes</button></div>
+        </form>
+        <div class="adm-card" style="margin-top:20px">
+          <h2 class="h-3">Respaldo</h2>
+          <p class="muted" style="margin:8px 0 16px">Descargá una copia completa del catálogo (archivo catalog.json).</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn--ghost btn--sm" data-export>Descargar respaldo</button>
+            <button class="btn btn--ghost btn--sm" data-demo-reset hidden>Restablecer demo</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- EDITOR DE PRODUCTO -->
+  <div class="editor" data-editor hidden role="dialog" aria-modal="true" aria-labelledby="ed-title">
+    <header class="editor__bar">
+      <button class="icon-btn" data-ed-close aria-label="Volver"></button>
+      <h2 id="ed-title" data-ed-title>Producto</h2>
+      <button class="btn btn--sm" data-ed-save>Guardar</button>
+    </header>
+    <form class="editor__body" data-ed-form novalidate>
+      <div class="ed-grid">
+        <div class="ed-col">
+          <section class="adm-card">
+            <h3>Datos del modelo</h3>
+            <div class="form-grid two">
+              <div class="field"><label for="ed-code">Código *</label><input id="ed-code" name="code" placeholder="PD-1651" required><span class="field__err"></span></div>
+              <div class="field"><label for="ed-nick">Apodo</label><input id="ed-nick" name="nick" placeholder="Cronógrafo, GMT, Day-Date…"></div>
+              <div class="field"><label for="ed-brand">Marca</label><input id="ed-brand" name="brand" placeholder="Pagani Design"></div>
+              <div class="field"><label for="ed-coll">Colección *</label><div class="select"><select id="ed-coll" name="collection" required></select><span data-ico="chevron-down"></span></div><span class="field__err"></span></div>
+              <div class="field"><label for="ed-type">Tipo de calibre</label><div class="select"><select id="ed-type" name="type"><option value="automatico">Automático</option><option value="mecacuarzo">Meca-cuarzo</option><option value="cuarzo">Cuarzo</option></select><span data-ico="chevron-down"></span></div></div>
+              <div class="field"><label for="ed-mov">Movimiento</label><input id="ed-mov" name="movement" placeholder="Miyota 8215 (Citizen)"></div>
+              <div class="field"><label for="ed-case">Tamaño de caja (mm)</label><input id="ed-case" name="case_mm" placeholder="40"></div>
+              <div class="field"><label for="ed-water">Resistencia al agua (m)</label><input id="ed-water" name="water_m" inputmode="numeric" placeholder="100"></div>
+              <div class="field"><label for="ed-crystal">Cristal</label><input id="ed-crystal" name="crystal" placeholder="Zafiro AR"></div>
+              <fieldset class="field"><legend>Correa</legend><div class="chips" data-ed-straps></div></fieldset>
+            </div>
+          </section>
+
+          <section class="adm-card">
+            <h3>Textos</h3>
+            <div class="lang-tabs" role="tablist" data-ed-langs>
+              <button type="button" role="tab" aria-selected="true" data-l="es">Español</button>
+              <button type="button" role="tab" aria-selected="false" data-l="pt">Português</button>
+              <button type="button" role="tab" aria-selected="false" data-l="en">English</button>
+            </div>
+            <p class="hint">Portugués e inglés son opcionales: si quedan vacíos, el sitio muestra el texto en español.</p>
+            <div data-ed-texts></div>
+          </section>
+
+          <section class="adm-card">
+            <div class="card-head"><h3>Versiones y precios</h3><span class="muted" data-ed-vcount></span></div>
+            <p class="hint">Cada versión es una combinación de color / correa con su foto y su precio. «Precio anterior» se muestra tachado (descuento).</p>
+            <ol class="vlist" data-ed-variants></ol>
+            <button type="button" class="btn btn--ghost btn--block" data-ed-add-variant><span data-ico="plus"></span>Agregar versión</button>
+          </section>
+        </div>
+
+        <div class="ed-col ed-col--side">
+          <section class="adm-card">
+            <h3>Publicación</h3>
+            <label class="switch"><span>Visible en el sitio</span><input type="checkbox" name="active"><span class="switch__ui"></span></label>
+            <label class="switch"><span>Destacado (aparece primero)</span><input type="checkbox" name="featured"><span class="switch__ui"></span></label>
+          </section>
+          <section class="adm-card">
+            <h3>Foto principal</h3>
+            <p class="hint">La que se ve en el catálogo. Si no subís una, se usa la de la primera versión.</p>
+            <div class="drop drop--hero" data-ed-hero></div>
+          </section>
+          <section class="adm-card ed-preview">
+            <h3>Vista previa</h3>
+            <div data-ed-preview></div>
+          </section>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Diálogo genérico -->
+  <div class="modal" data-dialog role="dialog" aria-modal="true">
+    <div class="modal__scrim" data-dlg-cancel></div>
+    <div class="modal__box dlg" data-dlg-box></div>
+  </div>
+  <div class="toasts" aria-live="polite" data-toasts></div>
+  <input type="file" accept="image/*" hidden data-file>
+
+  <script src="admin.js"></script>
+</body>
+</html>

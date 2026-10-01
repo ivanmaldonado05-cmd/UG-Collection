@@ -1,0 +1,14 @@
+# Material de trabajo (extracción de Canva, node_modules, URLs firmadas)
+_extract/
+node_modules/
+
+# Backend: credenciales y datos generados en el hosting
+server/config.php
+uploads/*
+!uploads/.htaccess
+!uploads/products/
+uploads/products/*
+!uploads/products/.gitkeep
+
+.DS_Store
+Thumbs.db

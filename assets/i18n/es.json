@@ -1,0 +1,76 @@
+{
+  "meta": { "lang": "es", "locale": "es-PY" },
+  "nav": { "home": "Inicio", "catalog": "Catálogo", "collections": "Colecciones", "contact": "Contacto", "favorites": "Favoritos", "menu": "Menú", "close": "Cerrar", "skip": "Saltar al contenido" },
+  "common": {
+    "from": "Desde", "view": "Ver reloj", "viewAll": "Ver todo el catálogo", "consult": "Consultar por WhatsApp", "consultShort": "Consultar",
+    "quickView": "Vista rápida", "details": "Ver detalle", "addFav": "Agregar a favoritos", "removeFav": "Quitar de favoritos",
+    "versions": "versiones", "version": "versión", "models": "modelos", "model": "modelo", "prev": "Anterior", "next": "Siguiente",
+    "share": "Compartir", "copied": "Enlace copiado", "off": "OFF", "loading": "Cargando…", "backTop": "Volver arriba",
+    "lowStock": "Consultá disponibilidad", "all": "Todos", "seeMore": "Ver más", "pending": "[PENDIENTE]"
+  },
+  "hero": {
+    "eyebrow": "Pagani Design · Paraguay",
+    "title": "El tiempo,<br>con carácter.",
+    "lead": "Relojes automáticos y cronógrafos con cristal de zafiro y calibres japoneses y suizos.",
+    "scroll": "Deslizá"
+  },
+  "marquee": ["Cristal de zafiro AR", "Calibres Miyota & Seiko", "Resistencia 100 m", "Acero inoxidable", "Descuento de apertura", "Atención personalizada"],
+  "home": {
+    "collectionsEyebrow": "Colecciones",
+    "collectionsTitle": "Encontrá tu calibre",
+    "featuredEyebrow": "Descuento de apertura",
+    "featuredTitle": "Los más buscados",
+    "calibreEyebrow": "Conocé tu reloj",
+    "calibreTitle": "Tres formas de medir el tiempo",
+    "calibreLead": "Mirá cómo se mueve la aguja de segundos de cada tipo de calibre. Es la hora real, ahora mismo.",
+    "aboutEyebrow": "UG Collection",
+    "aboutTitle": "Relojería con criterio, a tu alcance",
+    "aboutText": "Seleccionamos modelos de Pagani Design con especificaciones que normalmente encontrás en relojes de gama mucho más alta: cristal de zafiro, calibres automáticos japoneses y 100 metros de resistencia al agua.",
+    "statModels": "modelos", "statVersions": "versiones", "statWater": "metros de resistencia",
+    "bannerTitle": "Cada segundo, a la vista.",
+    "bannerText": "El PD-YS025 deja ver su corazón mecánico latiendo a través de la esfera.",
+    "instaTitle": "Seguinos en Instagram",
+    "instaText": "Novedades, ingresos y fotos reales de cada modelo.",
+    "whyTitle": "Por qué elegirnos"
+  },
+  "calibres": {
+    "automatico": { "name": "Automático", "text": "Se carga solo con el movimiento de tu muñeca, sin pila. El segundero avanza en un barrido suave de 6 pasos por segundo.", "spec": "Miyota 8215 · Seiko NH35" },
+    "mecacuarzo": { "name": "Meca-cuarzo", "text": "Precisión de cuarzo para la hora y un módulo mecánico para el cronógrafo: el segundero del crono recorre la esfera en un barrido continuo.", "spec": "Seiko VK63 · VH65" },
+    "cuarzo": { "name": "Cuarzo", "text": "Funciona a pila con un cristal de cuarzo que vibra 32.768 veces por segundo. Máxima precisión, un salto por segundo.", "spec": "Ronda 762 (Suiza)" }
+  },
+  "why": [
+    { "t": "Cristal de zafiro", "d": "Resistente a rayones, con tratamiento antirreflejo (AR)." },
+    { "t": "Calibres de confianza", "d": "Miyota, Seiko y Ronda: los motores que usan marcas de renombre." },
+    { "t": "100 m de resistencia", "d": "Lluvia, natación y uso diario sin preocupaciones." },
+    { "t": "Atención personalizada", "d": "Te asesoramos por WhatsApp para elegir tu reloj ideal." }
+  ],
+  "catalog": {
+    "title": "Catálogo", "lead": "Todos nuestros modelos, con sus versiones y precios.",
+    "search": "Buscar modelo, color, calibre…", "filters": "Filtros", "clear": "Limpiar", "apply": "Ver resultados",
+    "results": "resultados", "result": "resultado", "sort": "Ordenar",
+    "sortFeatured": "Destacados", "sortPriceAsc": "Precio: menor a mayor", "sortPriceDesc": "Precio: mayor a menor", "sortName": "Modelo A–Z",
+    "collection": "Colección", "type": "Calibre", "strap": "Correa", "case": "Tamaño de caja", "price": "Precio", "offers": "Solo con descuento",
+    "empty": "No encontramos relojes con esos filtros.", "emptyCta": "Limpiar filtros",
+    "density": "Columnas"
+  },
+  "product": {
+    "breadcrumb": "Catálogo", "selectVersion": "Elegí tu versión", "description": "Descripción", "specs": "Especificaciones",
+    "movement": "Movimiento", "type": "Calibre", "case": "Caja", "crystal": "Cristal", "water": "Resistencia al agua", "strap": "Correa", "features": "Características", "brand": "Marca",
+    "related": "También te puede gustar", "recent": "Vistos recientemente", "howTitle": "¿Cómo comprar?",
+    "how": ["Elegí el modelo y la versión que te gusta.", "Tocá «Consultar por WhatsApp»: el mensaje ya incluye el modelo y el precio.", "Te confirmamos disponibilidad y coordinamos el pago y la entrega."],
+    "perks": ["Atención personalizada", "Consultá disponibilidad al instante", "Asesoramiento para elegir tu talla"],
+    "notFound": "No encontramos este reloj.", "zoomHint": "Pasá el mouse para ampliar",
+    "waMsg": "Hola UG Collection! Me interesa el reloj {model} — versión {version} ({price}). ¿Está disponible?"
+  },
+  "fav": { "title": "Tus favoritos", "empty": "Todavía no guardaste relojes. Tocá el corazón en cualquier modelo para guardarlo acá.", "consultAll": "Consultar favoritos por WhatsApp", "waMsg": "Hola UG Collection! Me interesan estos relojes:", "added": "Guardado en favoritos", "removed": "Quitado de favoritos" },
+  "contact": {
+    "title": "Contacto", "lead": "Escribinos y te asesoramos para elegir tu próximo reloj.",
+    "whatsapp": "WhatsApp", "instagram": "Instagram", "hours": "Horario de atención", "location": "Ubicación",
+    "formTitle": "Envianos tu consulta", "name": "Tu nombre", "model": "Modelo de interés (opcional)", "message": "Tu consulta", "send": "Enviar por WhatsApp",
+    "anyModel": "Cualquier modelo", "waMsg": "Hola UG Collection! Soy {name}.", "waModel": "Me interesa: {model}.", "required": "Completá este campo"
+  },
+  "footer": { "tagline": "Relojes Pagani Design en Paraguay. Cristal de zafiro, calibres japoneses y suizos.", "explore": "Explorar", "contact": "Contacto", "rights": "Todos los derechos reservados." },
+  "types": { "automatico": "Automático", "mecacuarzo": "Meca-cuarzo", "cuarzo": "Cuarzo" },
+  "straps": { "acero": "Acero inoxidable", "caucho": "Caucho", "nylon": "Nylon", "cuero": "Cuero" },
+  "terms": {}
+}

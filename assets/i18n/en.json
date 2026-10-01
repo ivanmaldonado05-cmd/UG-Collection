@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en-US"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "collections": "Collections",
+    "contact": "Contact",
+    "favorites": "Favorites",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content"
+  },
+  "common": {
+    "from": "From",
+    "view": "View watch",
+    "viewAll": "View full catalog",
+    "consult": "Ask on WhatsApp",
+    "consultShort": "Ask",
+    "quickView": "Quick view",
+    "details": "View details",
+    "addFav": "Add to favorites",
+    "removeFav": "Remove from favorites",
+    "versions": "versions",
+    "version": "version",
+    "models": "models",
+    "model": "model",
+    "prev": "Previous",
+    "next": "Next",
+    "share": "Share",
+    "copied": "Link copied",
+    "off": "OFF",
+    "loading": "Loading…",
+    "backTop": "Back to top",
+    "lowStock": "Ask for availability",
+    "all": "All",
+    "seeMore": "See more",
+    "pending": "[PENDING]"
+  },
+  "hero": {
+    "eyebrow": "Pagani Design · Paraguay",
+    "title": "Time,<br>with character.",
+    "lead": "Automatic watches and chronographs with sapphire crystal and Japanese and Swiss calibres.",
+    "scroll": "Scroll"
+  },
+  "marquee": [
+    "AR sapphire crystal",
+    "Miyota & Seiko calibres",
+    "100 m water resistance",
+    "Stainless steel",
+    "Opening discount",
+    "Personal service"
+  ],
+  "home": {
+    "collectionsEyebrow": "Collections",
+    "collectionsTitle": "Find your calibre",
+    "featuredEyebrow": "Opening discount",
+    "featuredTitle": "Most wanted",
+    "calibreEyebrow": "Know your watch",
+    "calibreTitle": "Three ways to keep time",
+    "calibreLead": "See how the seconds hand moves on each type of calibre. It's the real time, right now.",
+    "aboutEyebrow": "UG Collection",
+    "aboutTitle": "Thoughtful watchmaking, within reach",
+    "aboutText": "We select Pagani Design models with specs you usually find on far more expensive watches: sapphire crystal, Japanese automatic calibres and 100 metres of water resistance.",
+    "statModels": "models",
+    "statVersions": "versions",
+    "statWater": "metres water resistance",
+    "bannerTitle": "Every second, on display.",
+    "bannerText": "The PD-YS025 shows its mechanical heart beating through the dial.",
+    "instaTitle": "Follow us on Instagram",
+    "instaText": "New arrivals and real photos of every model.",
+    "whyTitle": "Why choose us"
+  },
+  "calibres": {
+    "automatico": {
+      "name": "Automatic",
+      "text": "Winds itself with the motion of your wrist, no battery. The seconds hand glides in a smooth sweep of 6 steps per second.",
+      "spec": "Miyota 8215 · Seiko NH35"
+    },
+    "mecacuarzo": {
+      "name": "Meca-quartz",
+      "text": "Quartz precision for the time and a mechanical module for the chronograph: the chrono seconds hand sweeps continuously around the dial.",
+      "spec": "Seiko VK63 · VH65"
+    },
+    "cuarzo": {
+      "name": "Quartz",
+      "text": "Battery-powered with a quartz crystal vibrating 32,768 times per second. Maximum precision, one tick per second.",
+      "spec": "Ronda 762 (Swiss)"
+    }
+  },
+  "why": [
+    {
+      "t": "Sapphire crystal",
+      "d": "Scratch-resistant, with anti-reflective (AR) coating."
+    },
+    {
+      "t": "Trusted calibres",
+      "d": "Miyota, Seiko and Ronda: the engines used by renowned brands."
+    },
+    {
+      "t": "100 m water resistance",
+      "d": "Rain, swimming and everyday wear without worries."
+    },
+    {
+      "t": "Personal service",
+      "d": "We help you on WhatsApp to choose your ideal watch."
+    }
+  ],
+  "catalog": {
+    "title": "Catalog",
+    "lead": "All our models, with their versions and prices.",
+    "search": "Search model, colour, calibre…",
+    "filters": "Filters",
+    "clear": "Clear",
+    "apply": "Show results",
+    "results": "results",
+    "result": "result",
+    "sort": "Sort",
+    "sortFeatured": "Featured",
+    "sortPriceAsc": "Price: low to high",
+    "sortPriceDesc": "Price: high to low",
+    "sortName": "Model A–Z",
+    "collection": "Collection",
+    "type": "Calibre",
+    "strap": "Strap",
+    "case": "Case size",
+    "price": "Price",
+    "offers": "Discounted only",
+    "empty": "No watches match those filters.",
+    "emptyCta": "Clear filters",
+    "density": "Columns"
+  },
+  "product": {
+    "breadcrumb": "Catalog",
+    "selectVersion": "Choose your version",
+    "description": "Description",
+    "specs": "Specifications",
+    "movement": "Movement",
+    "type": "Calibre",
+    "case": "Case",
+    "crystal": "Crystal",
+    "water": "Water resistance",
+    "strap": "Strap",
+    "features": "Features",
+    "brand": "Brand",
+    "related": "You may also like",
+    "recent": "Recently viewed",
+    "howTitle": "How to buy",
+    "how": [
+      "Choose the model and version you like.",
+      "Tap “Ask on WhatsApp”: the message already includes the model and price.",
+      "We confirm availability and arrange payment and delivery."
+    ],
+    "perks": [
+      "Personal service",
+      "Check availability instantly",
+      "Help choosing your size"
+    ],
+    "notFound": "We couldn't find this watch.",
+    "zoomHint": "Hover to zoom",
+    "waMsg": "Hi UG Collection! I'm interested in the {model} watch — {version} version ({price}). Is it available?"
+  },
+  "fav": {
+    "title": "Your favorites",
+    "empty": "You haven't saved any watches yet. Tap the heart on any model to keep it here.",
+    "consultAll": "Ask about favorites on WhatsApp",
+    "waMsg": "Hi UG Collection! I'm interested in these watches:",
+    "added": "Saved to favorites",
+    "removed": "Removed from favorites"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Write to us and we'll help you choose your next watch.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "hours": "Opening hours",
+    "location": "Location",
+    "formTitle": "Send us your question",
+    "name": "Your name",
+    "model": "Model of interest (optional)",
+    "message": "Your question",
+    "send": "Send via WhatsApp",
+    "anyModel": "Any model",
+    "waMsg": "Hi UG Collection! I'm {name}.",
+    "waModel": "I'm interested in: {model}.",
+    "required": "Please fill in this field"
+  },
+  "footer": {
+    "tagline": "Pagani Design watches in Paraguay. Sapphire crystal, Japanese and Swiss calibres.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "types": {
+    "automatico": "Automatic",
+    "mecacuarzo": "Meca-quartz",
+    "cuarzo": "Quartz"
+  },
+  "straps": {
+    "acero": "Stainless steel",
+    "caucho": "Rubber",
+    "nylon": "Nylon",
+    "cuero": "Leather"
+  },
+  "terms": {
+    "Negro": "Black",
+    "Azul": "Blue",
+    "Celeste": "Ice blue",
+    "Verde": "Green",
+    "Gris": "Grey",
+    "Plata": "Silver",
+    "Blanco": "White",
+    "Champagne": "Champagne",
+    "Bronce": "Bronze",
+    "Salmón": "Salmon",
+    "Chocolate": "Chocolate",
+    "Turquesa": "Turquoise",
+    "Nácar": "Mother-of-pearl",
+    "Acero": "Steel",
+    "Caucho": "Rubber",
+    "Nylon": "Nylon",
+    "Cuero": "Leather",
+    "Oro rosa": "Rose gold",
+    "Dorado": "Gold",
+    "Bicolor": "Two-tone",
+    "Bisel": "Bezel",
+    "y": "and",
+    "rojo": "red",
+    "azul": "blue",
+    "negro": "black",
+    "verde": "green",
+    "gris": "grey",
+    "marrón": "brown",
+    "degradé": "gradient",
+    "Subesferas": "Subdials",
+    "negras": "black",
+    "humo": "smoke",
+    "petróleo": "petrol",
+    "dorado": "gold",
+    "rosa": "rose",
+    "oro": "gold",
+    "Corazón abierto": "Open Heart",
+    "Cronógrafo": "Chronograph",
+    "Automático": "Automatic",
+    "Suiza": "Swiss",
+    "Zafiro AR": "AR sapphire"
+  }
+}

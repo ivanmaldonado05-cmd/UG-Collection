@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — UG Collection</title>
+  <meta name="description" content="Catálogo completo de relojes Pagani Design: automáticos, cronógrafos meca-cuarzo y femeninos. Precios en guaraníes.">
+  <meta name="theme-color" content="#141519">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="catalog" data-header="dark">
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home"></a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 18 6-6-6-6"/></svg><span data-i18n="catalog.title"></span></nav>
+        <h1 class="h-display"><span class="split-line"><span data-i18n="catalog.title"></span></span></h1>
+        <p class="lead reveal" data-i18n="catalog.lead"></p>
+        <div class="chips reveal" data-coll-chips style="margin-top:10px"></div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <div class="search" id="buscar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="q" data-i18n="catalog.search"></label>
+          <input id="q" type="search" autocomplete="off" data-i18n-attr="placeholder:catalog.search">
+          <button type="button" data-clear-q data-i18n-attr="aria-label:catalog.clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+        </div>
+        <button class="btn btn--ghost btn--sm filters-btn" data-open-filters><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h9"/><path d="M19 6h1"/><path d="M4 12h3"/><path d="M13 12h7"/><path d="M4 18h11"/><circle cx="16" cy="6" r="2.5"/><circle cx="10" cy="12" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg><span data-i18n="catalog.filters"></span><span data-filter-count></span></button>
+        <span class="toolbar__count" aria-live="polite" data-count-label></span>
+        <div class="toolbar__right">
+          <div class="select">
+            <label class="sr-only" for="sort" data-i18n="catalog.sort"></label>
+            <select id="sort">
+              <option value="featured" data-i18n="catalog.sortFeatured"></option>
+              <option value="price-asc" data-i18n="catalog.sortPriceAsc"></option>
+              <option value="price-desc" data-i18n="catalog.sortPriceDesc"></option>
+              <option value="name" data-i18n="catalog.sortName"></option>
+            </select>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="density" role="group" data-i18n-attr="aria-label:catalog.density">
+            <button data-cols="2" aria-pressed="false" aria-label="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="18" rx="1.5"/><rect x="13" y="3" width="8" height="18" rx="1.5"/></svg></button>
+            <button data-cols="3" aria-pressed="false" aria-label="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="3" width="5" height="18" rx="1.2"/><rect x="9.5" y="3" width="5" height="18" rx="1.2"/><rect x="16.5" y="3" width="5" height="18" rx="1.2"/></svg></button>
+            <button data-cols="4" aria-pressed="true" aria-label="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="3.6" height="18" rx="1"/><rect x="7.5" y="3" width="3.6" height="18" rx="1"/><rect x="13" y="3" width="3.6" height="18" rx="1"/><rect x="18.4" y="3" width="3.6" height="18" rx="1"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section--tight">
+      <div class="container cat-layout">
+        <aside class="filters" aria-label="Filtros" data-filters>
+          <div class="filters__head"><h2 data-i18n="catalog.filters"></h2><button class="icon-btn" data-close-filters data-i18n-attr="aria-label:nav.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+          <div class="fwrap" data-fwrap></div>
+          <div class="filters__foot"><button class="btn btn--ghost btn--sm" data-clear-all data-i18n="catalog.clear"></button><button class="btn btn--sm" data-close-filters><span data-i18n="catalog.apply"></span> <span data-apply-count></span></button></div>
+        </aside>
+        <div>
+          <div class="active-filters" data-active></div>
+          <div class="grid grid-results" data-results aria-live="polite">
+            <div class="card"><div class="skel skel-card"></div></div><div class="card"><div class="skel skel-card"></div></div><div class="card"><div class="skel skel-card"></div></div><div class="card"><div class="skel skel-card"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="scrim" data-filters-scrim></div>
+
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>

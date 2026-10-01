@@ -1,0 +1,1904 @@
+{
+ "updated": "2026-10-01T21:45:52.921Z",
+ "settings": {
+  "brand": "UG Collection",
+  "whatsapp": "595983836674",
+  "instagram": "https://www.instagram.com/ug_collection27/",
+  "currency": "Gs.",
+  "promo": {
+   "es": "Descuento de apertura",
+   "pt": "Desconto de inauguração",
+   "en": "Opening discount"
+  },
+  "hero": [
+   "pd-1644",
+   "pd-1661",
+   "pd-ys025",
+   "pd-1673"
+  ]
+ },
+ "collections": [
+  {
+   "id": "calibre-japones",
+   "name": {
+    "es": "Calibre Japonés",
+    "pt": "Calibre Japonês",
+    "en": "Japanese Calibre"
+   },
+   "tagline": {
+    "es": "Automáticos Miyota & Seiko",
+    "pt": "Automáticos Miyota & Seiko",
+    "en": "Miyota & Seiko automatics"
+   },
+   "cover": "pd-1661"
+  },
+  {
+   "id": "meca-cuarzo",
+   "name": {
+    "es": "Meca-Cuarzo",
+    "pt": "Meca-Quartzo",
+    "en": "Meca-Quartz"
+   },
+   "tagline": {
+    "es": "Cronógrafos Seiko VK",
+    "pt": "Cronógrafos Seiko VK",
+    "en": "Seiko VK chronographs"
+   },
+   "cover": "pd-1644"
+  },
+  {
+   "id": "entrada",
+   "name": {
+    "es": "Línea Entrada",
+    "pt": "Linha Entrada",
+    "en": "Entry Line"
+   },
+   "tagline": {
+    "es": "Tu primer automático",
+    "pt": "Seu primeiro automático",
+    "en": "Your first automatic"
+   },
+   "cover": "pd-ys025"
+  },
+  {
+   "id": "femeninos",
+   "name": {
+    "es": "Femeninos",
+    "pt": "Femininos",
+    "en": "Women's"
+   },
+   "tagline": {
+    "es": "Elegancia en cada detalle",
+    "pt": "Elegância em cada detalhe",
+    "en": "Elegance in every detail"
+   },
+   "cover": "pd-1737l"
+  }
+ ],
+ "products": [
+  {
+   "id": "pd-1651",
+   "code": "PD-1651",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215 (Citizen)",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero",
+    "caucho"
+   ],
+   "features": {
+    "es": "Bisel giratorio · Correa Oyster, Jubilee o caucho",
+    "pt": "Bisel giratório · Pulseira Oyster, Jubilee ou borracha",
+    "en": "Rotating bezel · Oyster, Jubilee or rubber strap"
+   },
+   "desc": {
+    "es": "Deportivo y versátil: bisel giratorio, cristal de zafiro y calibre automático Miyota. Del agua a la oficina sin cambiar de reloj.",
+    "pt": "Esportivo e versátil: bisel giratório, cristal de safira e calibre automático Miyota. Da água ao escritório sem trocar de relógio.",
+    "en": "Sporty and versatile: rotating bezel, sapphire crystal and a Miyota automatic calibre. From the water to the office without switching watches."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1651.webp",
+    "w": 278,
+    "h": 401
+   },
+   "price_from": 950000,
+   "featured": true,
+   "active": true,
+   "order": 0,
+   "variants": [
+    {
+     "id": "pd-1651-1",
+     "name": "Azul degradé · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1651-1.webp",
+      "w": 256,
+      "h": 401
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1651-2",
+     "name": "Azul · Bisel negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1651-2.webp",
+      "w": 254,
+      "h": 402
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1651-3",
+     "name": "Negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1651-3.webp",
+      "w": 254,
+      "h": 401
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1651-4",
+     "name": "Gris · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1651-4.webp",
+      "w": 256,
+      "h": 399
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1651-5",
+     "name": "Negro · Oro rosa · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1651-5.webp",
+      "w": 230,
+      "h": 402
+     },
+     "price": 980000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1651-6",
+     "name": "Gris · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1651-6.webp",
+      "w": 518,
+      "h": 761
+     },
+     "price": 980000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1651-7",
+     "name": "Azul · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1651-7.webp",
+      "w": 273,
+      "h": 400
+     },
+     "price": 980000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1651-8",
+     "name": "Negro · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1651-8.webp",
+      "w": 796,
+      "h": 781
+     },
+     "price": 980000,
+     "compare_at": null,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1783",
+   "code": "PD-1783",
+   "nick": "Day-Date",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215 (Citizen)",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Fecha y día de la semana · Brazalete President",
+    "pt": "Data e dia da semana · Pulseira President",
+    "en": "Date and day of the week · President bracelet"
+   },
+   "desc": {
+    "es": "Un clásico de vestir con día y fecha a la vista, bisel estriado y brazalete President. Nueve combinaciones de esfera y metal.",
+    "pt": "Um clássico social com dia e data à vista, bisel canelado e pulseira President. Nove combinações de mostrador e metal.",
+    "en": "A dress classic with day and date on display, fluted bezel and President bracelet. Nine dial and metal combinations."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1783.webp",
+    "w": 420,
+    "h": 801
+   },
+   "price_from": 1100000,
+   "featured": true,
+   "active": true,
+   "order": 1,
+   "variants": [
+    {
+     "id": "pd-1783-1",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1783-1.webp",
+      "w": 211,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-2",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1783-2.webp",
+      "w": 241,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-3",
+     "name": "Gris · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1783-3.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-4",
+     "name": "Verde · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1783-4.webp",
+      "w": 222,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-5",
+     "name": "Bronce · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1783-5.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-6",
+     "name": "Negro · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1783-6.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-7",
+     "name": "Negro · Dorado",
+     "image": {
+      "src": "assets/img/products/pd-1783-7.webp",
+      "w": 222,
+      "h": 399
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-8",
+     "name": "Blanco · Dorado",
+     "image": {
+      "src": "assets/img/products/pd-1783-8.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1783-9",
+     "name": "Verde · Dorado",
+     "image": {
+      "src": "assets/img/products/pd-1783-9.webp",
+      "w": 222,
+      "h": 400
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1645",
+   "code": "PD-1645",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215 (Citizen)",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Fecha · Brazalete Jubilee",
+    "pt": "Data · Pulseira Jubilee",
+    "en": "Date · Jubilee bracelet"
+   },
+   "desc": {
+    "es": "Bisel estriado, brazalete Jubilee y fecha con lupa. La elegancia de siempre con un automático japonés confiable.",
+    "pt": "Bisel canelado, pulseira Jubilee e data com lupa. A elegância de sempre com um automático japonês confiável.",
+    "en": "Fluted bezel, Jubilee bracelet and magnified date. Timeless elegance powered by a reliable Japanese automatic."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1645.webp",
+    "w": 378,
+    "h": 624
+   },
+   "price_from": 960000,
+   "featured": false,
+   "active": true,
+   "order": 2,
+   "variants": [
+    {
+     "id": "pd-1645-1",
+     "name": "Champagne · Bicolor dorado",
+     "image": {
+      "src": "assets/img/products/pd-1645-1.webp",
+      "w": 378,
+      "h": 624
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-2",
+     "name": "Negro · Bicolor dorado",
+     "image": {
+      "src": "assets/img/products/pd-1645-2.webp",
+      "w": 113,
+      "h": 186,
+      "lowres": true
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-3",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1645-3.webp",
+      "w": 362,
+      "h": 599
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-4",
+     "name": "Plata · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1645-4.webp",
+      "w": 360,
+      "h": 595
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-5",
+     "name": "Verde · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1645-5.webp",
+      "w": 110,
+      "h": 200,
+      "lowres": true
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-6",
+     "name": "Gris · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1645-6.webp",
+      "w": 398,
+      "h": 793
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1645-7",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1645-7.webp",
+      "w": 404,
+      "h": 792
+     },
+     "price": 960000,
+     "compare_at": null,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1673",
+   "code": "PD-1673",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215",
+   "case_mm": "39",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero",
+    "caucho"
+   ],
+   "features": {
+    "es": "Caja octogonal · Esfera texturizada · Acero o caucho",
+    "pt": "Caixa octogonal · Mostrador texturizado · Aço ou borracha",
+    "en": "Octagonal case · Textured dial · Steel or rubber"
+   },
+   "desc": {
+    "es": "Caja octogonal con brazalete integrado y esfera con textura de cuadrícula. Diseño icónico de los 70, en versión acero o caucho.",
+    "pt": "Caixa octogonal com pulseira integrada e mostrador com textura quadriculada. Design icônico dos anos 70, em aço ou borracha.",
+    "en": "Octagonal case with integrated bracelet and grid-textured dial. An iconic 70s design, in steel or rubber."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1673.webp",
+    "w": 736,
+    "h": 736
+   },
+   "price_from": 1100000,
+   "featured": true,
+   "active": true,
+   "order": 3,
+   "variants": [
+    {
+     "id": "pd-1673-1",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1673-1.webp",
+      "w": 441,
+      "h": 799
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-2",
+     "name": "Plata · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1673-2.webp",
+      "w": 435,
+      "h": 791
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-3",
+     "name": "Negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1673-3.webp",
+      "w": 436,
+      "h": 789
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-4",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1673-4.webp",
+      "w": 437,
+      "h": 780
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-5",
+     "name": "Azul · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1673-5.webp",
+      "w": 426,
+      "h": 767
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-6",
+     "name": "Negro · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1673-6.webp",
+      "w": 425,
+      "h": 766
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-7",
+     "name": "Celeste · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1673-7.webp",
+      "w": 426,
+      "h": 767
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    },
+    {
+     "id": "pd-1673-8",
+     "name": "Plata · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1673-8.webp",
+      "w": 427,
+      "h": 767
+     },
+     "price": 1100000,
+     "compare_at": 1250000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1661",
+   "code": "PD-1661",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215 (Citizen)",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Bisel giratorio de buceo · Brazalete de acero",
+    "pt": "Bisel giratório de mergulho · Pulseira de aço",
+    "en": "Rotating dive bezel · Steel bracelet"
+   },
+   "desc": {
+    "es": "El buceador por excelencia: bisel giratorio, índices luminosos y 100 m de resistencia. Seis combinaciones de esfera y bisel.",
+    "pt": "O mergulhador por excelência: bisel giratório, índices luminosos e 100 m de resistência. Seis combinações de mostrador e bisel.",
+    "en": "The quintessential diver: rotating bezel, luminous indices and 100 m water resistance. Six dial and bezel combinations."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1661.webp",
+    "w": 493,
+    "h": 614
+   },
+   "price_from": 950000,
+   "featured": false,
+   "active": true,
+   "order": 4,
+   "variants": [
+    {
+     "id": "pd-1661-1",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1661.webp",
+      "w": 493,
+      "h": 614
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-2",
+     "name": "Azul · Bisel negro",
+     "image": {
+      "src": "assets/img/products/pd-1661-2.webp",
+      "w": 476,
+      "h": 697
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-3",
+     "name": "Verde · Bisel verde",
+     "image": {
+      "src": "assets/img/products/pd-1661-3.webp",
+      "w": 438,
+      "h": 684
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-4",
+     "name": "Negro · Bisel azul y rojo",
+     "image": {
+      "src": "assets/img/products/pd-1661-4.webp",
+      "w": 436,
+      "h": 682
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-5",
+     "name": "Negro · Bisel negro",
+     "image": {
+      "src": "assets/img/products/pd-1661-5.webp",
+      "w": 118,
+      "h": 185,
+      "lowres": true
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-6",
+     "name": "Negro · Bisel verde",
+     "image": {
+      "src": "assets/img/products/pd-1661-6.webp",
+      "w": 442,
+      "h": 691
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-1661-7",
+     "name": "Negro · Bisel azul",
+     "image": {
+      "src": "assets/img/products/pd-1661-7.webp",
+      "w": 256,
+      "h": 400
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1753",
+   "code": "PD-1753",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215 (Citizen) / Seiko NH35",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Brazalete integrado · Elegí calibre Miyota o Seiko",
+    "pt": "Pulseira integrada · Escolha calibre Miyota ou Seiko",
+    "en": "Integrated bracelet · Choose Miyota or Seiko calibre"
+   },
+   "desc": {
+    "es": "Líneas limpias, brazalete integrado y esfera con acabado cepillado. Disponible con calibre Miyota 8215 o Seiko NH35.",
+    "pt": "Linhas limpas, pulseira integrada e mostrador escovado. Disponível com calibre Miyota 8215 ou Seiko NH35.",
+    "en": "Clean lines, integrated bracelet and brushed dial. Available with a Miyota 8215 or Seiko NH35 calibre."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1753.webp",
+    "w": 766,
+    "h": 800
+   },
+   "price_from": 1050000,
+   "featured": false,
+   "active": true,
+   "order": 5,
+   "variants": [
+    {
+     "id": "pd-1753-1",
+     "name": "Verde · Miyota 8215",
+     "image": {
+      "src": "assets/img/products/pd-1753-1.webp",
+      "w": 427,
+      "h": 766
+     },
+     "price": 1050000,
+     "compare_at": 1200000,
+     "available": true
+    },
+    {
+     "id": "pd-1753-2",
+     "name": "Azul · Miyota 8215",
+     "image": {
+      "src": "assets/img/products/pd-1753-2.webp",
+      "w": 443,
+      "h": 799
+     },
+     "price": 1050000,
+     "compare_at": 1200000,
+     "available": true
+    },
+    {
+     "id": "pd-1753-3",
+     "name": "Negro · Miyota 8215",
+     "image": {
+      "src": "assets/img/products/pd-1753-3.webp",
+      "w": 427,
+      "h": 774
+     },
+     "price": 1050000,
+     "compare_at": 1200000,
+     "available": true
+    },
+    {
+     "id": "pd-1753-4",
+     "name": "Verde · Seiko NH35",
+     "image": {
+      "src": "assets/img/products/pd-1753-4.webp",
+      "w": 427,
+      "h": 766
+     },
+     "price": 1300000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1753-5",
+     "name": "Azul · Seiko NH35",
+     "image": {
+      "src": "assets/img/products/pd-1753-5.webp",
+      "w": 443,
+      "h": 799
+     },
+     "price": 1300000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1753-6",
+     "name": "Negro · Seiko NH35",
+     "image": {
+      "src": "assets/img/products/pd-1753-6.webp",
+      "w": 427,
+      "h": 774
+     },
+     "price": 1300000,
+     "compare_at": null,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-ys027",
+   "code": "PD-YS027",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Miyota 8215",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Esfera texturizada · Bisel estriado",
+    "pt": "Mostrador texturizado · Bisel canelado",
+    "en": "Textured dial · Fluted bezel"
+   },
+   "desc": {
+    "es": "Esfera con relieve ondulado, numerales aplicados y bisel estriado. Un automático con personalidad propia.",
+    "pt": "Mostrador com relevo ondulado, numerais aplicados e bisel canelado. Um automático com personalidade própria.",
+    "en": "Wave-textured dial, applied numerals and fluted bezel. An automatic with a personality of its own."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-ys027.webp",
+    "w": 441,
+    "h": 781
+   },
+   "price_from": 950000,
+   "featured": false,
+   "active": true,
+   "order": 6,
+   "variants": [
+    {
+     "id": "pd-ys027-1",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-ys027.webp",
+      "w": 441,
+      "h": 781
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    },
+    {
+     "id": "pd-ys027-2",
+     "name": "Negro · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-ys027-2.webp",
+      "w": 156,
+      "h": 199,
+      "lowres": true
+     },
+     "price": 950000,
+     "compare_at": 1050000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1644",
+   "code": "PD-1644",
+   "nick": "Cronógrafo",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VK63",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero",
+    "caucho"
+   ],
+   "features": {
+    "es": "Cronógrafo · Escala taquimétrica · Acero o caucho",
+    "pt": "Cronógrafo · Escala taquimétrica · Aço ou borracha",
+    "en": "Chronograph · Tachymeter scale · Steel or rubber"
+   },
+   "desc": {
+    "es": "Cronógrafo de inspiración racing con escala taquimétrica y calibre Seiko VK63: la precisión del cuarzo con el barrido del mecánico.",
+    "pt": "Cronógrafo de inspiração racing com escala taquimétrica e calibre Seiko VK63: a precisão do quartzo com o movimento do mecânico.",
+    "en": "Racing-inspired chronograph with tachymeter scale and Seiko VK63 calibre: quartz precision with a mechanical sweep."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1644.webp",
+    "w": 559,
+    "h": 774
+   },
+   "price_from": 775000,
+   "featured": true,
+   "active": true,
+   "order": 7,
+   "variants": [
+    {
+     "id": "pd-1644-1",
+     "name": "Blanco · Bisel negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1644-1.webp",
+      "w": 478,
+      "h": 737
+     },
+     "price": 775000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-2",
+     "name": "Negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1644-2.webp",
+      "w": 495,
+      "h": 764
+     },
+     "price": 775000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-3",
+     "name": "Negro · PVD negro",
+     "image": {
+      "src": "assets/img/products/pd-1644-3.webp",
+      "w": 455,
+      "h": 702
+     },
+     "price": 775000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-4",
+     "name": "Blanco · Subesferas negras · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1644-4.webp",
+      "w": 471,
+      "h": 723
+     },
+     "price": 775000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-5",
+     "name": "Negro · Oro rosa · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1644-5.webp",
+      "w": 489,
+      "h": 730
+     },
+     "price": 800000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-6",
+     "name": "Salmón · Oro rosa · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1644-6.webp",
+      "w": 499,
+      "h": 744
+     },
+     "price": 800000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-7",
+     "name": "Negro · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1644-7.webp",
+      "w": 491,
+      "h": 731
+     },
+     "price": 800000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-8",
+     "name": "Blanco · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1644-8.webp",
+      "w": 451,
+      "h": 730
+     },
+     "price": 800000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-9",
+     "name": "Blanco · Oro rosa · Caucho",
+     "image": {
+      "src": "assets/img/products/pd-1644-9.webp",
+      "w": 448,
+      "h": 725
+     },
+     "price": 800000,
+     "compare_at": 850000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-10",
+     "name": "Blanco · Oro rosa · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1644-10.webp",
+      "w": 490,
+      "h": 749
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-11",
+     "name": "Salmón · Bicolor",
+     "image": {
+      "src": "assets/img/products/pd-1644-11.webp",
+      "w": 560,
+      "h": 752
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-12",
+     "name": "Blanco · Bicolor",
+     "image": {
+      "src": "assets/img/products/pd-1644-12.webp",
+      "w": 576,
+      "h": 778
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-13",
+     "name": "Chocolate · Bicolor",
+     "image": {
+      "src": "assets/img/products/pd-1644-13.webp",
+      "w": 466,
+      "h": 784
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1644-14",
+     "name": "Negro · Bicolor",
+     "image": {
+      "src": "assets/img/products/pd-1644-14.webp",
+      "w": 528,
+      "h": 763
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1701",
+   "code": "PD-1701",
+   "nick": "Cronógrafo",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VK63",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero",
+    "nylon"
+   ],
+   "features": {
+    "es": "Cronógrafo · Acero o nylon",
+    "pt": "Cronógrafo · Aço ou nylon",
+    "en": "Chronograph · Steel or nylon"
+   },
+   "desc": {
+    "es": "Cronógrafo de espíritu aeronáutico con bisel taquimétrico. En brazalete de acero o correa de nylon para un look más casual.",
+    "pt": "Cronógrafo de espírito aeronáutico com bisel taquimétrico. Em pulseira de aço ou nylon para um visual mais casual.",
+    "en": "Aviation-spirited chronograph with tachymeter bezel. On a steel bracelet or nylon strap for a more casual look."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1701.webp",
+    "w": 447,
+    "h": 797
+   },
+   "price_from": 800000,
+   "featured": false,
+   "active": true,
+   "order": 8,
+   "variants": [
+    {
+     "id": "pd-1701-1",
+     "name": "Negro · Nylon",
+     "image": {
+      "src": "assets/img/products/pd-1701-1.webp",
+      "w": 433,
+      "h": 788
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true
+    },
+    {
+     "id": "pd-1701-2",
+     "name": "Negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1701-2.webp",
+      "w": 437,
+      "h": 793
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true
+    },
+    {
+     "id": "pd-1701-3",
+     "name": "Blanco · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1701-3.webp",
+      "w": 439,
+      "h": 773
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true
+    },
+    {
+     "id": "pd-1701-4",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1701-4.webp",
+      "w": 436,
+      "h": 766
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1701-5",
+     "name": "Blanco y azul · Nylon",
+     "image": {
+      "src": "assets/img/products/pd-1701-5.webp",
+      "w": 447,
+      "h": 797
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1701-6",
+     "name": "Blanco y azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1701-6.webp",
+      "w": 451,
+      "h": 796
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1707",
+   "code": "PD-1707",
+   "nick": "Cronógrafo",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VK63",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Cronógrafo · Caja octogonal · Brazalete integrado",
+    "pt": "Cronógrafo · Caixa octogonal · Pulseira integrada",
+    "en": "Chronograph · Octagonal case · Integrated bracelet"
+   },
+   "desc": {
+    "es": "La caja octogonal más deseada, ahora con cronógrafo. Esfera texturizada, brazalete integrado y calibre Seiko VK63.",
+    "pt": "A caixa octogonal mais desejada, agora com cronógrafo. Mostrador texturizado, pulseira integrada e calibre Seiko VK63.",
+    "en": "The most coveted octagonal case, now with a chronograph. Textured dial, integrated bracelet and Seiko VK63 calibre."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1707.webp",
+    "w": 615,
+    "h": 760
+   },
+   "price_from": 900000,
+   "featured": false,
+   "active": true,
+   "order": 9,
+   "variants": [
+    {
+     "id": "pd-1707-1",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1707-1.webp",
+      "w": 581,
+      "h": 768
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1707-2",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1707-2.webp",
+      "w": 432,
+      "h": 768
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1707-3",
+     "name": "Negro · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1707-3.webp",
+      "w": 432,
+      "h": 767
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    },
+    {
+     "id": "pd-1707-4",
+     "name": "Blanco · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1707-4.webp",
+      "w": 581,
+      "h": 768
+     },
+     "price": 900000,
+     "compare_at": 980000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1689",
+   "code": "PD-1689",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VH65",
+   "case_mm": "39",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "cuero"
+   ],
+   "features": {
+    "es": "Reserva de marcha · Correa de cuero",
+    "pt": "Reserva de marcha · Pulseira de couro",
+    "en": "Power reserve · Leather strap"
+   },
+   "desc": {
+    "es": "Reloj de vestir con indicador de reserva de marcha y correa de cuero. Discreto, fino y perfecto para el día a día.",
+    "pt": "Relógio social com indicador de reserva de marcha e pulseira de couro. Discreto, fino e perfeito para o dia a dia.",
+    "en": "Dress watch with power-reserve indicator and leather strap. Understated, refined and perfect for every day."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1689.webp",
+    "w": 400,
+    "h": 394
+   },
+   "price_from": 600000,
+   "featured": false,
+   "active": true,
+   "order": 10,
+   "variants": [
+    {
+     "id": "pd-1689-1",
+     "name": "Blanco · Oro rosa · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-1689.webp",
+      "w": 400,
+      "h": 394
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1689-2",
+     "name": "Azul · Cuero azul",
+     "image": {
+      "src": "assets/img/products/pd-1689-2.webp",
+      "w": 256,
+      "h": 400
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1689-3",
+     "name": "Negro · Oro rosa · Cuero negro",
+     "image": {
+      "src": "assets/img/products/pd-1689-3.webp",
+      "w": 256,
+      "h": 400
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1689-4",
+     "name": "Blanco · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-1689-4.webp",
+      "w": 194,
+      "h": 190,
+      "lowres": true
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1689-5",
+     "name": "Negro · Cuero negro",
+     "image": {
+      "src": "assets/img/products/pd-1689-5.webp",
+      "w": 800,
+      "h": 781
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1662",
+   "code": "PD-1662",
+   "nick": "GMT",
+   "brand": "Pagani Design",
+   "collection": "entrada",
+   "type": "automatico",
+   "movement": "Automático",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Doble zona horaria y fecha · Bisel giratorio 24 h",
+    "pt": "Duplo fuso horário e data · Bisel giratório 24 h",
+    "en": "Dual time zone and date · 24 h rotating bezel"
+   },
+   "desc": {
+    "es": "Para el que viaja: aguja GMT para un segundo huso horario, bisel bicolor de 24 horas y fecha. Seis combinaciones de bisel.",
+    "pt": "Para quem viaja: ponteiro GMT para um segundo fuso horário, bisel bicolor de 24 horas e data. Seis combinações de bisel.",
+    "en": "For the traveller: GMT hand for a second time zone, two-tone 24-hour bezel and date. Six bezel combinations."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1662.webp",
+    "w": 689,
+    "h": 694
+   },
+   "price_from": 850000,
+   "featured": true,
+   "active": true,
+   "order": 11,
+   "variants": [
+    {
+     "id": "pd-1662-1",
+     "name": "Bisel azul y negro · Oyster",
+     "image": {
+      "src": "assets/img/products/pd-1662.webp",
+      "w": 689,
+      "h": 694
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-2",
+     "name": "Bisel marrón y negro · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1662-2.webp",
+      "w": 129,
+      "h": 200,
+      "lowres": true
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-3",
+     "name": "Bisel azul y rojo · Jubilee",
+     "image": {
+      "src": "assets/img/products/pd-1662-3.webp",
+      "w": 450,
+      "h": 796
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-4",
+     "name": "Bisel azul y negro · Jubilee",
+     "image": {
+      "src": "assets/img/products/pd-1662-4.webp",
+      "w": 484,
+      "h": 758
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-5",
+     "name": "Bisel rojo y negro · Oyster",
+     "image": {
+      "src": "assets/img/products/pd-1662-5.webp",
+      "w": 498,
+      "h": 778
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-6",
+     "name": "Bisel gris y negro · Jubilee",
+     "image": {
+      "src": "assets/img/products/pd-1662-6.webp",
+      "w": 128,
+      "h": 200,
+      "lowres": true
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    },
+    {
+     "id": "pd-1662-7",
+     "name": "Bisel verde y negro · Oyster",
+     "image": {
+      "src": "assets/img/products/pd-1662-7.webp",
+      "w": 122,
+      "h": 200,
+      "lowres": true
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1752",
+   "code": "PD-1752",
+   "nick": "Day-Date",
+   "brand": "Pagani Design",
+   "collection": "entrada",
+   "type": "automatico",
+   "movement": "Automático",
+   "case_mm": "36",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Fecha y día de la semana · Caja 36 mm",
+    "pt": "Data e dia da semana · Caixa 36 mm",
+    "en": "Date and day of the week · 36 mm case"
+   },
+   "desc": {
+    "es": "El Day-Date en un tamaño más compacto de 36 mm. Ideal para muñecas finas o para quien prefiere un estilo clásico.",
+    "pt": "O Day-Date em um tamanho mais compacto de 36 mm. Ideal para pulsos finos ou para quem prefere um estilo clássico.",
+    "en": "The Day-Date in a more compact 36 mm size. Ideal for slimmer wrists or a more classic style."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1752.webp",
+    "w": 433,
+    "h": 786
+   },
+   "price_from": 900000,
+   "featured": false,
+   "active": true,
+   "order": 12,
+   "variants": [
+    {
+     "id": "pd-1752-1",
+     "name": "Blanco · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1752.webp",
+      "w": 433,
+      "h": 786
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-2",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1752-2.webp",
+      "w": 211,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-3",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1752-3.webp",
+      "w": 241,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-4",
+     "name": "Bronce · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1752-4.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-5",
+     "name": "Negro · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1752-5.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-6",
+     "name": "Negro · Dorado",
+     "image": {
+      "src": "assets/img/products/pd-1752-6.webp",
+      "w": 222,
+      "h": 399
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-7",
+     "name": "Blanco · Dorado",
+     "image": {
+      "src": "assets/img/products/pd-1752-7.webp",
+      "w": 210,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-8",
+     "name": "Chocolate · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1752-8.webp",
+      "w": 221,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-1752-9",
+     "name": "Plata · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1752-9.webp",
+      "w": 215,
+      "h": 400
+     },
+     "price": 900000,
+     "compare_at": null,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1728",
+   "code": "PD-1728",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "entrada",
+   "type": "automatico",
+   "movement": "Automático",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Caja cojín · Esfera horizontal estriada",
+    "pt": "Caixa almofada · Mostrador horizontal canelado",
+    "en": "Cushion case · Horizontally striped dial"
+   },
+   "desc": {
+    "es": "Caja tipo cojín con brazalete integrado y esfera de líneas horizontales. Deportivo-elegante, en acero u oro rosa.",
+    "pt": "Caixa tipo almofada com pulseira integrada e mostrador de linhas horizontais. Esportivo-elegante, em aço ou ouro rosé.",
+    "en": "Cushion case with integrated bracelet and horizontally striped dial. Sports-elegant, in steel or rose gold."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1728.webp",
+    "w": 478,
+    "h": 796
+   },
+   "price_from": 850000,
+   "featured": false,
+   "active": true,
+   "order": 13,
+   "variants": [
+    {
+     "id": "pd-1728-1",
+     "name": "Azul · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1728-1.webp",
+      "w": 478,
+      "h": 796
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    },
+    {
+     "id": "pd-1728-2",
+     "name": "Turquesa · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1728-2.webp",
+      "w": 462,
+      "h": 797
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    },
+    {
+     "id": "pd-1728-3",
+     "name": "Verde · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1728-3.webp",
+      "w": 445,
+      "h": 765
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    },
+    {
+     "id": "pd-1728-4",
+     "name": "Negro · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1728-4.webp",
+      "w": 413,
+      "h": 735
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    },
+    {
+     "id": "pd-1728-5",
+     "name": "Chocolate · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1728-5.webp",
+      "w": 440,
+      "h": 769
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    },
+    {
+     "id": "pd-1728-6",
+     "name": "Blanco · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1728-6.webp",
+      "w": 367,
+      "h": 612
+     },
+     "price": 850000,
+     "compare_at": 920000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-ys025",
+   "code": "PD-YS025",
+   "nick": "Corazón abierto",
+   "brand": "Pagani Design",
+   "collection": "entrada",
+   "type": "automatico",
+   "movement": "Automático",
+   "case_mm": "40",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Corazón abierto: el volante a la vista",
+    "pt": "Coração aberto: o balanço à vista",
+    "en": "Open heart: balance wheel on display"
+   },
+   "desc": {
+    "es": "Una ventana en la esfera deja ver el volante latiendo. Caja cojín, brazalete integrado y degradé de esfera.",
+    "pt": "Uma janela no mostrador revela o balanço pulsando. Caixa almofada, pulseira integrada e mostrador degradê.",
+    "en": "A window in the dial reveals the beating balance wheel. Cushion case, integrated bracelet and gradient dial."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-ys025.webp",
+    "w": 451,
+    "h": 775
+   },
+   "price_from": 1000000,
+   "featured": true,
+   "active": true,
+   "order": 14,
+   "variants": [
+    {
+     "id": "pd-ys025-1",
+     "name": "Chocolate · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-ys025-1.webp",
+      "w": 451,
+      "h": 775
+     },
+     "price": 1000000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-ys025-2",
+     "name": "Salmón · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-ys025-2.webp",
+      "w": 603,
+      "h": 774
+     },
+     "price": 1000000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-ys025-3",
+     "name": "Gris humo · Acero",
+     "image": {
+      "src": "assets/img/products/pd-ys025-3.webp",
+      "w": 451,
+      "h": 776
+     },
+     "price": 1000000,
+     "compare_at": null,
+     "available": true
+    },
+    {
+     "id": "pd-ys025-4",
+     "name": "Azul petróleo · Acero",
+     "image": {
+      "src": "assets/img/products/pd-ys025-4.webp",
+      "w": 605,
+      "h": 777
+     },
+     "price": 1000000,
+     "compare_at": null,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1737l",
+   "code": "PD-1737L",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "femeninos",
+   "type": "cuarzo",
+   "movement": "Ronda 762 (Suiza)",
+   "case_mm": "22 × 36",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Cuarzo suizo · Esfera de nácar · Engaste de cristales",
+    "pt": "Quartzo suíço · Mostrador de madrepérola · Cristais cravejados",
+    "en": "Swiss quartz · Mother-of-pearl dial · Crystal-set case"
+   },
+   "desc": {
+    "es": "Caja rectangular en tono oro rosa con engaste de cristales y esfera de nácar. Calibre suizo Ronda para una precisión impecable.",
+    "pt": "Caixa retangular em tom ouro rosé com cristais cravejados e mostrador de madrepérola. Calibre suíço Ronda para precisão impecável.",
+    "en": "Rose-gold-tone rectangular case set with crystals and a mother-of-pearl dial. Swiss Ronda calibre for flawless precision."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1737l.webp",
+    "w": 746,
+    "h": 765
+   },
+   "price_from": 550000,
+   "featured": true,
+   "active": true,
+   "order": 15,
+   "variants": [
+    {
+     "id": "pd-1737l-1",
+     "name": "Nácar · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1737l.webp",
+      "w": 746,
+      "h": 765
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    }
+   ]
+  }
+ ]
+}
