@@ -395,6 +395,7 @@
         </div>
         <div class="footer__bottom">
           <span>© ${new Date().getFullYear()} UG Collection. <span data-i18n="footer.rights"></span></span>
+          <span class="footer__credit"><span data-i18n="footer.credit"></span> <a href="https://www.instagram.com/ivma.dv/" target="_blank" rel="noopener">@ivma.dv</a></span>
           <div class="footer__langs" role="radiogroup">${CONFIG.langs.map((l) => `<button role="radio" aria-checked="${l === lang}" data-lang="${l}">${l.toUpperCase()}</button>`).join('')}</div>
         </div>
       </div>`;

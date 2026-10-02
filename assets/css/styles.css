@@ -860,3 +860,5 @@ a.cinfo__item:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
   .filters-btn { flex: 0 0 auto; height: 46px; }
   .select select { height: 46px; }
 }
+.footer__credit a { color: #b9b5ad; transition: color var(--t-fast); }
+.footer__credit a:hover { color: var(--gold-2); }
