@@ -252,9 +252,63 @@ async function cleanCorner(file) {
 
 // ---------- Imágenes ----------
 const LOWRES = 330; // por debajo de este alto, la foto viene chica desde Canva
+// Deja sólo el reloj: detecta el objeto más grande de la foto y borra lo que está suelto
+// (cajitas, logos, líneas, accesorios). Después recorta justo al reloj para que quede centrado.
+// Fotos con una etiqueta de texto pegada abajo («Blue»): se borra esa franja
+const ERASE_BOTTOM = { 'japones-p06-1': 0.075, 'entrada-p05-1': 0.075 };
+// Fotos chicas con ruido de compresión en el fondo: tolerancia mayor
+const BG_TOL = { 'meca-p12-2': 34 };
+async function isolateWatch(input, eraseBottom = 0, tol = 12) {
+  const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const W = info.width, H = info.height, N = W * H;
+  const at = (x, y) => (y * W + x) * 4;
+  const corners = [at(0, 0), at(W - 1, 0), at(0, H - 1), at(W - 1, H - 1)];
+  const transparent = corners.some((i) => data[i + 3] < 20);
+  // color de fondo = mediana de las esquinas (no siempre es blanco puro)
+  const med = (c) => corners.map((i) => data[i + c]).sort((a, b) => a - b)[2];
+  const bg = [med(0), med(1), med(2)].map((v) => Math.max(v, 225));
+  if (eraseBottom) for (let y = Math.floor(H * (1 - eraseBottom)); y < H; y++) for (let x = 0; x < W; x++) { const o = at(x, y); if (transparent) data[o + 3] = 0; else { data[o] = bg[0]; data[o + 1] = bg[1]; data[o + 2] = bg[2]; } }
+  const fg = new Uint8Array(N);
+  for (let i = 0; i < N; i++) {
+    const o = i * 4;
+    fg[i] = transparent ? (data[o + 3] > 24 ? 1 : 0) : (Math.abs(data[o] - bg[0]) < tol && Math.abs(data[o + 1] - bg[1]) < tol && Math.abs(data[o + 2] - bg[2]) < tol ? 0 : 1);
+  }
+  // une piezas separadas por menos de ~6 px (dilatación) antes de etiquetar
+  const R = 3, dil = new Uint8Array(N), tmp = new Uint8Array(N);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { let v = 0; for (let k = -R; k <= R && !v; k++) { const xx = x + k; if (xx >= 0 && xx < W && fg[y * W + xx]) v = 1; } tmp[y * W + x] = v; }
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { let v = 0; for (let k = -R; k <= R && !v; k++) { const yy = y + k; if (yy >= 0 && yy < H && tmp[yy * W + x]) v = 1; } dil[y * W + x] = v; }
+  const label = new Int32Array(N), stack = new Int32Array(N);
+  let best = 0, bestArea = 0, cur = 0;
+  for (let i = 0; i < N; i++) {
+    if (!dil[i] || label[i]) continue;
+    cur++; let sp = 0, area = 0; stack[sp++] = i; label[i] = cur;
+    while (sp) {
+      const p = stack[--sp]; if (fg[p]) area++;
+      const x = p % W, y = (p - x) / W;
+      for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+        const nx = x + dx, ny = y + dy; if (nx < 0 || ny < 0 || nx >= W || ny >= H) continue;
+        const q = ny * W + nx; if (dil[q] && !label[q]) { label[q] = cur; stack[sp++] = q; }
+      }
+    }
+    if (area > bestArea) { bestArea = area; best = cur; }
+  }
+  let x0 = W, y0 = H, x1 = -1, y1 = -1;
+  for (let i = 0; i < N; i++) {
+    const o = i * 4;
+    if (fg[i] && label[i] === best) { const x = i % W, y = (i - x) / W; if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+    else if (transparent) data[o + 3] = 0;
+    else { data[o] = data[o + 1] = data[o + 2] = 255; data[o + 3] = 255; }
+  }
+  const m = Math.round(Math.max(x1 - x0, y1 - y0) * 0.015);
+  const left = Math.max(0, x0 - m), top = Math.max(0, y0 - m);
+  const width = Math.min(W, x1 + m + 1) - left, height = Math.min(H, y1 + m + 1) - top;
+  return sharp(data, { raw: info }).extract({ left, top, width, height }).png().toBuffer();
+}
+
 async function encode(srcName, outName) {
   let file = path.join(SRC, srcName + '.png');
   if (CLEAN_CORNER.has(srcName)) file = await cleanCorner(file);
+  file = await isolateWatch(file, ERASE_BOTTOM[srcName] || 0, BG_TOL[srcName] || 12);
   const meta = await sharp(file).metadata();
   const h = Math.min(meta.height, 1000);
   await sharp(file).resize({ height: h, withoutEnlargement: true }).webp({ quality: 84, alphaQuality: 90 }).toFile(path.join(OUT, outName + '.webp'));

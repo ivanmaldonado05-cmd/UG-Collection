@@ -175,3 +175,5 @@ fieldset.field legend { font-size: 13px; font-weight: 600; letter-spacing: .04em
 @media (max-width: 760px) { .modal__box.dlg { border-radius: var(--r-lg) var(--r-lg) 0 0; padding-bottom: max(22px, env(safe-area-inset-bottom)); } }
 
 .toast.is-error svg { color: #f2a08f; }
+.prow__img { position: relative; }
+.prow__img img { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); max-height: none; object-fit: contain; }

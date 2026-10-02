@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T21:26:05.253Z",
+ "updated": "2026-10-02T22:52:33.801Z",
  "settings": {
   "brand": "UG Collection",
   "whatsapp": "595983836674",
@@ -200,8 +200,8 @@
      "name": "Negro · Caucho",
      "image": {
       "src": "assets/img/products/pd-1651-8.webp",
-      "w": 796,
-      "h": 781
+      "w": 539,
+      "h": 769
      },
      "price": 980000,
      "compare_at": null,
@@ -260,8 +260,8 @@
      "name": "Azul · Acero",
      "image": {
       "src": "assets/img/products/pd-1783-2.webp",
-      "w": 241,
-      "h": 400
+      "w": 215,
+      "h": 376
      },
      "price": 1100000,
      "compare_at": 1250000,
@@ -320,7 +320,7 @@
      "name": "Negro · Dorado",
      "image": {
       "src": "assets/img/products/pd-1783-7.webp",
-      "w": 222,
+      "w": 215,
       "h": 399
      },
      "price": 1100000,
@@ -634,7 +634,7 @@
    },
    "hero": {
     "src": "assets/img/products/pd-1661.webp",
-    "w": 493,
+    "w": 381,
     "h": 614
    },
    "price_from": 950000,
@@ -647,7 +647,7 @@
      "name": "Celeste · Acero",
      "image": {
       "src": "assets/img/products/pd-1661.webp",
-      "w": 493,
+      "w": 381,
       "h": 614
      },
      "price": 950000,
@@ -888,7 +888,7 @@
      "name": "Negro · Bicolor oro rosa",
      "image": {
       "src": "assets/img/products/pd-ys027-2.webp",
-      "w": 156,
+      "w": 114,
       "h": 199,
       "lowres": true
      },
@@ -1058,7 +1058,7 @@
      "name": "Salmón · Bicolor",
      "image": {
       "src": "assets/img/products/pd-1644-11.webp",
-      "w": 560,
+      "w": 444,
       "h": 752
      },
      "price": 900000,
@@ -1070,8 +1070,8 @@
      "name": "Blanco · Bicolor",
      "image": {
       "src": "assets/img/products/pd-1644-12.webp",
-      "w": 576,
-      "h": 778
+      "w": 445,
+      "h": 773
      },
      "price": 900000,
      "compare_at": 980000,
@@ -1094,7 +1094,7 @@
      "name": "Negro · Bicolor",
      "image": {
       "src": "assets/img/products/pd-1644-14.webp",
-      "w": 528,
+      "w": 448,
       "h": 763
      },
      "price": 900000,
@@ -1251,7 +1251,7 @@
      "name": "Azul · Acero",
      "image": {
       "src": "assets/img/products/pd-1707-1.webp",
-      "w": 581,
+      "w": 443,
       "h": 768
      },
      "price": 900000,
@@ -1287,7 +1287,7 @@
      "name": "Blanco · Acero",
      "image": {
       "src": "assets/img/products/pd-1707-4.webp",
-      "w": 581,
+      "w": 445,
       "h": 768
      },
      "price": 900000,
@@ -1371,7 +1371,7 @@
      "name": "Blanco · Cuero marrón",
      "image": {
       "src": "assets/img/products/pd-1689-4.webp",
-      "w": 194,
+      "w": 126,
       "h": 190,
       "lowres": true
      },
@@ -1384,8 +1384,8 @@
      "name": "Negro · Cuero negro",
      "image": {
       "src": "assets/img/products/pd-1689-5.webp",
-      "w": 800,
-      "h": 781
+      "w": 502,
+      "h": 767
      },
      "price": 600000,
      "compare_at": 650000,
@@ -1579,8 +1579,8 @@
      "name": "Azul · Acero",
      "image": {
       "src": "assets/img/products/pd-1752-3.webp",
-      "w": 241,
-      "h": 400
+      "w": 215,
+      "h": 376
      },
      "price": 900000,
      "compare_at": null,
@@ -1615,7 +1615,7 @@
      "name": "Negro · Dorado",
      "image": {
       "src": "assets/img/products/pd-1752-6.webp",
-      "w": 222,
+      "w": 215,
       "h": 399
      },
      "price": 900000,
@@ -1819,7 +1819,7 @@
      "name": "Salmón · Bicolor oro rosa",
      "image": {
       "src": "assets/img/products/pd-ys025-2.webp",
-      "w": 603,
+      "w": 462,
       "h": 774
      },
      "price": 1000000,
@@ -1843,7 +1843,7 @@
      "name": "Azul petróleo · Acero",
      "image": {
       "src": "assets/img/products/pd-ys025-4.webp",
-      "w": 605,
+      "w": 463,
       "h": 777
      },
      "price": 1000000,
@@ -1891,7 +1891,7 @@
      "name": "Nácar · Oro rosa",
      "image": {
       "src": "assets/img/products/pd-1737l-1.webp",
-      "w": 335,
+      "w": 289,
       "h": 737
      },
      "price": 550000,
@@ -1903,7 +1903,7 @@
      "name": "Gris nácar · Oro rosa",
      "image": {
       "src": "assets/img/products/pd-1737l-2.webp",
-      "w": 359,
+      "w": 290,
       "h": 743
      },
      "price": 550000,
@@ -1915,7 +1915,7 @@
      "name": "Rojo · Oro rosa",
      "image": {
       "src": "assets/img/products/pd-1737l-3.webp",
-      "w": 304,
+      "w": 274,
       "h": 699
      },
      "price": 550000,
@@ -1927,7 +1927,7 @@
      "name": "Turquesa · Oro rosa",
      "image": {
       "src": "assets/img/products/pd-1737l-4.webp",
-      "w": 339,
+      "w": 292,
       "h": 744
      },
      "price": 550000,
@@ -1939,7 +1939,7 @@
      "name": "Nácar · Acero",
      "image": {
       "src": "assets/img/products/pd-1737l-5.webp",
-      "w": 339,
+      "w": 306,
       "h": 777
      },
      "price": 550000,
@@ -1951,7 +1951,7 @@
      "name": "Gris nácar · Acero",
      "image": {
       "src": "assets/img/products/pd-1737l-6.webp",
-      "w": 369,
+      "w": 297,
       "h": 759
      },
      "price": 550000,
@@ -1963,7 +1963,7 @@
      "name": "Rojo · Acero",
      "image": {
       "src": "assets/img/products/pd-1737l-7.webp",
-      "w": 331,
+      "w": 297,
       "h": 758
      },
      "price": 550000,
@@ -1975,7 +1975,7 @@
      "name": "Turquesa · Acero",
      "image": {
       "src": "assets/img/products/pd-1737l-8.webp",
-      "w": 329,
+      "w": 296,
       "h": 755
      },
      "price": 550000,
@@ -2010,7 +2010,7 @@
    },
    "hero": {
     "src": "assets/img/products/pd-1776.webp",
-    "w": 452,
+    "w": 382,
     "h": 767
    },
    "price_from": 550000,
@@ -2023,7 +2023,7 @@
      "name": "Celeste · Acero",
      "image": {
       "src": "assets/img/products/pd-1776-1.webp",
-      "w": 452,
+      "w": 382,
       "h": 767
      },
      "price": 550000,
@@ -2035,7 +2035,7 @@
      "name": "Verde · Acero",
      "image": {
       "src": "assets/img/products/pd-1776-2.webp",
-      "w": 381,
+      "w": 375,
       "h": 751
      },
      "price": 550000,

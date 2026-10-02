@@ -47,7 +47,7 @@ _build/serve.mjs               servidor local: node _build/serve.mjs 5510
 - Dominio (para SEO: canonical, sitemap.xml, og:url, Open Graph con URL absoluta).
 - Calibre exacto de la **Línea Entrada** (los catálogos sólo dicen «Automático»).
 - Confirmar los nombres de color de cada versión: los puse mirando las fotos y se pueden corregir desde el panel.
-- Femeninos: se limpió el ícono de caja de regalo que traían algunas fotos (PD-1737L, PD-1776, PD-1825). Nombres de color de PD-1825 (nácar, malaquita, ojo de tigre) a confirmar.
+- Todas las fotos se procesan en `_build/build.mjs` (`isolateWatch`): queda sólo el reloj (sin cajitas, logos, líneas ni etiquetas) y se recorta centrado. Nombres de color de PD-1825 (nácar, malaquita, ojo de tigre) a confirmar.
 - Fotos en baja resolución (venían chicas desde Canva, el sitio las muestra más chicas): PD-1645 Negro bicolor y Verde · PD-1661 Negro · PD-YS027 Negro bicolor · PD-1662 bisel marrón, gris y verde · PD-1689 Blanco/cuero marrón.
 - Versiones de PD-1701 que **no se cargaron** porque las fotos traían textos encima: Blanco · Nylon y Crema · Acero (800.000 Gs.). Pedir fotos limpias.
 - En Canva, la página 9 del catálogo «Entrada» dice «MODELO PD-1728», pero las fotos son del PD-YS025 (corazón abierto). Se cargaron como PD-YS025.

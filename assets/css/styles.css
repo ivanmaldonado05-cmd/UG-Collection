@@ -918,3 +918,15 @@ a.cinfo__item:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
   .insta__grid { gap: 8px; }
   .footer__big { font-size: 34px; }
 }
+
+/* ---------- Imágenes de reloj: siempre centradas y contenidas ----------
+   (Safari en iPhone no resuelve max-height:% dentro de grillas: se usan cajas fijas + object-fit) */
+.card__img, .stage__img, .hero__float { display: block; }
+.hero__float { position: absolute; inset: 0; height: auto; }
+.card__img img, .stage__img img, .hero__slide img {
+  position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; object-position: center;
+}
+.vopt, .fav-item__img, .insta__tile, .about__media { position: relative; }
+.vopt img, .fav-item__img img { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); max-height: none; object-fit: contain; }
+.insta__tile img { position: absolute; inset: 9%; width: 82%; height: 82%; max-height: none; object-fit: contain; }
+.about__media img:not(.mono) { position: absolute; inset: 13% 12%; width: 76%; height: 74%; max-height: none; object-fit: contain; }
