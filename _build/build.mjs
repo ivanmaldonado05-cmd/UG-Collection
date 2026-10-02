@@ -212,14 +212,49 @@ const products = [
     desc: { es: 'Caja rectangular en tono oro rosa con engaste de cristales y esfera de nácar. Calibre suizo Ronda para una precisión impecable.',
             pt: 'Caixa retangular em tom ouro rosé com cristais cravejados e mostrador de madrepérola. Calibre suíço Ronda para precisão impecável.',
             en: 'Rose-gold-tone rectangular case set with crystals and a mother-of-pearl dial. Swiss Ronda calibre for flawless precision.' },
-    hero: 'femeninos-p02-1',
-    v: [['Nácar · Oro rosa', 'femeninos-p02-1', 550000, 600000]] },
+    hero: 'fem-pd-1737l-main-0',
+    v: [['Nácar · Oro rosa', 'fem-pd-1737l-var-2', 550000, 600000], ['Gris nácar · Oro rosa', 'fem-pd-1737l-var-0', 550000, 600000],
+        ['Rojo · Oro rosa', 'fem-pd-1737l-var-1', 550000, 600000], ['Turquesa · Oro rosa', 'fem-pd-1737l-var-3', 550000, 600000],
+        ['Nácar · Acero', 'fem-pd-1737l-var-6', 550000, 600000], ['Gris nácar · Acero', 'fem-pd-1737l-var-4', 550000, 600000],
+        ['Rojo · Acero', 'fem-pd-1737l-var-5', 550000, 600000], ['Turquesa · Acero', 'fem-pd-1737l-var-7', 550000, 600000]] },
+
+  { code: 'PD-1776', collection: 'femeninos', type: 'cuarzo', movement: 'Seiko VH65',
+    case_mm: '32', water_m: 100, crystal: SAPPHIRE, straps: ['acero'],
+    features: { es: 'Bisel con cristales · Pequeño segundero · Numerales romanos', pt: 'Bisel com cristais · Pequenos segundos · Numerais romanos', en: 'Crystal-set bezel · Small seconds · Roman numerals' },
+    desc: { es: 'Caja redonda de 32 mm con bisel engastado en cristales, numerales romanos y pequeño segundero. Brillo justo para todos los días.',
+            pt: 'Caixa redonda de 32 mm com bisel cravejado de cristais, numerais romanos e pequenos segundos. O brilho certo para todos os dias.',
+            en: 'Round 32 mm case with a crystal-set bezel, Roman numerals and small seconds. Just the right sparkle for every day.' },
+    hero: 'fem-pd-1776-main-0',
+    v: [['Celeste · Acero', 'fem-pd-1776-var-0', 550000, 600000], ['Verde · Acero', 'fem-pd-1776-var-1', 550000, 600000],
+        ['Nácar · Acero', 'fem-pd-1776-var-2', 550000, 600000]] },
+
+  { code: 'PD-1825', collection: 'femeninos', type: 'cuarzo', movement: 'Citizen GL22',
+    case_mm: '32', water_m: 100, crystal: SAPPHIRE, straps: ['cuero'], featured: true,
+    features: { es: 'Esferas de piedra y nácar · Correa de cuero', pt: 'Mostradores de pedra e madrepérola · Pulseira de couro', en: 'Stone and mother-of-pearl dials · Leather strap' },
+    desc: { es: 'Caja cojín minimalista con esferas de nácar, malaquita u ojo de tigre y correa de cuero al tono. Cada pieza es única.',
+            pt: 'Caixa almofada minimalista com mostradores de madrepérola, malaquita ou olho de tigre e pulseira de couro combinando. Cada peça é única.',
+            en: 'Minimalist cushion case with mother-of-pearl, malachite or tiger-eye dials and a matching leather strap. Every piece is unique.' },
+    hero: 'fem-pd-1825-main-0',
+    v: [['Azul nácar · Cuero azul', 'fem-pd-1825-var-0', 600000, 650000], ['Malaquita · Cuero verde', 'fem-pd-1825-var-1', 600000, 650000],
+        ['Nácar · Cuero blanco', 'fem-pd-1825-var-2', 600000, 650000], ['Ojo de tigre · Cuero marrón', 'fem-pd-1825-var-3', 600000, 650000]] },
 ];
+
+// Fotos que traen el ícono de la caja de regalo abajo a la derecha: se limpia esa esquina
+const CLEAN_CORNER = new Set(['fem-pd-1737l-var-0', 'fem-pd-1737l-var-1', 'fem-pd-1737l-var-2', 'fem-pd-1737l-var-3', 'fem-pd-1737l-var-4',
+  'fem-pd-1737l-var-5', 'fem-pd-1737l-var-6', 'fem-pd-1737l-var-7', 'fem-pd-1776-var-2', 'fem-pd-1825-var-0', 'fem-pd-1825-var-2']);
+async function cleanCorner(file) {
+  const { data, info } = await sharp(file).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const bg = data.slice(0, 4); // color del fondo (esquina superior izquierda)
+  for (let y = Math.floor(info.height * 0.66); y < info.height; y++)
+    for (let x = Math.floor(info.width * 0.68); x < info.width; x++) data.set(bg, (y * info.width + x) * 4);
+  return sharp(data, { raw: info }).trim({ threshold: 10 }).png().toBuffer();
+}
 
 // ---------- Imágenes ----------
 const LOWRES = 330; // por debajo de este alto, la foto viene chica desde Canva
 async function encode(srcName, outName) {
-  const file = path.join(SRC, srcName + '.png');
+  let file = path.join(SRC, srcName + '.png');
+  if (CLEAN_CORNER.has(srcName)) file = await cleanCorner(file);
   const meta = await sharp(file).metadata();
   const h = Math.min(meta.height, 1000);
   await sharp(file).resize({ height: h, withoutEnlargement: true }).webp({ quality: 84, alphaQuality: 90 }).toFile(path.join(OUT, outName + '.webp'));

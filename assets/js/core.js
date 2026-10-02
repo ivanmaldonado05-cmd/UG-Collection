@@ -144,7 +144,7 @@
 
   // Colores para las muestras (esfera / metal)
   const COLORS = {
-    'azul petróleo': '#1f5566', 'gris humo': '#5c5955', 'azul degradé': '#2a4fa8', 'blanco y azul': '#f5f4f0',
+    'azul petróleo': '#1f5566', 'gris nácar': '#6e7385', 'azul nácar': '#4a5f86', malaquita: '#14895a', 'ojo de tigre': '#9b5a1c', 'gris humo': '#5c5955', 'azul degradé': '#2a4fa8', 'blanco y azul': '#f5f4f0',
     negro: '#17181b', azul: '#23408e', celeste: '#a9d8ea', verde: '#1e6b47', gris: '#7a7e85', plata: '#d4d6d9', blanco: '#f5f4f0',
     champagne: '#e3cf9e', bronce: '#a5694a', 'salmón': '#eba78b', chocolate: '#5a3828', turquesa: '#36c2cc', 'nácar': '#efe8e2',
     rojo: '#b0262c', 'marrón': '#6b4430',

@@ -85,8 +85,6 @@
   $('[data-hero-next]').addEventListener('click', () => go(cur + 1, true));
   hero.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') go(cur + 1, true); if (e.key === 'ArrowLeft') go(cur - 1, true); });
   const pause = (on) => { paused = on; hero.classList.toggle('is-paused', on); };
-  $('.hero__stage').addEventListener('mouseenter', () => pause(true));
-  $('.hero__stage').addEventListener('mouseleave', () => pause(false));
   document.addEventListener('visibilitychange', () => pause(document.hidden));
   // swipe
   let sx = null;

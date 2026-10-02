@@ -307,7 +307,6 @@ p { margin: 0; }
 /* ---------- Marquee ---------- */
 .marquee { background: var(--ink-2); color: #d9d4cb; border-block: 1px solid var(--line-dark); overflow: hidden; padding-block: 20px; }
 .marquee__track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
-.marquee:hover .marquee__track { animation-play-state: paused; }
 .marquee__group { display: flex; align-items: center; }
 .marquee__item { display: inline-flex; align-items: center; gap: 30px; padding-right: 30px; font-family: var(--ff-display); font-size: clamp(18px, 2vw, 24px); letter-spacing: .06em; white-space: nowrap; }
 .marquee__item::after { content: ""; width: 7px; height: 7px; border: 1px solid var(--gold); transform: rotate(45deg); }
@@ -862,3 +861,60 @@ a.cinfo__item:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 }
 .footer__credit a { color: #b9b5ad; transition: color var(--t-fast); }
 .footer__credit a:hover { color: var(--gold-2); }
+
+/* ---------- Móvil: secciones más compactas ---------- */
+@media (max-width: 760px) {
+  .section { padding-block: 56px; }
+  .h-1 { font-size: clamp(28px, 8vw, 34px); }
+  .h-2 { font-size: clamp(24px, 7vw, 30px); }
+  .lead { font-size: 15px; }
+  .eyebrow { font-size: 11px; letter-spacing: .2em; }
+  .section-head { margin-bottom: 22px; gap: 14px; }
+  .section-head > div { gap: 10px; }
+  .section-head .carousel__nav { display: none; }
+
+  /* pestañas en una fila deslizable */
+  .chips[role="tablist"], .page-head .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
+  .chips[role="tablist"]::-webkit-scrollbar, .page-head .chips::-webkit-scrollbar { display: none; }
+  .chips[role="tablist"] .chip, .page-head .chip { height: 36px; padding: 0 14px; font-size: 12.5px; flex-shrink: 0; }
+  [data-feat-tabs] { margin-bottom: 18px !important; }
+
+  .carousel__track { grid-auto-columns: 58%; gap: 12px; padding-bottom: 16px; }
+  .card { gap: 10px; }
+  .card__badges { top: 10px; left: 10px; }
+  .badge { height: 22px; font-size: 10.5px; padding: 0 8px; }
+  .heart { width: 38px; height: 38px; }
+  .heart svg { width: 18px; height: 18px; }
+  .card__meta { font-size: 10px; letter-spacing: .14em; }
+  .price__now { font-size: 15px; }
+
+  /* calibres */
+  .calibre { gap: 28px; }
+  .dial-wrap { width: min(62vw, 250px); }
+  .dial-label { font-size: 10.5px; bottom: -14px; }
+  .calibre__tabs { margin-top: 22px; gap: 8px; }
+  .cal-tab { grid-template-columns: auto 1fr; gap: 6px 12px; padding: 14px 16px; }
+  .cal-tab__name { font-size: 19px; }
+  .cal-tab__spec { grid-column: 2; font-size: 11px; }
+  .cal-tab__body { grid-column: 1 / -1; font-size: 14px; }
+
+  /* nosotros / colecciones */
+  .about__media { max-height: 360px; }
+  .stat b { font-size: 34px; }
+  .why__item { padding: 22px 20px; }
+  .coll-card { min-height: 320px; padding: 20px; }
+  .coll-card__img img { max-height: 180px; }
+  .coll-card h3 { font-size: 22px; }
+
+  /* banner */
+  .banner { min-height: 0; border-radius: var(--r); }
+  .banner__media { padding: 28px 20px 0; }
+  .banner__media img { max-height: 210px; }
+  .banner__ring { width: min(62%, 240px); }
+  .banner__copy { padding: 22px 22px 28px; gap: 14px; }
+  .banner__copy .btn { min-height: 46px; }
+
+  /* instagram */
+  .insta__grid { gap: 8px; }
+  .footer__big { font-size: 34px; }
+}

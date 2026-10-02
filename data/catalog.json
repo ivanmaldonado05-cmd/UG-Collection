@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T21:45:52.921Z",
+ "updated": "2026-10-02T21:26:05.253Z",
  "settings": {
   "brand": "UG Collection",
   "whatsapp": "595983836674",
@@ -1890,12 +1890,252 @@
      "id": "pd-1737l-1",
      "name": "Nácar · Oro rosa",
      "image": {
-      "src": "assets/img/products/pd-1737l.webp",
-      "w": 746,
+      "src": "assets/img/products/pd-1737l-1.webp",
+      "w": 335,
+      "h": 737
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-2",
+     "name": "Gris nácar · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1737l-2.webp",
+      "w": 359,
+      "h": 743
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-3",
+     "name": "Rojo · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1737l-3.webp",
+      "w": 304,
+      "h": 699
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-4",
+     "name": "Turquesa · Oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1737l-4.webp",
+      "w": 339,
+      "h": 744
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-5",
+     "name": "Nácar · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1737l-5.webp",
+      "w": 339,
+      "h": 777
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-6",
+     "name": "Gris nácar · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1737l-6.webp",
+      "w": 369,
+      "h": 759
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-7",
+     "name": "Rojo · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1737l-7.webp",
+      "w": 331,
+      "h": 758
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1737l-8",
+     "name": "Turquesa · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1737l-8.webp",
+      "w": 329,
+      "h": 755
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1776",
+   "code": "PD-1776",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "femeninos",
+   "type": "cuarzo",
+   "movement": "Seiko VH65",
+   "case_mm": "32",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "acero"
+   ],
+   "features": {
+    "es": "Bisel con cristales · Pequeño segundero · Numerales romanos",
+    "pt": "Bisel com cristais · Pequenos segundos · Numerais romanos",
+    "en": "Crystal-set bezel · Small seconds · Roman numerals"
+   },
+   "desc": {
+    "es": "Caja redonda de 32 mm con bisel engastado en cristales, numerales romanos y pequeño segundero. Brillo justo para todos los días.",
+    "pt": "Caixa redonda de 32 mm com bisel cravejado de cristais, numerais romanos e pequenos segundos. O brilho certo para todos os dias.",
+    "en": "Round 32 mm case with a crystal-set bezel, Roman numerals and small seconds. Just the right sparkle for every day."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1776.webp",
+    "w": 452,
+    "h": 767
+   },
+   "price_from": 550000,
+   "featured": false,
+   "active": true,
+   "order": 16,
+   "variants": [
+    {
+     "id": "pd-1776-1",
+     "name": "Celeste · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1776-1.webp",
+      "w": 452,
+      "h": 767
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1776-2",
+     "name": "Verde · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1776-2.webp",
+      "w": 381,
+      "h": 751
+     },
+     "price": 550000,
+     "compare_at": 600000,
+     "available": true
+    },
+    {
+     "id": "pd-1776-3",
+     "name": "Nácar · Acero",
+     "image": {
+      "src": "assets/img/products/pd-1776-3.webp",
+      "w": 370,
       "h": 765
      },
      "price": 550000,
      "compare_at": 600000,
+     "available": true
+    }
+   ]
+  },
+  {
+   "id": "pd-1825",
+   "code": "PD-1825",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "femeninos",
+   "type": "cuarzo",
+   "movement": "Citizen GL22",
+   "case_mm": "32",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "cuero"
+   ],
+   "features": {
+    "es": "Esferas de piedra y nácar · Correa de cuero",
+    "pt": "Mostradores de pedra e madrepérola · Pulseira de couro",
+    "en": "Stone and mother-of-pearl dials · Leather strap"
+   },
+   "desc": {
+    "es": "Caja cojín minimalista con esferas de nácar, malaquita u ojo de tigre y correa de cuero al tono. Cada pieza es única.",
+    "pt": "Caixa almofada minimalista com mostradores de madrepérola, malaquita ou olho de tigre e pulseira de couro combinando. Cada peça é única.",
+    "en": "Minimalist cushion case with mother-of-pearl, malachite or tiger-eye dials and a matching leather strap. Every piece is unique."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1825.webp",
+    "w": 781,
+    "h": 800
+   },
+   "price_from": 600000,
+   "featured": true,
+   "active": true,
+   "order": 17,
+   "variants": [
+    {
+     "id": "pd-1825-1",
+     "name": "Azul nácar · Cuero azul",
+     "image": {
+      "src": "assets/img/products/pd-1825-1.webp",
+      "w": 391,
+      "h": 747
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1825-2",
+     "name": "Malaquita · Cuero verde",
+     "image": {
+      "src": "assets/img/products/pd-1825-2.webp",
+      "w": 390,
+      "h": 747
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1825-3",
+     "name": "Nácar · Cuero blanco",
+     "image": {
+      "src": "assets/img/products/pd-1825-3.webp",
+      "w": 388,
+      "h": 743
+     },
+     "price": 600000,
+     "compare_at": 650000,
+     "available": true
+    },
+    {
+     "id": "pd-1825-4",
+     "name": "Ojo de tigre · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-1825-4.webp",
+      "w": 390,
+      "h": 747
+     },
+     "price": 600000,
+     "compare_at": 650000,
      "available": true
     }
    ]
