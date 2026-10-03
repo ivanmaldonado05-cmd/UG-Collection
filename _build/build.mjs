@@ -194,14 +194,17 @@ const products = [
   { code: 'PD-1662', nick: 'GMT', collection: 'entrada', type: 'automatico', movement: 'Automático',
     case_mm: '40', water_m: 100, crystal: SAPPHIRE, straps: ['acero'], bezel: true, featured: true,
     features: { es: 'Doble zona horaria y fecha · Bisel giratorio 24 h', pt: 'Duplo fuso horário e data · Bisel giratório 24 h', en: 'Dual time zone and date · 24 h rotating bezel' },
-    desc: { es: 'Para el que viaja: aguja GMT para un segundo huso horario, bisel bicolor de 24 horas y fecha. Seis combinaciones de bisel.',
-            pt: 'Para quem viaja: ponteiro GMT para um segundo fuso horário, bisel bicolor de 24 horas e data. Seis combinações de bisel.',
-            en: 'For the traveller: GMT hand for a second time zone, two-tone 24-hour bezel and date. Six bezel combinations.' },
+    desc: { es: 'Para el que viaja: aguja GMT para un segundo huso horario, bisel bicolor de 24 horas y fecha. En malla Oyster, Jubilee o bicolor.',
+            pt: 'Para quem viaja: ponteiro GMT para um segundo fuso horário, bisel bicolor de 24 horas e data. Em pulseira Oyster, Jubilee ou bicolor.',
+            en: 'For the traveller: GMT hand for a second time zone, two-tone 24-hour bezel and date. On an Oyster, Jubilee or two-tone bracelet.' },
     hero: 'entrada-p02-0',
     v: [['Bisel azul y negro · Oyster', 'entrada-p02-0', 850000, 950000], ['Bisel marrón y negro · Bicolor oro rosa', 'entrada-p03-0', 850000, 950000],
         ['Bisel azul y rojo · Jubilee', 'entrada-p03-1', 850000, 950000], ['Bisel azul y negro · Jubilee', 'entrada-p03-2', 850000, 950000],
         ['Bisel rojo y negro · Oyster', 'entrada-p03-3', 850000, 950000], ['Bisel gris y negro · Jubilee', 'entrada-p03-4', 850000, 950000],
-        ['Bisel verde y negro · Oyster', 'entrada-p03-5', 850000, 950000]] },
+        ['Bisel verde y negro · Oyster', 'entrada-p03-5', 850000, 950000],
+        ['Bisel rojo y negro · Jubilee', 'new-gmt-0', 850000, 950000], ['Chocolate · Bisel marrón y negro · Bicolor oro rosa', 'new-gmt-1', 850000, 950000],
+        ['Bisel gris y negro · Oyster', 'new-gmt-2', 850000, 950000], ['Bisel azul y rojo · Oyster', 'new-gmt-3', 850000, 950000],
+        ['Bisel verde y negro · Jubilee', 'new-gmt-4', 850000, 950000]] },
 
   { code: 'PD-1752', nick: 'Day-Date', collection: 'entrada', type: 'automatico', movement: 'Automático',
     case_mm: '36', water_m: 100, crystal: SAPPHIRE, straps: ['acero'],
@@ -283,11 +286,13 @@ const products = [
 ];
 
 // Fotos que traen el ícono de la caja de regalo abajo a la derecha: se limpia esa esquina
-const CLEAN_CORNER = new Set(['fem-pd-1737l-var-0', 'fem-pd-1737l-var-1', 'fem-pd-1737l-var-2', 'fem-pd-1737l-var-3', 'fem-pd-1737l-var-4',
+const CLEAN_CORNER = new Set(['new-gmt-0', 'new-gmt-3', 'fem-pd-1737l-var-0', 'fem-pd-1737l-var-1', 'fem-pd-1737l-var-2', 'fem-pd-1737l-var-3', 'fem-pd-1737l-var-4',
   'fem-pd-1737l-var-5', 'fem-pd-1737l-var-6', 'fem-pd-1737l-var-7', 'fem-pd-1776-var-2', 'fem-pd-1825-var-0', 'fem-pd-1825-var-2']);
 async function cleanCorner(file) {
   const { data, info } = await sharp(file).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const bg = data.slice(0, 4); // color del fondo (esquina superior izquierda)
+  // color del fondo: la esquina más clara (alguna puede tener un marco o el logo)
+  const W0 = info.width, H0 = info.height;
+  const bg = [0, (W0 - 1) * 4, (H0 - 1) * W0 * 4, (H0 * W0 - 1) * 4].map((o) => data.slice(o, o + 4)).sort((p, q) => (q[0] + q[1] + q[2] + q[3]) - (p[0] + p[1] + p[2] + p[3]))[0];
   for (let y = Math.floor(info.height * 0.66); y < info.height; y++)
     for (let x = Math.floor(info.width * 0.68); x < info.width; x++) data.set(bg, (y * info.width + x) * 4);
   return sharp(data, { raw: info }).trim({ threshold: 10 }).png().toBuffer();
@@ -350,8 +355,24 @@ async function isolateWatch(input, eraseBottom = 0, tol = 12) {
   return sharp(data, { raw: info }).extract({ left, top, width, height }).png().toBuffer();
 }
 
+// Signos oscuros pegados a la malla (el «+» de algunas fotos): se borran sólo los píxeles oscuros de la zona
+// [x0, y0, x1, y1] en fracciones de la foto
+// [x0, y0, x1, y1, umbral]: umbral 765 = borra todo; menor = sólo píxeles más oscuros que eso
+const ERASE_DARK = { 'new-gmt-3': [[0.53, 0.83, 0.556, 0.96, 480], [0.556, 0.83, 0.64, 0.96, 765]] };
+async function eraseDark(input, rects) {
+  const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  for (const [a, b, c, d, lim = 330] of rects)
+    for (let y = Math.floor(info.height * b); y < Math.ceil(info.height * d); y++)
+      for (let x = Math.floor(info.width * a); x < Math.ceil(info.width * c); x++) {
+        const o = (y * info.width + x) * 4;
+        if (data[o] + data[o + 1] + data[o + 2] < lim) { data[o] = data[o + 1] = data[o + 2] = 255; }
+      }
+  return sharp(data, { raw: info }).png().toBuffer();
+}
+
 async function encode(srcName, outName) {
   let file = path.join(SRC, srcName + '.png');
+  if (ERASE_DARK[srcName]) file = await eraseDark(file, ERASE_DARK[srcName]);
   if (CLEAN_CORNER.has(srcName)) file = await cleanCorner(file);
   file = await isolateWatch(file, ERASE_BOTTOM[srcName] || 0, BG_TOL[srcName] || (srcName.startsWith('new-') ? 30 : 12));
   const meta = await sharp(file).metadata();

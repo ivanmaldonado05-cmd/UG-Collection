@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T15:46:22.871Z",
+ "updated": "2026-10-03T16:24:30.069Z",
  "settings": {
   "brand": "UG Collection",
   "whatsapp": "595983836674",
@@ -1775,9 +1775,9 @@
     "en": "Dual time zone and date · 24 h rotating bezel"
    },
    "desc": {
-    "es": "Para el que viaja: aguja GMT para un segundo huso horario, bisel bicolor de 24 horas y fecha. Seis combinaciones de bisel.",
-    "pt": "Para quem viaja: ponteiro GMT para um segundo fuso horário, bisel bicolor de 24 horas e data. Seis combinações de bisel.",
-    "en": "For the traveller: GMT hand for a second time zone, two-tone 24-hour bezel and date. Six bezel combinations."
+    "es": "Para el que viaja: aguja GMT para un segundo huso horario, bisel bicolor de 24 horas y fecha. En malla Oyster, Jubilee o bicolor.",
+    "pt": "Para quem viaja: ponteiro GMT para um segundo fuso horário, bisel bicolor de 24 horas e data. Em pulseira Oyster, Jubilee ou bicolor.",
+    "en": "For the traveller: GMT hand for a second time zone, two-tone 24-hour bezel and date. On an Oyster, Jubilee or two-tone bracelet."
    },
    "hero": {
     "src": "assets/img/products/pd-1662.webp",
@@ -1877,6 +1877,71 @@
       "w": 122,
       "h": 200,
       "lowres": true
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1662-8",
+     "name": "Bisel rojo y negro · Jubilee",
+     "image": {
+      "src": "assets/img/products/pd-1662-8.webp",
+      "w": 663,
+      "h": 1000
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1662-9",
+     "name": "Chocolate · Bisel marrón y negro · Bicolor oro rosa",
+     "image": {
+      "src": "assets/img/products/pd-1662-9.webp",
+      "w": 654,
+      "h": 1000
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1662-10",
+     "name": "Bisel gris y negro · Oyster",
+     "image": {
+      "src": "assets/img/products/pd-1662-10.webp",
+      "w": 617,
+      "h": 1000
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1662-11",
+     "name": "Bisel azul y rojo · Oyster",
+     "image": {
+      "src": "assets/img/products/pd-1662-11.webp",
+      "w": 653,
+      "h": 1000
+     },
+     "price": 850000,
+     "compare_at": 950000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1662-12",
+     "name": "Bisel verde y negro · Jubilee",
+     "image": {
+      "src": "assets/img/products/pd-1662-12.webp",
+      "w": 577,
+      "h": 1000
      },
      "price": 850000,
      "compare_at": 950000,

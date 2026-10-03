@@ -16,7 +16,7 @@ assets/js/core.js              i18n, datos, header/footer, favoritos, vista ráp
 assets/js/{home,catalog,product}.js
 assets/i18n/{es,pt,en}.json    textos de la interfaz + diccionario de colores (terms)
 assets/img/products/           fotos optimizadas (WebP) del catálogo inicial
-data/catalog.json              catálogo inicial (22 modelos, 137 versiones)
+data/catalog.json              catálogo inicial (22 modelos, 142 versiones)
 admin/                         panel (index.html + admin.js + admin.css)
 server/                        API PHP (api.php, lib.php, install.php, schema.sql, config.sample.php)
 uploads/                       fotos subidas desde el panel + uploads/catalog.json (generado, fuera de Git)
