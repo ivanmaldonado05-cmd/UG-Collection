@@ -252,5 +252,16 @@
     "Ojo de tigre": "Olho de tigre",
     "nácar": "madrepérola",
     "blanco": "branco"
+  },
+  "stock": {
+    "badge": "Em estoque",
+    "ready": "Em estoque · entrega imediata",
+    "onOrder": "Sob encomenda · consulte disponibilidade",
+    "filter": "Em estoque",
+    "filterHint": "Entrega imediata",
+    "tab": "Em estoque",
+    "empty": "No momento não há relógios em estoque para entrega imediata. Fale conosco pelo WhatsApp e avisamos quando chegarem.",
+    "waNote": "(aparece em estoque para entrega imediata)",
+    "units": "versões prontas para entrega"
   }
 }

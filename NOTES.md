@@ -24,6 +24,15 @@ _build/build.mjs               regenera data/catalog.json + fotos desde _extract
 _build/serve.mjs               servidor local: node _build/serve.mjs 5510
 ```
 
+## Panel de administración (/admin)
+
+- **Productos:** crear, editar, duplicar, ocultar, eliminar, reordenar. Cada versión tiene foto, precio, precio anterior (tachado), stock y «mostrar en el sitio». Etiqueta opcional por producto («Nuevo», «Edición limitada»…).
+- **Stock:** unidades por versión con +/− o interruptor. Stock > 0 = «En stock · entrega inmediata» (insignia verde, filtro del catálogo, pestaña en el inicio, aviso en la ficha y en el mensaje de WhatsApp). Stock 0 = «A pedido».
+- **Promos:** descuento masivo por % (todo / colección / sólo en stock / modelos elegidos) con redondeo; «Quitar descuentos» vuelve al precio de lista. Barra de anuncio arriba del sitio (ES/PT/EN + enlace). Texto de la oferta.
+- **Colecciones** y **Ajustes** (WhatsApp, Instagram, relojes de la portada, usuario y contraseña del admin, respaldo).
+- Las fotos que sube el dueño se limpian solas en el navegador: queda sólo el reloj, centrado (misma lógica que `_build/build.mjs`).
+- Acceso: la cuenta vive en la tabla `ug_admin`; mientras no exista se usa la de `config.php`.
+
 ## Cómo funcionan los datos
 
 - **GitHub Pages / local:** el sitio lee `data/catalog.json`. El panel funciona en **modo demo**: los cambios se guardan sólo en ese navegador y el sitio muestra una «Vista previa del panel» en ese mismo navegador.

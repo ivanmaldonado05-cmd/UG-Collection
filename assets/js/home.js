@@ -145,11 +145,13 @@
   let featFilter = 'all';
   const featTrack = $('[data-featured]');
   function renderFeatTabs() {
-    const tabs = [['all', t('common.all')], ...DATA.collections.filter((c) => P.some((p) => p.collection === c.id)).map((c) => [c.id, tx(c.name)])];
-    $('[data-feat-tabs]').innerHTML = tabs.map(([id, name]) => `<button class="chip" role="tab" aria-selected="${id === featFilter}" data-tab="${esc(id)}">${esc(name)}</button>`).join('');
+    // pestaña «En stock» sólo si hay relojes para entrega inmediata
+    const tabs = [['all', t('common.all')], ...(P.some(UG.pInStock) ? [['stock', t('stock.tab')]] : []), ...DATA.collections.filter((c) => P.some((p) => p.collection === c.id)).map((c) => [c.id, tx(c.name)])];
+    $('[data-feat-tabs]').innerHTML = tabs.map(([id, name]) => `<button class="chip${id === 'stock' ? ' chip--stock' : ''}" role="tab" aria-selected="${id === featFilter}" data-tab="${esc(id)}">${esc(name)}</button>`).join('');
   }
   function renderFeatured() {
-    let list = featFilter === 'all' ? [...P].sort((a, b) => (b.featured - a.featured) || (UG.bestDiscount(b) - UG.bestDiscount(a))) : P.filter((p) => p.collection === featFilter);
+    let list = featFilter === 'all' ? [...P].sort((a, b) => (UG.pInStock(b) - UG.pInStock(a)) || (b.featured - a.featured) || (UG.bestDiscount(b) - UG.bestDiscount(a)))
+      : featFilter === 'stock' ? P.filter(UG.pInStock) : P.filter((p) => p.collection === featFilter);
     list = list.slice(0, 10);
     featTrack.style.opacity = 0;
     setTimeout(() => {

@@ -1,7 +1,7 @@
 /* UG Collection — catálogo con filtros, búsqueda, orden y URL compartible */
 (async () => {
   'use strict';
-  const { $, $$, t, tx, tterm, esc, icon, money, cardHTML, observe, store, lockScroll } = UG;
+  const { $, $$, t, tx, tterm, esc, icon, money, cardHTML, observe, store, lockScroll, inStock, pInStock } = UG;
   const DATA = await UG.ready;
   if (!DATA) return;
   const P = DATA.products;
@@ -18,12 +18,12 @@
   };
 
   /* ---------- Estado ---------- */
-  const st = { c: new Set(), t: new Set(), s: new Set(), z: new Set(), min: PMIN, max: PMAX, o: false, q: '', sort: 'featured' };
+  const st = { c: new Set(), t: new Set(), s: new Set(), z: new Set(), min: PMIN, max: PMAX, o: false, k: false, q: '', sort: 'featured' };
   function readURL() {
     const u = new URLSearchParams(location.search);
     Object.keys(GROUPS).forEach((k) => { st[k] = new Set((u.get(k) || '').split(',').filter(Boolean)); });
     st.min = +u.get('min') || PMIN; st.max = +u.get('max') || PMAX;
-    st.o = u.get('o') === '1'; st.q = u.get('q') || ''; st.sort = u.get('sort') || 'featured';
+    st.o = u.get('o') === '1'; st.k = u.get('stock') === '1'; st.q = u.get('q') || ''; st.sort = u.get('sort') || 'featured';
   }
   function writeURL() {
     const u = new URLSearchParams();
@@ -31,6 +31,7 @@
     if (st.min > PMIN) u.set('min', st.min);
     if (st.max < PMAX) u.set('max', st.max);
     if (st.o) u.set('o', '1');
+    if (st.k) u.set('stock', '1');
     if (st.q) u.set('q', st.q);
     if (st.sort !== 'featured') u.set('sort', st.sort);
     const qs = u.toString();
@@ -63,7 +64,7 @@
   function filtered(except) {
     return P.map((p) => {
       for (const k of Object.keys(GROUPS)) if (k !== except && st[k].size && !GROUPS[k].test(p, st[k])) return null;
-      const vs = p.variants.filter((v) => v.price >= st.min && v.price <= st.max && (!st.o || (v.compare_at && v.compare_at > v.price)));
+      const vs = p.variants.filter((v) => v.price >= st.min && v.price <= st.max && (!st.o || (v.compare_at && v.compare_at > v.price)) && (!st.k || inStock(v)));
       if (!vs.length) return null;
       const m = matchQuery(p);
       if (!m.ok) return null;
@@ -73,7 +74,7 @@
   function sorted(list) {
     const min = (x) => Math.min(...x.vs.map((v) => v.price));
     const by = {
-      featured: (a, b) => (b.p.featured - a.p.featured) || (a.p.order - b.p.order),
+      featured: (a, b) => (pInStock(b.p) - pInStock(a.p)) || (b.p.featured - a.p.featured) || (a.p.order - b.p.order),
       'price-asc': (a, b) => min(a) - min(b),
       'price-desc': (a, b) => min(b) - min(a),
       name: (a, b) => a.p.code.localeCompare(b.p.code, 'es', { numeric: true }),
@@ -89,7 +90,9 @@
     $('[data-count-label]').innerHTML = `<b>${n}</b> ${esc(t(n === 1 ? 'catalog.result' : 'catalog.results'))}`;
     $('[data-apply-count]').textContent = `(${n})`;
     if (!n) {
-      results.innerHTML = `<div class="empty cat-empty">${icon('search')}<p>${esc(t('catalog.empty'))}</p><button class="btn btn--ghost btn--sm" data-clear-all>${esc(t('catalog.emptyCta'))}</button></div>`;
+      results.innerHTML = st.k && !P.some(pInStock)
+        ? `<div class="empty cat-empty">${icon('watch')}<p>${esc(t('stock.empty'))}</p><a class="btn btn--wa btn--sm" href="${UG.waLink()}" target="_blank" rel="noopener">${icon('whatsapp')}<span>${esc(t('common.consult'))}</span></a></div>`
+        : `<div class="empty cat-empty">${icon('search')}<p>${esc(t('catalog.empty'))}</p><button class="btn btn--ghost btn--sm" data-clear-all>${esc(t('catalog.emptyCta'))}</button></div>`;
     } else {
       results.innerHTML = list.map(({ p, vs, variant }, i) => {
         // la tarjeta muestra la versión que coincide con la búsqueda/filtro
@@ -106,12 +109,14 @@
 
   function renderCollChips() {
     const chips = [['', t('common.all')], ...DATA.collections.map((c) => [c.id, tx(c.name)])];
-    $('[data-coll-chips]').innerHTML = chips.map(([id, name]) => {
+    const nStock = P.filter(pInStock).length;
+    $('[data-coll-chips]').innerHTML = `<button class="chip chip--stock" aria-pressed="${st.k}" data-stock-chip><i></i>${esc(t('stock.filter'))}<small>${esc(t('stock.filterHint'))}${nStock ? ` · ${nStock}` : ''}</small></button><span class="chips__sep" aria-hidden="true"></span>` + chips.map(([id, name]) => {
       const on = id ? (st.c.size === 1 && st.c.has(id)) : !st.c.size;
       return `<button class="chip" aria-pressed="${on}" data-coll="${esc(id)}">${esc(name)}</button>`;
     }).join('');
   }
   $('[data-coll-chips]').addEventListener('click', (e) => {
+    if (e.target.closest('[data-stock-chip]')) { st.k = !st.k; syncFilterInputs(); render(); return; }
     const b = e.target.closest('[data-coll]'); if (!b) return;
     st.c = new Set(b.dataset.coll ? [b.dataset.coll] : []);
     syncFilterInputs(); renderCollChips(); render();
@@ -137,6 +142,7 @@
       </div>
       <div class="range__vals"><span data-vmin></span><span data-vmax></span></div>
       <label class="switch" style="margin-top:8px"><span>${esc(t('catalog.offers'))}</span><input type="checkbox" data-offers${st.o ? ' checked' : ''}><span class="switch__ui"></span></label>`);
+    html = `<div class="fgroup fgroup--stock"><label class="switch"><span><b>${esc(t('stock.filter'))}</b><small>${esc(t('stock.filterHint'))}</small></span><input type="checkbox" data-stock-sw${st.k ? ' checked' : ''}><span class="switch__ui"></span></label></div>` + html;
     $('[data-fwrap]').innerHTML = html;
     updateRange();
   }
@@ -153,6 +159,7 @@
     const mi = $('[data-min]'), ma = $('[data-max]');
     if (mi) { mi.value = st.min; ma.value = st.max; }
     const of = $('[data-offers]'); if (of) of.checked = st.o;
+    const ks = $('[data-stock-sw]'); if (ks) ks.checked = st.k;
     $('#q').value = st.q; $('.search').classList.toggle('has-value', !!st.q);
     $('#sort').value = st.sort;
     updateRange();
@@ -176,6 +183,7 @@
     }
     if (st.min > PMIN || st.max < PMAX) chips.push(['p', `${money(st.min)} – ${money(st.max)}`]);
     if (st.o) chips.push(['o', t('catalog.offers')]);
+    if (st.k) chips.push(['k', t('stock.ready')]);
     if (st.q) chips.push(['q', `“${st.q}”`]);
     $('[data-active]').innerHTML = chips.length ? chips.map(([id, label]) => `<button class="chip" data-rm="${esc(id)}">${esc(label)}${icon('x', 'x')}</button>`).join('') + `<button class="chip" data-clear-all style="border-color:transparent;text-decoration:underline">${esc(t('catalog.clear'))}</button>` : '';
     renderCollChips();
@@ -187,6 +195,7 @@
     const i = e.target;
     if (i.dataset.k) { i.checked ? st[i.dataset.k].add(i.value) : st[i.dataset.k].delete(i.value); render(); }
     if (i.hasAttribute('data-offers')) { st.o = i.checked; render(); }
+    if (i.hasAttribute('data-stock-sw')) { st.k = i.checked; render(); }
   });
   let rangeT;
   fwrap.addEventListener('input', (e) => {
@@ -209,13 +218,13 @@
     const rm = e.target.closest('[data-rm]');
     if (rm) {
       const id = rm.dataset.rm;
-      if (id === 'p') { st.min = PMIN; st.max = PMAX; } else if (id === 'o') st.o = false; else if (id === 'q') st.q = '';
+      if (id === 'p') { st.min = PMIN; st.max = PMAX; } else if (id === 'o') st.o = false; else if (id === 'k') st.k = false; else if (id === 'q') st.q = '';
       else { const [k, ...v] = id.split(':'); st[k].delete(v.join(':')); }
       syncFilterInputs(); render();
     }
     if (e.target.closest('[data-clear-all]')) {
       Object.keys(GROUPS).forEach((k) => st[k].clear());
-      st.min = PMIN; st.max = PMAX; st.o = false; st.q = '';
+      st.min = PMIN; st.max = PMAX; st.o = false; st.k = false; st.q = '';
       syncFilterInputs(); render();
     }
   });

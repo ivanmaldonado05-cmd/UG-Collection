@@ -174,6 +174,8 @@ function ug_clean_product(array $p, array $collectionIds): array
             'price' => $price,
             'compare_at' => $compare > $price ? $compare : null,
             'available' => !isset($v['available']) || (bool)$v['available'],
+            // unidades listas para entrega inmediata (0 = a pedido)
+            'stock' => max(0, min(9999, (int)($v['stock'] ?? 0))),
         ];
     }
     if (!$variants) throw new InvalidArgumentException('Agregá al menos una versión con precio.');
@@ -200,6 +202,7 @@ function ug_clean_product(array $p, array $collectionIds): array
         'straps' => $straps,
         'features' => ug_i18n($p['features'] ?? [], 300),
         'desc' => ug_i18n($p['desc'] ?? [], 2000),
+        'badge' => ug_i18n($p['badge'] ?? [], 24),
         'hero' => $hero,
         'featured' => !empty($p['featured']),
         'active' => !isset($p['active']) || (bool)$p['active'],
@@ -219,6 +222,33 @@ function ug_clean_collection(array $c): array
     ];
 }
 
+const UG_ANNOUNCE_LINKS = ['', 'catalogo.html', 'catalogo.html?stock=1', 'catalogo.html?o=1', 'contacto.html'];
+
+function ug_clean_announce(array $a): array
+{
+    $text = ug_i18n($a['text'] ?? [], 140);
+    $link = in_array($a['link'] ?? '', UG_ANNOUNCE_LINKS, true) ? $a['link'] : '';
+    return ['active' => !empty($a['active']) && !empty($text['es']), 'text' => $text, 'link' => $link];
+}
+
+/* ---------- Usuario administrador ---------- */
+// La cuenta se guarda en la base (tabla ug_admin). Si todavía no existe, se usa la de config.php.
+function ug_admin_account(): array
+{
+    try {
+        $row = ug_db()->query('SELECT user, pass_hash FROM ug_admin WHERE id = 1')->fetch();
+        if ($row && $row['pass_hash'] !== '') return ['user' => (string)$row['user'], 'hash' => (string)$row['pass_hash']];
+    } catch (Throwable $e) { /* tabla todavía no creada */ }
+    $cfg = ug_config();
+    return ['user' => (string)$cfg['admin_user'], 'hash' => (string)$cfg['admin_pass_hash']];
+}
+
+function ug_check_login(string $user, string $pass): bool
+{
+    $acc = ug_admin_account();
+    return $acc['hash'] !== '' && hash_equals($acc['user'], $user) && password_verify($pass, $acc['hash']);
+}
+
 function ug_clean_settings(array $s): array
 {
     $wa = preg_replace('/\D+/', '', (string)($s['whatsapp'] ?? '')) ?? '';
@@ -232,6 +262,7 @@ function ug_clean_settings(array $s): array
         'instagram' => $ig,
         'currency' => 'Gs.',
         'promo' => ug_i18n($s['promo'] ?? [], 80),
+        'announce' => ug_clean_announce(is_array($s['announce'] ?? null) ? $s['announce'] : []),
         'hero' => array_slice($hero, 0, 6),
     ];
 }

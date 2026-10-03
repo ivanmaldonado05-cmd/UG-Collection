@@ -205,5 +205,16 @@
     "nylon": "Nylon",
     "cuero": "Cuero"
   },
-  "terms": {}
+  "terms": {},
+  "stock": {
+    "badge": "En stock",
+    "ready": "En stock · entrega inmediata",
+    "onOrder": "A pedido · consultá disponibilidad",
+    "filter": "En stock",
+    "filterHint": "Entrega inmediata",
+    "tab": "En stock",
+    "empty": "Por ahora no hay relojes en stock para entrega inmediata. Escribinos por WhatsApp y te avisamos cuando lleguen.",
+    "waNote": "(figura en stock para entrega inmediata)",
+    "units": "versiones listas para entregar"
+  }
 }

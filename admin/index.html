@@ -55,6 +55,8 @@
 
     <nav class="tabs" role="tablist" aria-label="Secciones">
       <button role="tab" data-tab="products" aria-selected="true"><span data-ico="watch"></span>Productos</button>
+      <button role="tab" data-tab="stock" aria-selected="false"><span data-ico="box"></span>Stock</button>
+      <button role="tab" data-tab="promos" aria-selected="false"><span data-ico="tag"></span>Promos</button>
       <button role="tab" data-tab="collections" aria-selected="false"><span data-ico="grid2"></span>Colecciones</button>
       <button role="tab" data-tab="settings" aria-selected="false"><span data-ico="cog"></span>Ajustes</button>
     </nav>
@@ -69,9 +71,80 @@
         <div class="adm-tools">
           <div class="search"><span data-ico="search"></span><input type="search" placeholder="Buscar por código, apodo, color…" data-prod-q aria-label="Buscar productos"><button type="button" data-prod-q-clear aria-label="Limpiar"></button></div>
           <div class="select"><select data-prod-coll aria-label="Filtrar por colección"></select><span data-ico="chevron-down"></span></div>
+          <div class="select"><select data-prod-stock aria-label="Filtrar por stock"><option value="">Todo el catálogo</option><option value="in">Sólo en stock</option><option value="out">Sin stock</option></select><span data-ico="chevron-down"></span></div>
         </div>
         <p class="hint" data-reorder-hint>Arrastrá <span data-ico="grip"></span> para cambiar el orden en el que aparecen en el sitio.</p>
         <ul class="plist" data-plist></ul>
+      </section>
+
+      <!-- STOCK -->
+      <section data-panel="stock" hidden>
+        <div class="adm-head">
+          <div><h1>Stock</h1><p class="muted">Relojes listos para entrega inmediata. En el sitio aparecen con la insignia «En stock» y en el filtro del catálogo.</p></div>
+        </div>
+        <div class="stats-row" data-stock-stats></div>
+        <div class="adm-tools">
+          <div class="search"><span data-ico="search"></span><input type="search" placeholder="Buscar modelo o color…" data-stock-q aria-label="Buscar en stock"><button type="button" data-stock-q-clear aria-label="Limpiar"></button></div>
+          <div class="seg" role="radiogroup" aria-label="Mostrar" data-stock-view>
+            <button type="button" role="radio" aria-checked="true" data-sv="all">Todos</button>
+            <button type="button" role="radio" aria-checked="false" data-sv="in">En stock</button>
+            <button type="button" role="radio" aria-checked="false" data-sv="out">Sin stock</button>
+          </div>
+        </div>
+        <p class="hint" style="display:block">Usá <b>+</b> y <b>−</b> para las unidades, o el interruptor para marcar / desmarcar. Con 0 unidades el reloj sigue en el catálogo, pero sin «entrega inmediata».</p>
+        <div class="stock-list" data-stock-list></div>
+      </section>
+
+      <!-- PROMOS -->
+      <section data-panel="promos" hidden>
+        <div class="adm-head"><div><h1>Promos y descuentos</h1><p class="muted">Descuentos por porcentaje, barra de anuncio y texto de la oferta.</p></div></div>
+        <div class="promo-grid">
+          <form class="adm-card" data-bulk novalidate>
+            <h2 class="h-3">Aplicar descuento</h2>
+            <p class="muted">Calcula el precio nuevo a partir del precio de lista y muestra el anterior tachado.</p>
+            <fieldset class="field">
+              <legend>¿A qué relojes?</legend>
+              <div class="seg seg--wrap" role="radiogroup" data-bulk-scope>
+                <button type="button" role="radio" aria-checked="true" data-scope="all">Todo el catálogo</button>
+                <button type="button" role="radio" aria-checked="false" data-scope="coll">Una colección</button>
+                <button type="button" role="radio" aria-checked="false" data-scope="stock">Sólo en stock</button>
+                <button type="button" role="radio" aria-checked="false" data-scope="pick">Elegir modelos</button>
+              </div>
+            </fieldset>
+            <div class="field" data-bulk-coll-wrap hidden><label for="bk-coll">Colección</label><div class="select"><select id="bk-coll" data-bulk-coll></select><span data-ico="chevron-down"></span></div></div>
+            <ul class="pick-list" data-bulk-pick hidden></ul>
+            <div class="form-grid two">
+              <div class="field"><label for="bk-pct">Descuento (%)</label><input id="bk-pct" data-bulk-pct inputmode="numeric" placeholder="10" maxlength="2"></div>
+              <div class="field"><label for="bk-round">Redondear a</label><div class="select"><select id="bk-round" data-bulk-round><option value="1000">Gs. 1.000</option><option value="5000" selected>Gs. 5.000</option><option value="10000">Gs. 10.000</option><option value="50000">Gs. 50.000</option></select><span data-ico="chevron-down"></span></div></div>
+            </div>
+            <div class="bulk-preview" data-bulk-preview></div>
+            <div class="form-actions">
+              <button type="button" class="btn btn--ghost" data-bulk-remove>Quitar descuentos</button>
+              <button type="submit" class="btn btn--gold">Aplicar descuento</button>
+            </div>
+          </form>
+
+          <form class="adm-card form-grid" data-promos novalidate>
+            <h2 class="h-3">Barra de anuncio</h2>
+            <p class="muted" style="margin-top:-6px">Una franja fina arriba de todas las páginas del sitio.</p>
+            <label class="switch"><span>Mostrar la barra en el sitio</span><input type="checkbox" name="announce_on"><span class="switch__ui"></span></label>
+            <fieldset class="field i18n-field">
+              <legend>Texto del anuncio</legend>
+              <div class="i18n-row"><span>ES</span><input name="announce_es" maxlength="140" placeholder="Descuento de apertura en toda la tienda"></div>
+              <div class="i18n-row"><span>PT</span><input name="announce_pt" maxlength="140" placeholder="opcional"></div>
+              <div class="i18n-row"><span>EN</span><input name="announce_en" maxlength="140" placeholder="opcional"></div>
+            </fieldset>
+            <div class="field"><label for="pr-link">Enlace al tocar la barra (opcional)</label><div class="select"><select id="pr-link" name="announce_link"><option value="">Sin enlace</option><option value="catalogo.html">Catálogo</option><option value="catalogo.html?stock=1">Catálogo · En stock</option><option value="catalogo.html?o=1">Catálogo · Con descuento</option><option value="contacto.html">Contacto</option></select><span data-ico="chevron-down"></span></div></div>
+            <div class="announce-preview" data-announce-preview></div>
+            <fieldset class="field i18n-field">
+              <legend>Texto de la oferta (junto al precio tachado)</legend>
+              <div class="i18n-row"><span>ES</span><input name="promo_es" placeholder="Descuento de apertura"></div>
+              <div class="i18n-row"><span>PT</span><input name="promo_pt" placeholder="Desconto de inauguração"></div>
+              <div class="i18n-row"><span>EN</span><input name="promo_en" placeholder="Opening discount"></div>
+            </fieldset>
+            <div class="form-actions"><button class="btn" type="submit">Guardar promos</button></div>
+          </form>
+        </div>
       </section>
 
       <!-- COLECCIONES -->
@@ -85,22 +158,27 @@
 
       <!-- AJUSTES -->
       <section data-panel="settings" hidden>
-        <div class="adm-head"><div><h1>Ajustes</h1><p class="muted">Datos de contacto y portada del sitio.</p></div></div>
+        <div class="adm-head"><div><h1>Ajustes</h1><p class="muted">Contacto, portada del sitio y acceso al panel.</p></div></div>
         <form class="adm-card form-grid" data-settings novalidate>
           <div class="field"><label for="st-wa">WhatsApp (con código de país, sin + ni espacios)</label><input id="st-wa" name="whatsapp" inputmode="numeric" placeholder="595983836674" required><span class="field__err"></span></div>
           <div class="field"><label for="st-ig">Instagram</label><input id="st-ig" name="instagram" type="url" placeholder="https://www.instagram.com/…"><span class="field__err"></span></div>
-          <fieldset class="field i18n-field">
-            <legend>Texto de la oferta (aparece junto al precio tachado)</legend>
-            <div class="i18n-row"><span>ES</span><input name="promo_es" placeholder="Descuento de apertura"></div>
-            <div class="i18n-row"><span>PT</span><input name="promo_pt" placeholder="Desconto de inauguração"></div>
-            <div class="i18n-row"><span>EN</span><input name="promo_en" placeholder="Opening discount"></div>
-          </fieldset>
           <fieldset class="field">
             <legend>Relojes de la portada (slider principal, hasta 6)</legend>
             <p class="hint">Marcá los relojes y ordenalos con las flechas. Conviene usar fotos con fondo transparente.</p>
             <ul class="hero-pick" data-hero-pick></ul>
           </fieldset>
           <div class="form-actions"><button class="btn" type="submit">Guardar ajustes</button></div>
+        </form>
+        <form class="adm-card form-grid" style="margin-top:20px" data-account novalidate>
+          <h2 class="h-3">Usuario administrador</h2>
+          <p class="muted" style="margin-top:-6px" data-account-note>Cambiá el usuario o la contraseña con la que se ingresa al panel.</p>
+          <div class="form-grid two">
+            <div class="field"><label for="ac-user">Usuario</label><input id="ac-user" name="user" autocomplete="username" required><span class="field__err"></span></div>
+            <div class="field"><label for="ac-cur">Contraseña actual *</label><input id="ac-cur" name="current" type="password" autocomplete="current-password" required><span class="field__err"></span></div>
+            <div class="field"><label for="ac-new">Contraseña nueva</label><input id="ac-new" name="pass" type="password" autocomplete="new-password" placeholder="mín. 10 caracteres"><span class="field__err"></span></div>
+            <div class="field"><label for="ac-new2">Repetir contraseña nueva</label><input id="ac-new2" name="pass2" type="password" autocomplete="new-password"><span class="field__err"></span></div>
+          </div>
+          <div class="form-actions"><button class="btn" type="submit">Guardar acceso</button></div>
         </form>
         <div class="adm-card" style="margin-top:20px">
           <h2 class="h-3">Respaldo</h2>
@@ -137,6 +215,12 @@
               <div class="field"><label for="ed-water">Resistencia al agua (m)</label><input id="ed-water" name="water_m" inputmode="numeric" placeholder="100"></div>
               <div class="field"><label for="ed-crystal">Cristal</label><input id="ed-crystal" name="crystal" placeholder="Zafiro AR"></div>
               <fieldset class="field"><legend>Correa</legend><div class="chips" data-ed-straps></div></fieldset>
+              <fieldset class="field i18n-field"><legend>Etiqueta en la tarjeta (opcional)</legend>
+                <p class="hint" style="margin-top:-4px">Ej: «Nuevo», «Edición limitada», «Más vendido». Se muestra arriba de la foto.</p>
+                <div class="i18n-row"><span>ES</span><input name="badge_es" maxlength="24" placeholder="Nuevo"></div>
+                <div class="i18n-row"><span>PT</span><input name="badge_pt" maxlength="24" placeholder="opcional"></div>
+                <div class="i18n-row"><span>EN</span><input name="badge_en" maxlength="24" placeholder="opcional"></div>
+              </fieldset>
             </div>
           </section>
 
@@ -153,7 +237,7 @@
 
           <section class="adm-card">
             <div class="card-head"><h3>Versiones y precios</h3><span class="muted" data-ed-vcount></span></div>
-            <p class="hint">Cada versión es una combinación de color / correa con su foto y su precio. «Precio anterior» se muestra tachado (descuento).</p>
+            <p class="hint">Cada versión es una combinación de color / correa con su foto, su precio y su stock. «Precio anterior» se muestra tachado (descuento). Con stock mayor a 0 aparece como «En stock · entrega inmediata».</p>
             <ol class="vlist" data-ed-variants></ol>
             <button type="button" class="btn btn--ghost btn--block" data-ed-add-variant><span data-ico="plus"></span>Agregar versión</button>
           </section>

@@ -252,5 +252,16 @@
     "Ojo de tigre": "Tiger eye",
     "nácar": "mother-of-pearl",
     "blanco": "white"
+  },
+  "stock": {
+    "badge": "In stock",
+    "ready": "In stock · ready to ship",
+    "onOrder": "Made to order · ask for availability",
+    "filter": "In stock",
+    "filterHint": "Ready to ship",
+    "tab": "In stock",
+    "empty": "There are no watches in stock right now. Message us on WhatsApp and we'll let you know when they arrive.",
+    "waNote": "(shown as in stock, ready to ship)",
+    "units": "versions ready to ship"
   }
 }

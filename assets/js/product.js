@@ -1,7 +1,7 @@
 /* UG Collection — ficha de producto */
 (async () => {
   'use strict';
-  const { $, $$, t, tx, tterm, esc, icon, money, discount, productName, productUrl, imgTag, cardHTML, swatchStyle, waProduct, observe, carousel, toast, reduceMotion } = UG;
+  const { $, $$, t, tx, tterm, esc, icon, money, discount, productName, productUrl, imgTag, cardHTML, swatchStyle, waProduct, observe, carousel, toast, reduceMotion, inStock } = UG;
   const DATA = await UG.ready;
   const root = $('[data-pdp]');
   const params = new URLSearchParams(location.search);
@@ -55,13 +55,14 @@
           <div>
             <div class="buy__price" data-price></div>
             <div data-promo style="margin-top:8px"></div>
+            <div class="avail" data-avail aria-live="polite"></div>
           </div>
           <p class="buy__desc">${esc(tx(p.desc))}</p>
 
           <div class="vpick">
             <div class="vpick__label"><b>${esc(t('product.selectVersion'))}</b><span data-vname></span></div>
             <div class="vpick__opts" role="radiogroup" aria-label="${esc(t('product.selectVersion'))}">
-              ${p.variants.map((x) => `<button class="vopt" role="radio" aria-checked="false" data-v="${esc(x.id)}" title="${esc(tterm(x.name))}" aria-label="${esc(tterm(x.name))}">${imgTag(x.image, '')}<span class="sw" style="${swatchStyle(x)}"></span></button>`).join('')}
+              ${p.variants.map((x) => `<button class="vopt${inStock(x) ? ' has-stock' : ''}" role="radio" aria-checked="false" data-v="${esc(x.id)}" title="${esc(tterm(x.name))}" aria-label="${esc(tterm(x.name))}">${imgTag(x.image, '')}<span class="sw" style="${swatchStyle(x)}"></span></button>`).join('')}
             </div>
           </div>
 
@@ -130,6 +131,9 @@
     const off = discount(v);
     $('[data-price]').innerHTML = `<span class="price__now">${money(v.price)}</span>${v.compare_at ? `<span class="price__was">${money(v.compare_at)}</span>` : ''}${off ? `<span class="badge badge--sale">-${off}%</span>` : ''}`;
     $('[data-promo]').innerHTML = v.compare_at ? `<span class="buy__promo"><i></i>${esc(tx(DATA.settings.promo))}</span>` : '';
+    const av = $('[data-avail]');
+    av.className = 'avail' + (inStock(v) ? ' is-stock' : '');
+    av.innerHTML = inStock(v) ? `${icon('check')}<span><b>${esc(t('stock.badge'))}</b> · ${esc(t('stock.filterHint'))}</span>` : `${icon('clock')}<span>${esc(t('stock.onOrder'))}</span>`;
     $('[data-wa]').href = waProduct(p, v);
     if (!fromGallery) { const i = gallery.findIndex((g) => g.vid === v.id); if (i >= 0 && i !== gi) showImage(i, i > gi ? 1 : -1); }
     if (updateURL) history.replaceState(null, '', productUrl(p, v));
@@ -173,7 +177,7 @@
   /* ---------- CTA fija ---------- */
   const sticky = $('[data-sticky]');
   function renderSticky() {
-    sticky.innerHTML = `${imgTag(v.image, '')}<div class="sticky-cta__info"><b>${esc(productName(p))}</b><span>${money(v.price)}</span></div><a class="btn btn--wa" href="${waProduct(p, v)}" target="_blank" rel="noopener">${icon('whatsapp')}<span>${esc(t('common.consultShort'))}</span></a>`;
+    sticky.innerHTML = `${imgTag(v.image, '')}<div class="sticky-cta__info"><b>${esc(productName(p))}</b><span>${money(v.price)}${inStock(v) ? ` · <em class="in-stock">${esc(t('stock.badge'))}</em>` : ''}</span></div><a class="btn btn--wa" href="${waProduct(p, v)}" target="_blank" rel="noopener">${icon('whatsapp')}<span>${esc(t('common.consultShort'))}</span></a>`;
   }
   function watchSticky() {
     const target = $('[data-main-cta]');

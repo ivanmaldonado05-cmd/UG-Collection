@@ -326,7 +326,7 @@ for (const p of products) {
   for (let i = 0; i < p.v.length; i++) {
     const [name, img, price, compare] = p.v[i];
     const image = img === p.hero ? hero : await encode(img, `${id}-${i + 1}`);
-    variants.push({ id: `${id}-${i + 1}`, name, image, price, compare_at: compare || null, available: true });
+    variants.push({ id: `${id}-${i + 1}`, name, image, price, compare_at: compare || null, available: true, stock: 0 });
   }
   const prices = variants.map((v) => v.price);
   out.push({
@@ -345,6 +345,7 @@ const settings = {
   currency: 'Gs.',
   promo: { es: 'Descuento de apertura', pt: 'Desconto de inauguração', en: 'Opening discount' },
   hero: ['pd-1644', 'pd-1661', 'pd-ys025', 'pd-1673'],
+  announce: { active: false, text: { es: 'Descuento de apertura en toda la tienda', pt: 'Desconto de inauguração em toda a loja', en: 'Opening discount storewide' }, link: 'catalogo.html?o=1' },
 };
 
 fs.writeFileSync(path.join(ROOT, 'data/catalog.json'), JSON.stringify({ updated: new Date().toISOString(), settings, collections, products: out }, null, 1));

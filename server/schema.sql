@@ -23,6 +23,14 @@ CREATE TABLE IF NOT EXISTS ug_products (
   KEY idx_sort (sort)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Usuario administrador (una sola cuenta; se cambia desde el panel → Ajustes)
+CREATE TABLE IF NOT EXISTS ug_admin (
+  id TINYINT UNSIGNED NOT NULL PRIMARY KEY DEFAULT 1,
+  user VARCHAR(40) NOT NULL,
+  pass_hash VARCHAR(255) NOT NULL,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Intentos de login (protección contra fuerza bruta)
 CREATE TABLE IF NOT EXISTS ug_login_attempts (
   ip VARCHAR(45) NOT NULL,

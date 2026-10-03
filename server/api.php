@@ -24,7 +24,7 @@ try {
         $cfg = ug_config();
         $user = ug_str($b['user'] ?? '', 60);
         $pass = (string)($b['pass'] ?? '');
-        $ok = $cfg['admin_pass_hash'] !== '' && hash_equals((string)$cfg['admin_user'], $user) && password_verify($pass, (string)$cfg['admin_pass_hash']);
+        $ok = ug_check_login($user, $pass);
         if (!$ok) {
             ug_log_attempt();
             usleep(700000);
@@ -148,6 +148,60 @@ try {
             $s = ug_clean_settings(is_array(ug_body()['settings'] ?? null) ? ug_body()['settings'] : []);
             $db->prepare('INSERT INTO ug_settings (id, data) VALUES (1, ?) ON DUPLICATE KEY UPDATE data = VALUES(data)')->execute([json_encode($s, JSON_UNESCAPED_UNICODE)]);
             ug_json(['ok' => true, 'data' => ug_export()]);
+        }
+
+        case 'variant.stock': {
+            // cambio rápido de stock desde la pestaña «Stock»
+            $b = ug_body();
+            $id = ug_str($b['id'] ?? '', 64);
+            $vid = ug_str($b['vid'] ?? '', 80);
+            $stock = max(0, min(9999, (int)($b['stock'] ?? 0)));
+            $db->beginTransaction();
+            $q = $db->prepare('SELECT data FROM ug_products WHERE id = ? FOR UPDATE');
+            $q->execute([$id]);
+            $data = $q->fetchColumn();
+            if ($data === false) throw new InvalidArgumentException('Producto no encontrado');
+            $p = json_decode($data, true);
+            $found = false;
+            foreach ($p['variants'] as &$v) { if (($v['id'] ?? '') === $vid) { $v['stock'] = $stock; $found = true; } }
+            unset($v);
+            if (!$found) throw new InvalidArgumentException('Versión no encontrada');
+            $db->prepare('UPDATE ug_products SET data = ? WHERE id = ?')->execute([json_encode($p, JSON_UNESCAPED_UNICODE), $id]);
+            $db->commit();
+            ug_json(['ok' => true, 'data' => ug_export()]);
+        }
+
+        case 'product.bulk': {
+            // descuentos masivos: guarda varios productos existentes de una vez
+            $list = ug_body()['products'] ?? [];
+            if (!is_array($list) || count($list) > 500) throw new InvalidArgumentException('Lista inválida');
+            $collIds = $db->query('SELECT id FROM ug_collections')->fetchAll(PDO::FETCH_COLUMN);
+            $upd = $db->prepare('UPDATE ug_products SET data = ? WHERE id = ?');
+            $db->beginTransaction();
+            foreach ($list as $raw) {
+                if (!is_array($raw)) continue;
+                $p = ug_clean_product($raw, $collIds);
+                $upd->execute([json_encode($p, JSON_UNESCAPED_UNICODE), $p['id']]);
+            }
+            $db->commit();
+            ug_json(['ok' => true, 'data' => ug_export()]);
+        }
+
+        case 'account.save': {
+            $b = ug_body();
+            $acc = ug_admin_account();
+            if (!password_verify((string)($b['current'] ?? ''), $acc['hash'])) {
+                ug_log_attempt();
+                throw new InvalidArgumentException('La contraseña actual no es correcta.');
+            }
+            $user = ug_str($b['user'] ?? '', 40);
+            if (!preg_match('/^[A-Za-z0-9._@-]{3,40}$/', $user)) throw new InvalidArgumentException('Usuario inválido (3 a 40 caracteres, sin espacios).');
+            $pass = (string)($b['pass'] ?? '');
+            if ($pass !== '' && strlen($pass) < 10) throw new InvalidArgumentException('La contraseña nueva necesita al menos 10 caracteres.');
+            $hash = $pass !== '' ? password_hash($pass, PASSWORD_DEFAULT) : $acc['hash'];
+            $db->prepare('INSERT INTO ug_admin (id, user, pass_hash) VALUES (1, ?, ?) ON DUPLICATE KEY UPDATE user = VALUES(user), pass_hash = VALUES(pass_hash)')->execute([$user, $hash]);
+            $_SESSION['user'] = $user;
+            ug_json(['ok' => true, 'user' => $user]);
         }
 
         case 'upload': {

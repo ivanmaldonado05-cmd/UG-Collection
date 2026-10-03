@@ -138,6 +138,9 @@
   const money = (n) => (DATA?.settings?.currency || 'Gs.') + ' ' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   const discount = (v) => (v.compare_at && v.compare_at > v.price) ? Math.round((1 - v.price / v.compare_at) * 100) : 0;
   const bestDiscount = (p) => Math.max(0, ...p.variants.map(discount));
+  // Stock: unidades listas para entrega inmediata
+  const inStock = (v) => (+v?.stock || 0) > 0;
+  const pInStock = (p) => p.variants.some(inStock);
   const productName = (p) => p.code + (p.nick ? ' ' + tterm(p.nick) : '');
   const productUrl = (p, v) => `producto.html?id=${encodeURIComponent(p.id)}${v ? '&v=' + encodeURIComponent(v.id) : ''}`;
   const imgTag = (im, alt, extra = '') => im ? `<img src="${esc(im.src)}" width="${im.w || ''}" height="${im.h || ''}" alt="${esc(alt)}" loading="lazy" decoding="async" ${extra}>` : '';
@@ -204,7 +207,7 @@
 
   /* ---------- WhatsApp ---------- */
   const waLink = (msg) => `https://wa.me/${DATA?.settings?.whatsapp || '595983836674'}${msg ? '?text=' + encodeURIComponent(msg) : ''}`;
-  const waProduct = (p, v) => waLink(t('product.waMsg', { model: `${p.brand} ${productName(p)}`, version: tterm(v.name), price: money(v.price) }) + '\n' + new URL(productUrl(p, v), location.href).href);
+  const waProduct = (p, v) => waLink(t('product.waMsg', { model: `${p.brand} ${productName(p)}`, version: tterm(v.name), price: money(v.price) }) + (inStock(v) ? ' ' + t('stock.waNote') : '') + '\n' + new URL(productUrl(p, v), location.href).href);
 
   /* ---------- Toasts ---------- */
   function toast(msg, ic = 'check') {
@@ -228,7 +231,7 @@
     return `
     <article class="card" style="--i:${i}" data-id="${esc(p.id)}">
       <div class="card__media">
-        <div class="card__badges">${off ? `<span class="badge badge--sale">-${off}%</span>` : ''}${p.variants.length > 1 ? `<span class="badge badge--soft">${p.variants.length} ${esc(t('common.versions'))}</span>` : ''}</div>
+        <div class="card__badges">${off ? `<span class="badge badge--sale">-${off}%</span>` : ''}${pInStock(p) ? `<span class="badge badge--stock"><i></i>${esc(t('stock.badge'))}</span>` : ''}${tx(p.badge) ? `<span class="badge">${esc(tx(p.badge))}</span>` : ''}${p.variants.length > 1 ? `<span class="badge badge--soft">${p.variants.length} ${esc(t('common.versions'))}</span>` : ''}</div>
         <div class="card__fav"><button class="heart" data-fav="${esc(p.id)}" aria-pressed="false" aria-label="${esc(t('common.addFav'))}">${icon('heart')}</button></div>
         <div class="card__img card__img--main${alt ? ' has-alt' : ''}">${imgTag(p.hero, productName(p))}</div>
         ${alt ? `<div class="card__img card__img--alt">${imgTag(alt.image, productName(p) + ' ' + alt.name)}</div>` : ''}
@@ -362,6 +365,7 @@
     const skip = document.createElement('a');
     skip.className = 'skip-link'; skip.href = '#main'; skip.dataset.i18n = 'nav.skip';
     document.body.prepend(skip, header);
+    renderAnnounce();
 
     const mnav = document.createElement('div');
     mnav.className = 'mnav'; mnav.setAttribute('aria-hidden', 'true');
@@ -452,10 +456,26 @@
       top.style.setProperty('--p', max > 0 ? Math.min(1, y / max) : 0);
       top.classList.toggle('is-visible', y > innerHeight * .8);
       document.documentElement.style.setProperty('--header-offset', header.classList.contains('is-hidden') ? '0px' : getComputedStyle(header).height);
+      const ann = $('.announce');
+      header.style.top = ann ? Math.max(0, ann.offsetHeight - y) + 'px' : '';
       ticking = false;
     };
     addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
     onScroll();
+  }
+  // Barra de anuncio (se configura en el panel → Promos)
+  function renderAnnounce() {
+    $('.announce')?.remove();
+    document.body.classList.remove('has-announce');
+    const a = DATA?.settings?.announce;
+    const text = a?.active && tx(a.text);
+    if (!text) return;
+    const el = document.createElement(a.link ? 'a' : 'div');
+    el.className = 'announce';
+    if (a.link) el.href = a.link;
+    el.innerHTML = `<span class="announce__track">${icon('sparkles')}<span>${esc(text)}</span>${a.link ? icon('arrow-right') : ''}</span>`;
+    document.body.prepend(el);
+    document.body.classList.add('has-announce');
   }
   function openMenu() { const m = $('.mnav'); m.classList.add('is-open'); m.setAttribute('aria-hidden', 'false'); lockScroll(true); setTimeout(() => $('.mnav__close').focus(), 50); }
   function closeMenu() { const m = $('.mnav'); if (!m?.classList.contains('is-open')) return; m.classList.remove('is-open'); m.setAttribute('aria-hidden', 'true'); lockScroll(false); }
@@ -488,6 +508,8 @@
     const cur = $('.lang__cur'); if (cur) cur.textContent = l.toUpperCase();
     if (DATA) $('.footer__colls').innerHTML = DATA.collections.map((c) => `<li><a href="catalogo.html?c=${c.id}">${esc(tx(c.name))}</a></li>`).join('');
     syncFavButtons();
+    renderAnnounce();
+    dispatchEvent(new Event('scroll'));
     document.dispatchEvent(new CustomEvent('ug:lang', { detail: l }));
   }
 
@@ -603,7 +625,7 @@
   })();
 
   window.UG = {
-    ready, $, $$, t, tx, tterm, esc, icon, money, discount, bestDiscount, productName, productUrl, imgTag, cardHTML, swatchStyle,
+    ready, $, $$, t, tx, tterm, esc, icon, money, discount, bestDiscount, inStock, pInStock, productName, productUrl, imgTag, cardHTML, swatchStyle,
     waLink, waProduct, toast, quickView, observe, carousel, applyI18n, syncFavButtons, recent, store, reduceMotion, lockScroll,
     get lang() { return lang; }, get data() { return DATA; }, favs, toggleFav,
   };
