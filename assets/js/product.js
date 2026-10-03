@@ -206,6 +206,15 @@
   function seo() {
     document.title = `${p.brand} ${productName(p)} — UG Collection`;
     $('meta[name="description"]').setAttribute('content', tx(p.desc));
+    // canónico y vista previa al compartir con los datos de este reloj
+    const abs = (u) => new URL(u, location.href).href;
+    const setMeta = (sel, val) => { const m = document.head.querySelector(sel); if (m) m.setAttribute(m.tagName === 'LINK' ? 'href' : 'content', val); };
+    const url = 'https://ugcollectionpy.com/producto.html?id=' + encodeURIComponent(p.id);
+    setMeta('link[rel="canonical"]', url);
+    setMeta('meta[property="og:url"]', url);
+    setMeta('meta[property="og:title"]', `${p.brand} ${productName(p)} — UG Collection`);
+    setMeta('meta[property="og:description"]', tx(p.desc));
+    setMeta('meta[property="og:image"]', abs(p.hero.src));
     const ld = document.createElement('script');
     ld.type = 'application/ld+json';
     ld.textContent = JSON.stringify({

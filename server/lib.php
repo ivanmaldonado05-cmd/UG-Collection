@@ -16,6 +16,7 @@ const UG_ROOT = __DIR__ . '/..';
 const UG_CATALOG_FILE = UG_ROOT . '/uploads/catalog.json';
 // Catálogo inicial del repositorio (se importa una vez con install.php)
 const UG_SEED_FILE = UG_ROOT . '/data/catalog.json';
+const UG_SITE_URL = 'https://ugcollectionpy.com';
 const UG_UPLOAD_DIR = UG_ROOT . '/uploads/products';
 const UG_UPLOAD_URL = 'uploads/products';
 
@@ -301,5 +302,23 @@ function ug_export(): array
     if (file_put_contents($tmp, $json, LOCK_EX) === false || !rename($tmp, UG_CATALOG_FILE)) {
         throw new RuntimeException('No se pudo escribir uploads/catalog.json (revisá permisos de la carpeta uploads/).');
     }
+    ug_write_sitemap($public['products']);
     return $all;
+}
+
+/** Regenera /sitemap.xml con las páginas y los relojes visibles (para Google). Si falla no corta el guardado. */
+function ug_write_sitemap(array $products): void
+{
+    $today = gmdate('Y-m-d');
+    $urls = [['/', '1.0', 'weekly'], ['/catalogo.html', '0.9', 'daily'], ['/contacto.html', '0.5', 'monthly']];
+    foreach ($products as $p) {
+        if (!empty($p['id'])) $urls[] = ['/producto.html?id=' . rawurlencode((string)$p['id']), '0.8', 'weekly'];
+    }
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ($urls as [$path, $prio, $freq]) {
+        $xml .= '  <url><loc>' . htmlspecialchars(UG_SITE_URL . $path, ENT_XML1) . "</loc><lastmod>$today</lastmod><changefreq>$freq</changefreq><priority>$prio</priority></url>\n";
+    }
+    $xml .= "</urlset>\n";
+    $file = UG_ROOT . '/sitemap.xml';
+    if (@file_put_contents($file . '.tmp', $xml, LOCK_EX) !== false) @rename($file . '.tmp', $file);
 }

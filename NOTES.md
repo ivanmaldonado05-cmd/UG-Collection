@@ -54,8 +54,8 @@ _build/serve.mjs               servidor local: node _build/serve.mjs 5510
 
 - Modelos agregados el 2026-10-03 (PD-1790, PD-1781, PD-YS008, PD-YS021): falta el **tamaño de caja** de PD-1781, PD-YS008 y PD-YS021 (no se muestra en la ficha hasta tenerlo) y confirmar **resistencia al agua** (se puso 100 m). Colores nombrados mirando las fotos.
 
-- Horario de atención y ubicación/dirección (hoy figuran como [PENDIENTE] en Contacto).
-- Dominio (para SEO: canonical, sitemap.xml, og:url, Open Graph con URL absoluta).
+- (Horario y ubicación: se quitaron de Contacto a pedido del cliente.)
+- Dominio: ugcollectionpy.com (SEO hecho: canonical, Open Graph con assets/img/og.jpg, datos de tienda, sitemap.xml generado por el servidor al guardar en el panel).
 - Calibre exacto de la **Línea Entrada** (los catálogos sólo dicen «Automático»).
 - Confirmar los nombres de color de cada versión: los puse mirando las fotos y se pueden corregir desde el panel.
 - Todas las fotos se procesan en `_build/build.mjs` (`isolateWatch`): queda sólo el reloj (sin cajitas, logos, líneas ni etiquetas) y se recorta centrado. Nombres de color de PD-1825 (nácar, malaquita, ojo de tigre) a confirmar.

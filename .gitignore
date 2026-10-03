@@ -12,3 +12,6 @@ uploads/products/*
 
 .DS_Store
 Thumbs.db
+
+# Generado por el servidor al guardar en el panel
+sitemap.xml
