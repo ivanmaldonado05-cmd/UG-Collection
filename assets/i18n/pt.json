@@ -267,6 +267,10 @@
     "tab": "Em estoque",
     "empty": "No momento não há relógios em estoque para entrega imediata. Fale conosco pelo WhatsApp e avisamos quando chegarem.",
     "waNote": "(aparece em estoque para entrega imediata)",
-    "units": "versões prontas para entrega"
+    "units": "versões prontas para entrega",
+    "sectionTitle": "Disponíveis para entrega imediata",
+    "sectionSub": "Relógios em estoque, prontos para levar hoje.",
+    "orderTitle": "Sob encomenda",
+    "orderSub": "Nós conseguimos para você: consulte o prazo de entrega pelo WhatsApp."
   }
 }

@@ -267,6 +267,10 @@
     "tab": "In stock",
     "empty": "There are no watches in stock right now. Message us on WhatsApp and we'll let you know when they arrive.",
     "waNote": "(shown as in stock, ready to ship)",
-    "units": "versions ready to ship"
+    "units": "versions ready to ship",
+    "sectionTitle": "Ready for immediate delivery",
+    "sectionSub": "Watches in stock, ready to take home today.",
+    "orderTitle": "Made to order",
+    "orderSub": "We source them for you: ask for the delivery time on WhatsApp."
   }
 }

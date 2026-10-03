@@ -94,12 +94,29 @@
         ? `<div class="empty cat-empty">${icon('watch')}<p>${esc(t('stock.empty'))}</p><a class="btn btn--wa btn--sm" href="${UG.waLink()}" target="_blank" rel="noopener">${icon('whatsapp')}<span>${esc(t('common.consult'))}</span></a></div>`
         : `<div class="empty cat-empty">${icon('search')}<p>${esc(t('catalog.empty'))}</p><button class="btn btn--ghost btn--sm" data-clear-all>${esc(t('catalog.emptyCta'))}</button></div>`;
     } else {
-      results.innerHTML = list.map(({ p, vs, variant }, i) => {
-        // la tarjeta muestra la versión que coincide con la búsqueda/filtro
-        const lead = variant || (vs.length < p.variants.length ? vs[0] : null);
+      // la tarjeta muestra la versión que coincide con la búsqueda/filtro
+      const card = ({ p, vs, variant }, i) => {
+        const lead = variant && vs.includes(variant) ? variant : (vs.length < p.variants.length ? vs[0] : null);
         const view = lead ? { ...p, hero: lead.image, variants: [lead, ...vs.filter((v) => v !== lead)] } : { ...p, variants: vs };
         return cardHTML(view, Math.min(i, 12));
-      }).join('');
+      };
+      // Dos bloques: primero lo que está en stock (entrega inmediata), después lo que es sobre pedido.
+      // Si un modelo tiene sólo algunas versiones en stock, esas van arriba y el resto abajo.
+      const ready = [], order = [];
+      list.forEach((x) => {
+        const inS = x.vs.filter(inStock), out = x.vs.filter((v) => !inStock(v));
+        if (inS.length) ready.push({ ...x, vs: inS });
+        if (out.length && !st.k) order.push({ ...x, vs: out });
+      });
+      const head = (cls, ic, title, sub, count) => `
+        <header class="res-head ${cls}">
+          <span class="res-head__icon">${icon(ic)}</span>
+          <div><h2>${esc(title)} <small>${count}</small></h2><p>${esc(sub)}</p></div>
+        </header>`;
+      results.innerHTML = !ready.length
+        ? list.map(card).join('')
+        : head('res-head--stock', 'check', t('stock.sectionTitle'), t('stock.sectionSub'), ready.length) + ready.map(card).join('')
+          + (order.length ? head('res-head--order', 'clock', t('stock.orderTitle'), t('stock.orderSub'), order.length) + order.map((x, i) => card(x, i)).join('') : '');
     }
     UG.syncFavButtons();
     renderActive();

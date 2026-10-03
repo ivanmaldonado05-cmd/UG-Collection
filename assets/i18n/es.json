@@ -215,6 +215,10 @@
     "tab": "En stock",
     "empty": "Por ahora no hay relojes en stock para entrega inmediata. Escribinos por WhatsApp y te avisamos cuando lleguen.",
     "waNote": "(figura en stock para entrega inmediata)",
-    "units": "versiones listas para entregar"
+    "units": "versiones listas para entregar",
+    "sectionTitle": "Disponibles para entrega inmediata",
+    "sectionSub": "Relojes en stock, listos para llevártelos hoy.",
+    "orderTitle": "Sobre pedido",
+    "orderSub": "Te los conseguimos: consultá el plazo de entrega por WhatsApp."
   }
 }
