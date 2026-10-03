@@ -19,7 +19,7 @@ return [
     'admin_user' => 'admin',
     'admin_pass_hash' => '', // pegá acá el hash generado
 
-    // Clave para correr install.php una sola vez (cambiala y borrá install.php después)
+    // Clave para correr install.php (mín. 12 caracteres). Después de instalar dejala vacía ('') para deshabilitarlo.
     'install_key' => 'CAMBIAR-ESTA-CLAVE',
 
     // Límite de subida de fotos (MB)

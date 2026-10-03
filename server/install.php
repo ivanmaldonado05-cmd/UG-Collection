@@ -13,7 +13,9 @@ header('Content-Type: text/html; charset=utf-8');
 header('Cache-Control: no-store');
 $cfg = ug_config();
 $key = (string)($_GET['key'] ?? '');
-if ($cfg['install_key'] === 'CAMBIAR-ESTA-CLAVE' || !hash_equals((string)$cfg['install_key'], $key)) {
+// Con install_key vacía (o la de ejemplo) el instalador queda deshabilitado: así sigue bloqueado aunque un deploy lo vuelva a subir
+$ik = (string)($cfg['install_key'] ?? '');
+if (strlen($ik) < 12 || $ik === 'CAMBIAR-ESTA-CLAVE' || !hash_equals($ik, $key)) {
     http_response_code(403);
     exit('Acceso denegado. Configurá install_key en config.php y pasala como ?key=...');
 }
