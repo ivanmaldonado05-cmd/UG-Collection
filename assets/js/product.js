@@ -27,7 +27,7 @@
     const specs = [
       ['cog', 'product.movement', tterm(p.movement)],
       ['clock', 'product.type', t('types.' + p.type)],
-      ['watch', 'product.case', p.case_mm + ' mm'],
+      ['watch', 'product.case', p.case_mm ? p.case_mm + ' mm' : ''],
       ['gem', 'product.crystal', tterm(p.crystal)],
       ['droplet', 'product.water', p.water_m + ' m'],
       ['strap', 'product.strap', p.straps.map((s) => t('straps.' + s)).join(' / ')],
@@ -76,7 +76,7 @@
 
           <div>
             <h2 class="h-3" style="margin-bottom:16px">${esc(t('product.specs'))}</h2>
-            <dl class="specs">${specs.map(([ic, k, val, wide]) => `<div class="spec${wide ? ' spec--wide' : ''}">${icon(ic)}<dt>${esc(t(k))}</dt><dd>${esc(val)}</dd></div>`).join('')}</dl>
+            <dl class="specs">${specs.filter((x) => x[2]).map(([ic, k, val, wide]) => `<div class="spec${wide ? ' spec--wide' : ''}">${icon(ic)}<dt>${esc(t(k))}</dt><dd>${esc(val)}</dd></div>`).join('')}</dl>
           </div>
 
           <div>

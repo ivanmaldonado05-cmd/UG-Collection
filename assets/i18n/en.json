@@ -251,7 +251,12 @@
     "Malaquita": "Malachite",
     "Ojo de tigre": "Tiger eye",
     "nácar": "mother-of-pearl",
-    "blanco": "white"
+    "blanco": "white",
+    "Tela": "Fabric",
+    "tela": "fabric",
+    "negra": "black",
+    "Morado": "Purple",
+    "Marrón": "Brown"
   },
   "stock": {
     "badge": "In stock",

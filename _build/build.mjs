@@ -113,6 +113,17 @@ const products = [
     hero: 'japones-p17-0',
     v: [['Celeste · Acero', 'japones-p17-0', 950000, 1050000], ['Negro · Bicolor oro rosa', 'japones-p18-0', 950000, 1050000]] },
 
+  { code: 'PD-1790', collection: 'calibre-japones', type: 'automatico', movement: 'Y-9020 (japonés)',
+    case_mm: '42', water_m: 100, crystal: SAPPHIRE, straps: ['cuero'],
+    features: { es: 'Pequeño segundero · Correa de cuero', pt: 'Pequenos segundos · Pulseira de couro', en: 'Small seconds · Leather strap' },
+    desc: { es: 'Un automático de vestir de 42 mm con pequeño segundero, numerales aplicados y correa de cuero. Seis esferas para todos los estilos.',
+            pt: 'Um automático social de 42 mm com pequenos segundos, numerais aplicados e pulseira de couro. Seis mostradores para todos os estilos.',
+            en: 'A 42 mm dress automatic with small seconds, applied numerals and a leather strap. Six dials for every style.' },
+    hero: 'new-z1-4',
+    v: [['Azul · Cuero azul', 'new-z1-4', 750000, 820000], ['Negro · Cuero negro', 'new-z1-3', 750000, 820000],
+        ['Verde · Cuero verde', 'new-z1-0', 750000, 820000], ['Marrón · Cuero negro', 'new-z1-1', 750000, 820000],
+        ['Salmón · Cuero marrón', 'new-z1-2', 750000, 820000], ['Blanco · Oro rosa · Cuero marrón', 'new-z1-5', 750000, 820000]] },
+
   { code: 'PD-1644', nick: 'Cronógrafo', collection: 'meca-cuarzo', type: 'mecacuarzo', movement: 'Seiko VK63',
     case_mm: '40', water_m: 100, crystal: SAPPHIRE, straps: ['acero', 'caucho'], featured: true,
     features: { es: 'Cronógrafo · Escala taquimétrica · Acero o caucho', pt: 'Cronógrafo · Escala taquimétrica · Aço ou borracha', en: 'Chronograph · Tachymeter scale · Steel or rubber' },
@@ -160,6 +171,26 @@ const products = [
         ['Negro · Oro rosa · Cuero negro', 'meca-p12-1', 600000, 650000], ['Blanco · Cuero marrón', 'meca-p12-2', 600000, 650000],
         ['Negro · Cuero negro', 'meca-p12-3', 600000, 650000]] },
 
+  { code: 'PD-1781', nick: 'Cronógrafo', collection: 'meca-cuarzo', type: 'mecacuarzo', movement: 'Seiko VK63',
+    case_mm: '', water_m: 100, crystal: SAPPHIRE, straps: ['nylon'],
+    features: { es: 'Cronógrafo · Correa de tela tipo denim', pt: 'Cronógrafo · Pulseira de tecido estilo denim', en: 'Chronograph · Denim-style fabric strap' },
+    desc: { es: 'Cronógrafo de líneas limpias con calibre Seiko VK63 y correa de tela tipo denim. Casual, liviano y con carácter.',
+            pt: 'Cronógrafo de linhas limpas com calibre Seiko VK63 e pulseira de tecido estilo denim. Casual, leve e com personalidade.',
+            en: 'Clean-lined chronograph with a Seiko VK63 calibre and denim-style fabric strap. Casual, light and full of character.' },
+    hero: 'new-z2-1',
+    v: [['Azul · Tela azul', 'new-z2-1', 800000, 870000], ['Negro · Tela negra', 'new-z2-2', 800000, 870000],
+        ['Blanco · Tela negra', 'new-z2-0', 800000, 870000]] },
+
+  { code: 'PD-YS008', nick: 'Cronógrafo', collection: 'meca-cuarzo', type: 'mecacuarzo', movement: 'Seiko VK63',
+    case_mm: '', water_m: 100, crystal: SAPPHIRE, straps: ['nylon'],
+    features: { es: 'Cronógrafo deportivo · Escala taquimétrica · Correa de nylon', pt: 'Cronógrafo esportivo · Escala taquimétrica · Pulseira de nylon', en: 'Sports chronograph · Tachymeter scale · Nylon strap' },
+    desc: { es: 'Cronógrafo deportivo con escala taquimétrica, calibre Seiko VK63 y correa de nylon. Disponible en acero u oro rosa.',
+            pt: 'Cronógrafo esportivo com escala taquimétrica, calibre Seiko VK63 e pulseira de nylon. Disponível em aço ou ouro rosé.',
+            en: 'Sports chronograph with tachymeter scale, Seiko VK63 calibre and nylon strap. Available in steel or rose gold.' },
+    hero: 'new-z3-0',
+    v: [['Gris · Oro rosa · Nylon', 'new-z3-0', 800000, 900000], ['Negro · Oro rosa · Nylon', 'new-z3-1', 800000, 900000],
+        ['Azul · Nylon azul', 'new-z3-2', 800000, 900000], ['Negro · Nylon gris', 'new-z3-3', 800000, 900000]] },
+
   { code: 'PD-1662', nick: 'GMT', collection: 'entrada', type: 'automatico', movement: 'Automático',
     case_mm: '40', water_m: 100, crystal: SAPPHIRE, straps: ['acero'], bezel: true, featured: true,
     features: { es: 'Doble zona horaria y fecha · Bisel giratorio 24 h', pt: 'Duplo fuso horário e data · Bisel giratório 24 h', en: 'Dual time zone and date · 24 h rotating bezel' },
@@ -205,6 +236,18 @@ const products = [
     hero: 'entrada-p08-0',
     v: [['Chocolate · Bicolor oro rosa', 'entrada-p09-0', 1000000], ['Salmón · Bicolor oro rosa', 'entrada-p09-1', 1000000],
         ['Gris humo · Acero', 'entrada-p09-2', 1000000], ['Azul petróleo · Acero', 'entrada-p09-3', 1000000]] },
+
+  { code: 'PD-YS021', nick: 'Corazón abierto', collection: 'entrada', type: 'automatico', movement: 'Automático',
+    case_mm: '', water_m: 100, crystal: SAPPHIRE, straps: ['cuero', 'nylon'],
+    features: { es: 'Corazón abierto · Fase lunar', pt: 'Coração aberto · Fase da lua', en: 'Open heart · Moon phase' },
+    desc: { es: 'Corazón abierto que deja ver el volante latiendo, más indicador de fase lunar y esfera degradé. Siete combinaciones de color y correa.',
+            pt: 'Coração aberto que revela o balanço pulsando, indicador de fase da lua e mostrador degradê. Sete combinações de cor e pulseira.',
+            en: 'An open heart showing the beating balance wheel, plus a moon-phase indicator and gradient dial. Seven colour and strap combinations.' },
+    hero: 'new-z4-6',
+    v: [['Rojo · Oro rosa · Nylon negro', 'new-z4-6', 950000], ['Chocolate · Oro rosa · Cuero marrón', 'new-z4-1', 950000],
+        ['Negro · Oro rosa · Nylon negro', 'new-z4-3', 950000], ['Morado · Acero · Nylon negro', 'new-z4-4', 950000],
+        ['Azul · Acero · Cuero azul', 'new-z4-5', 950000], ['Chocolate · Acero · Cuero marrón', 'new-z4-2', 950000],
+        ['Negro · Acero · Nylon negro', 'new-z4-0', 950000]] },
 
   { code: 'PD-1737L', collection: 'femeninos', type: 'cuarzo', movement: 'Ronda 762 (Suiza)',
     case_mm: '22 × 36', water_m: 100, crystal: SAPPHIRE, straps: ['acero'], featured: true,
@@ -268,6 +311,8 @@ async function isolateWatch(input, eraseBottom = 0, tol = 12) {
   const med = (c) => corners.map((i) => data[i + c]).sort((a, b) => a - b)[2];
   const bg = [med(0), med(1), med(2)].map((v) => Math.max(v, 225));
   if (eraseBottom) for (let y = Math.floor(H * (1 - eraseBottom)); y < H; y++) for (let x = 0; x < W; x++) { const o = at(x, y); if (transparent) data[o + 3] = 0; else { data[o] = bg[0]; data[o + 1] = bg[1]; data[o + 2] = bg[2]; } }
+  // marcos finos en el borde de la foto (unen el logo con el reloj): se borran
+  if (!transparent) for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (x < 4 || y < 4 || x >= W - 4 || y >= H - 4) { const o = at(x, y); data[o] = bg[0]; data[o + 1] = bg[1]; data[o + 2] = bg[2]; }
   const fg = new Uint8Array(N);
   for (let i = 0; i < N; i++) {
     const o = i * 4;
@@ -308,7 +353,7 @@ async function isolateWatch(input, eraseBottom = 0, tol = 12) {
 async function encode(srcName, outName) {
   let file = path.join(SRC, srcName + '.png');
   if (CLEAN_CORNER.has(srcName)) file = await cleanCorner(file);
-  file = await isolateWatch(file, ERASE_BOTTOM[srcName] || 0, BG_TOL[srcName] || 12);
+  file = await isolateWatch(file, ERASE_BOTTOM[srcName] || 0, BG_TOL[srcName] || (srcName.startsWith('new-') ? 30 : 12));
   const meta = await sharp(file).metadata();
   const h = Math.min(meta.height, 1000);
   await sharp(file).resize({ height: h, withoutEnlargement: true }).webp({ quality: 84, alphaQuality: 90 }).toFile(path.join(OUT, outName + '.webp'));

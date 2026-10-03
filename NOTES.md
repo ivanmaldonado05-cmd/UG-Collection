@@ -16,7 +16,7 @@ assets/js/core.js              i18n, datos, header/footer, favoritos, vista ráp
 assets/js/{home,catalog,product}.js
 assets/i18n/{es,pt,en}.json    textos de la interfaz + diccionario de colores (terms)
 assets/img/products/           fotos optimizadas (WebP) del catálogo inicial
-data/catalog.json              catálogo inicial (18 modelos, 117 versiones)
+data/catalog.json              catálogo inicial (22 modelos, 137 versiones)
 admin/                         panel (index.html + admin.js + admin.css)
 server/                        API PHP (api.php, lib.php, install.php, schema.sql, config.sample.php)
 uploads/                       fotos subidas desde el panel + uploads/catalog.json (generado, fuera de Git)
@@ -51,6 +51,8 @@ _build/serve.mjs               servidor local: node _build/serve.mjs 5510
 ⚠️ El backend PHP está **escrito sin probar** (no hay PHP en la PC de desarrollo). Probarlo en staging antes de entregarlo: login, crear/editar/borrar producto, subir foto, reordenar, ajustes.
 
 ## [PENDIENTE] — datos a pedir al cliente
+
+- Modelos agregados el 2026-10-03 (PD-1790, PD-1781, PD-YS008, PD-YS021): falta el **tamaño de caja** de PD-1781, PD-YS008 y PD-YS021 (no se muestra en la ficha hasta tenerlo) y confirmar **resistencia al agua** (se puso 100 m). Colores nombrados mirando las fotos.
 
 - Horario de atención y ubicación/dirección (hoy figuran como [PENDIENTE] en Contacto).
 - Dominio (para SEO: canonical, sitemap.xml, og:url, Open Graph con URL absoluta).

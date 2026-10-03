@@ -251,7 +251,12 @@
     "Malaquita": "Malaquita",
     "Ojo de tigre": "Olho de tigre",
     "nácar": "madrepérola",
-    "blanco": "branco"
+    "blanco": "branco",
+    "Tela": "Tecido",
+    "tela": "tecido",
+    "negra": "preta",
+    "Morado": "Roxo",
+    "Marrón": "Marrom"
   },
   "stock": {
     "badge": "Em estoque",

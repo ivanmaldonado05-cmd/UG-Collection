@@ -248,6 +248,8 @@
     const transparent = corners.some((i) => px[i + 3] < 20);
     const med = (c) => corners.map((i) => px[i + c]).sort((a, b) => a - b)[2];
     const bg = [med(0), med(1), med(2)].map((v) => Math.max(v, 225));
+    // marcos finos en el borde de la foto (unen el logo con el reloj): se borran
+    if (!transparent) for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (x < 4 || y < 4 || x >= W - 4 || y >= H - 4) { const o = at(x, y); px[o] = bg[0]; px[o + 1] = bg[1]; px[o + 2] = bg[2]; }
     const fg = new Uint8Array(N);
     for (let i = 0; i < N; i++) {
       const o = i * 4;

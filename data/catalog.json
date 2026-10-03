@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T22:52:33.801Z",
+ "updated": "2026-10-03T15:46:22.871Z",
  "settings": {
   "brand": "UG Collection",
   "whatsapp": "595983836674",
@@ -955,6 +955,120 @@
    ]
   },
   {
+   "id": "pd-1790",
+   "code": "PD-1790",
+   "nick": "",
+   "brand": "Pagani Design",
+   "collection": "calibre-japones",
+   "type": "automatico",
+   "movement": "Y-9020 (japonés)",
+   "case_mm": "42",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "cuero"
+   ],
+   "features": {
+    "es": "Pequeño segundero · Correa de cuero",
+    "pt": "Pequenos segundos · Pulseira de couro",
+    "en": "Small seconds · Leather strap"
+   },
+   "desc": {
+    "es": "Un automático de vestir de 42 mm con pequeño segundero, numerales aplicados y correa de cuero. Seis esferas para todos los estilos.",
+    "pt": "Um automático social de 42 mm com pequenos segundos, numerais aplicados e pulseira de couro. Seis mostradores para todos os estilos.",
+    "en": "A 42 mm dress automatic with small seconds, applied numerals and a leather strap. Six dials for every style."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1790.webp",
+    "w": 643,
+    "h": 1000
+   },
+   "price_from": 750000,
+   "featured": false,
+   "active": true,
+   "order": 7,
+   "variants": [
+    {
+     "id": "pd-1790-1",
+     "name": "Azul · Cuero azul",
+     "image": {
+      "src": "assets/img/products/pd-1790.webp",
+      "w": 643,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1790-2",
+     "name": "Negro · Cuero negro",
+     "image": {
+      "src": "assets/img/products/pd-1790-2.webp",
+      "w": 645,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1790-3",
+     "name": "Verde · Cuero verde",
+     "image": {
+      "src": "assets/img/products/pd-1790-3.webp",
+      "w": 644,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1790-4",
+     "name": "Marrón · Cuero negro",
+     "image": {
+      "src": "assets/img/products/pd-1790-4.webp",
+      "w": 641,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1790-5",
+     "name": "Salmón · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-1790-5.webp",
+      "w": 645,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1790-6",
+     "name": "Blanco · Oro rosa · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-1790-6.webp",
+      "w": 652,
+      "h": 1000
+     },
+     "price": 750000,
+     "compare_at": 820000,
+     "available": true,
+     "stock": 0
+    }
+   ]
+  },
+  {
    "id": "pd-1644",
    "code": "PD-1644",
    "nick": "Cronógrafo",
@@ -987,7 +1101,7 @@
    "price_from": 775000,
    "featured": true,
    "active": true,
-   "order": 7,
+   "order": 8,
    "variants": [
     {
      "id": "pd-1644-1",
@@ -1206,7 +1320,7 @@
    "price_from": 800000,
    "featured": false,
    "active": true,
-   "order": 8,
+   "order": 9,
    "variants": [
     {
      "id": "pd-1701-1",
@@ -1320,7 +1434,7 @@
    "price_from": 900000,
    "featured": false,
    "active": true,
-   "order": 9,
+   "order": 10,
    "variants": [
     {
      "id": "pd-1707-1",
@@ -1408,7 +1522,7 @@
    "price_from": 600000,
    "featured": false,
    "active": true,
-   "order": 10,
+   "order": 11,
    "variants": [
     {
      "id": "pd-1689-1",
@@ -1455,7 +1569,7 @@
      "image": {
       "src": "assets/img/products/pd-1689-4.webp",
       "w": 126,
-      "h": 190,
+      "h": 188,
       "lowres": true
      },
      "price": 600000,
@@ -1473,6 +1587,169 @@
      },
      "price": 600000,
      "compare_at": 650000,
+     "available": true,
+     "stock": 0
+    }
+   ]
+  },
+  {
+   "id": "pd-1781",
+   "code": "PD-1781",
+   "nick": "Cronógrafo",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VK63",
+   "case_mm": "",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "nylon"
+   ],
+   "features": {
+    "es": "Cronógrafo · Correa de tela tipo denim",
+    "pt": "Cronógrafo · Pulseira de tecido estilo denim",
+    "en": "Chronograph · Denim-style fabric strap"
+   },
+   "desc": {
+    "es": "Cronógrafo de líneas limpias con calibre Seiko VK63 y correa de tela tipo denim. Casual, liviano y con carácter.",
+    "pt": "Cronógrafo de linhas limpas com calibre Seiko VK63 e pulseira de tecido estilo denim. Casual, leve e com personalidade.",
+    "en": "Clean-lined chronograph with a Seiko VK63 calibre and denim-style fabric strap. Casual, light and full of character."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-1781.webp",
+    "w": 618,
+    "h": 1000
+   },
+   "price_from": 800000,
+   "featured": false,
+   "active": true,
+   "order": 12,
+   "variants": [
+    {
+     "id": "pd-1781-1",
+     "name": "Azul · Tela azul",
+     "image": {
+      "src": "assets/img/products/pd-1781.webp",
+      "w": 618,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 870000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1781-2",
+     "name": "Negro · Tela negra",
+     "image": {
+      "src": "assets/img/products/pd-1781-2.webp",
+      "w": 618,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 870000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-1781-3",
+     "name": "Blanco · Tela negra",
+     "image": {
+      "src": "assets/img/products/pd-1781-3.webp",
+      "w": 617,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 870000,
+     "available": true,
+     "stock": 0
+    }
+   ]
+  },
+  {
+   "id": "pd-ys008",
+   "code": "PD-YS008",
+   "nick": "Cronógrafo",
+   "brand": "Pagani Design",
+   "collection": "meca-cuarzo",
+   "type": "mecacuarzo",
+   "movement": "Seiko VK63",
+   "case_mm": "",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "nylon"
+   ],
+   "features": {
+    "es": "Cronógrafo deportivo · Escala taquimétrica · Correa de nylon",
+    "pt": "Cronógrafo esportivo · Escala taquimétrica · Pulseira de nylon",
+    "en": "Sports chronograph · Tachymeter scale · Nylon strap"
+   },
+   "desc": {
+    "es": "Cronógrafo deportivo con escala taquimétrica, calibre Seiko VK63 y correa de nylon. Disponible en acero u oro rosa.",
+    "pt": "Cronógrafo esportivo com escala taquimétrica, calibre Seiko VK63 e pulseira de nylon. Disponível em aço ou ouro rosé.",
+    "en": "Sports chronograph with tachymeter scale, Seiko VK63 calibre and nylon strap. Available in steel or rose gold."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-ys008.webp",
+    "w": 596,
+    "h": 1000
+   },
+   "price_from": 800000,
+   "featured": false,
+   "active": true,
+   "order": 13,
+   "variants": [
+    {
+     "id": "pd-ys008-1",
+     "name": "Gris · Oro rosa · Nylon",
+     "image": {
+      "src": "assets/img/products/pd-ys008.webp",
+      "w": 596,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys008-2",
+     "name": "Negro · Oro rosa · Nylon",
+     "image": {
+      "src": "assets/img/products/pd-ys008-2.webp",
+      "w": 596,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys008-3",
+     "name": "Azul · Nylon azul",
+     "image": {
+      "src": "assets/img/products/pd-ys008-3.webp",
+      "w": 630,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 900000,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys008-4",
+     "name": "Negro · Nylon gris",
+     "image": {
+      "src": "assets/img/products/pd-ys008-4.webp",
+      "w": 594,
+      "h": 1000
+     },
+     "price": 800000,
+     "compare_at": 900000,
      "available": true,
      "stock": 0
     }
@@ -1510,7 +1787,7 @@
    "price_from": 850000,
    "featured": true,
    "active": true,
-   "order": 11,
+   "order": 14,
    "variants": [
     {
      "id": "pd-1662-1",
@@ -1640,7 +1917,7 @@
    "price_from": 900000,
    "featured": false,
    "active": true,
-   "order": 12,
+   "order": 15,
    "variants": [
     {
      "id": "pd-1752-1",
@@ -1793,7 +2070,7 @@
    "price_from": 850000,
    "featured": false,
    "active": true,
-   "order": 13,
+   "order": 16,
    "variants": [
     {
      "id": "pd-1728-1",
@@ -1907,7 +2184,7 @@
    "price_from": 1000000,
    "featured": true,
    "active": true,
-   "order": 14,
+   "order": 17,
    "variants": [
     {
      "id": "pd-ys025-1",
@@ -1964,6 +2241,134 @@
    ]
   },
   {
+   "id": "pd-ys021",
+   "code": "PD-YS021",
+   "nick": "Corazón abierto",
+   "brand": "Pagani Design",
+   "collection": "entrada",
+   "type": "automatico",
+   "movement": "Automático",
+   "case_mm": "",
+   "water_m": 100,
+   "crystal": "Zafiro AR",
+   "straps": [
+    "cuero",
+    "nylon"
+   ],
+   "features": {
+    "es": "Corazón abierto · Fase lunar",
+    "pt": "Coração aberto · Fase da lua",
+    "en": "Open heart · Moon phase"
+   },
+   "desc": {
+    "es": "Corazón abierto que deja ver el volante latiendo, más indicador de fase lunar y esfera degradé. Siete combinaciones de color y correa.",
+    "pt": "Coração aberto que revela o balanço pulsando, indicador de fase da lua e mostrador degradê. Sete combinações de cor e pulseira.",
+    "en": "An open heart showing the beating balance wheel, plus a moon-phase indicator and gradient dial. Seven colour and strap combinations."
+   },
+   "hero": {
+    "src": "assets/img/products/pd-ys021.webp",
+    "w": 609,
+    "h": 1000
+   },
+   "price_from": 950000,
+   "featured": false,
+   "active": true,
+   "order": 18,
+   "variants": [
+    {
+     "id": "pd-ys021-1",
+     "name": "Rojo · Oro rosa · Nylon negro",
+     "image": {
+      "src": "assets/img/products/pd-ys021.webp",
+      "w": 609,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-2",
+     "name": "Chocolate · Oro rosa · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-ys021-2.webp",
+      "w": 606,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-3",
+     "name": "Negro · Oro rosa · Nylon negro",
+     "image": {
+      "src": "assets/img/products/pd-ys021-3.webp",
+      "w": 607,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-4",
+     "name": "Morado · Acero · Nylon negro",
+     "image": {
+      "src": "assets/img/products/pd-ys021-4.webp",
+      "w": 606,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-5",
+     "name": "Azul · Acero · Cuero azul",
+     "image": {
+      "src": "assets/img/products/pd-ys021-5.webp",
+      "w": 607,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-6",
+     "name": "Chocolate · Acero · Cuero marrón",
+     "image": {
+      "src": "assets/img/products/pd-ys021-6.webp",
+      "w": 613,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    },
+    {
+     "id": "pd-ys021-7",
+     "name": "Negro · Acero · Nylon negro",
+     "image": {
+      "src": "assets/img/products/pd-ys021-7.webp",
+      "w": 615,
+      "h": 1000
+     },
+     "price": 950000,
+     "compare_at": null,
+     "available": true,
+     "stock": 0
+    }
+   ]
+  },
+  {
    "id": "pd-1737l",
    "code": "PD-1737L",
    "nick": "",
@@ -1995,7 +2400,7 @@
    "price_from": 550000,
    "featured": true,
    "active": true,
-   "order": 15,
+   "order": 19,
    "variants": [
     {
      "id": "pd-1737l-1",
@@ -2135,7 +2540,7 @@
    "price_from": 550000,
    "featured": false,
    "active": true,
-   "order": 16,
+   "order": 20,
    "variants": [
     {
      "id": "pd-1776-1",
@@ -2210,7 +2615,7 @@
    "price_from": 600000,
    "featured": true,
    "active": true,
-   "order": 17,
+   "order": 21,
    "variants": [
     {
      "id": "pd-1825-1",
